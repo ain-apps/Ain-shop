@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-17T05:43:37.282Z",
+  "live_searches_run": 0,
+  "harness_509": {
+    "total": 509,
+    "passed": 496,
+    "failed": 13,
+    "bySection": {
+      "A-relevant": {
+        "total": 310,
+        "pass": 310
+      },
+      "B-sort": {
+        "total": 100,
+        "pass": 100
+      },
+      "C-intent": {
+        "total": 39,
+        "pass": 33
+      },
+      "C-intent-fix": {
+        "total": 20,
+        "pass": 20
+      },
+      "C-intent-hit": {
+        "total": 20,
+        "pass": 13
+      },
+      "C-intent-noise": {
+        "total": 20,
+        "pass": 20
+      }
+    }
+  },
+  "teaching_cases": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0
+  },
+  "cases": [
+    {
+      "id": "t-shoes-women-one-piece-bathing-suit",
+      "query": "shoes",
+      "wrong_title": "Women One Piece Bathing Suit",
+      "correct_title": "Nike Running Shoes for Men",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "category-exclusion",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "filterSearchResults() must remove \"Women One Piece Bathing Suit\" for query \"shoes\": title category is \"swimwear\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+      },
+      "pass": true
+    },
+    {
+      "id": "t-sneakers-dog-food-grain-free-15lb",
+      "query": "sneakers",
+      "wrong_title": "Dog Food Grain Free 15lb",
+      "correct_title": "Nike Sneakers for Men",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "category-exclusion",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "filterSearchResults() must remove \"Dog Food Grain Free 15lb\" for query \"sneakers\": title category is \"pets\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+      },
+      "pass": true
+    },
+    {
+      "id": "t-pumps-water-pump",
+      "query": "pumps",
+      "wrong_title": "Water Pump",
+      "correct_title": "Women Heeled Pumps Black",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "category-exclusion",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "filterSearchResults() must remove \"Water Pump\" for query \"pumps\": title category is \"tools\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+      },
+      "pass": true
+    },
+    {
+      "id": "t-milk-milk-scented-candle",
+      "query": "milk",
+      "wrong_title": "Milk Scented Candle",
+      "correct_title": "Great Value Whole Milk 1 Gallon",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "category-exclusion",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "filterSearchResults() must remove \"Milk Scented Candle\" for query \"milk\": title category is \"home\", query category is \"groceries\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+      },
+      "pass": true
+    },
+    {
+      "id": "t-toothpaste-ceramic-coffee-mug-set",
+      "query": "toothpaste",
+      "wrong_title": "Ceramic Coffee Mug Set",
+      "correct_title": "Colgate Toothpaste Whitening Mint",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "category-exclusion",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "filterSearchResults() must remove \"Ceramic Coffee Mug Set\" for query \"toothpaste\": title category is \"kitchen\", query category is \"personal care\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+      },
+      "pass": true
+    },
+    {
+      "id": "t-bicycle-bike-helmet",
+      "query": "bicycle",
+      "wrong_title": "Bike Helmet",
+      "correct_title": "Trek Bicycle for Adults",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "already-handled",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "No new rule needed: relevant(\"Bike Helmet\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back."
+      },
+      "pass": true
+    },
+    {
+      "id": "t-bicycle-bike-rack",
+      "query": "bicycle",
+      "wrong_title": "Bike Rack",
+      "correct_title": "Trek Bicycle for Adults",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "already-handled",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "No new rule needed: relevant(\"Bike Rack\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back."
+      },
+      "pass": true
+    },
+    {
+      "id": "t-bicycle-bike-lock",
+      "query": "bicycle",
+      "wrong_title": "Bike Lock",
+      "correct_title": "Trek Bicycle for Adults",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "already-handled",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "No new rule needed: relevant(\"Bike Lock\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back."
+      },
+      "pass": true
+    },
+    {
+      "id": "t-bicycle-bike-pump",
+      "query": "bicycle",
+      "wrong_title": "Bike Pump",
+      "correct_title": "Trek Bicycle for Adults",
+      "wrong_rejected": true,
+      "filtered_out": true,
+      "correct_accepted": true,
+      "suggestion": {
+        "type": "category-exclusion",
+        "file": "site/_worker.js",
+        "status": "pending-review",
+        "rule": "filterSearchResults() must remove \"Bike Pump\" for query \"bicycle\": title category is \"tools\", query category is \"sports\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+      },
+      "pass": true
+    }
+  ]
+}
