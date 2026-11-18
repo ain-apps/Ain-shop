@@ -1,0 +1,83 @@
+[
+  {
+    "correct_title": "Nike Running Shoes for Men",
+    "date": "2026-11-16",
+    "id": "t-shoes-women-one-piece-bathing-suit",
+    "query": "shoes",
+    "source": "example — the mix-up users reported (shoes → bathing suit)",
+    "status": "pending-review",
+    "wrong_title": "Women One Piece Bathing Suit"
+  },
+  {
+    "correct_title": "Nike Sneakers for Men",
+    "date": "2026-11-16",
+    "id": "t-sneakers-dog-food-grain-free-15lb",
+    "query": "sneakers",
+    "source": "example — 500-test worst case (sneakers → dog food on top)",
+    "status": "pending-review",
+    "wrong_title": "Dog Food Grain Free 15lb"
+  },
+  {
+    "correct_title": "Women Heeled Pumps Black",
+    "date": "2026-11-16",
+    "id": "t-pumps-water-pump",
+    "query": "pumps",
+    "source": "example — 'pumps' for a wedding brought water pumps; also hung live twice",
+    "status": "pending-review",
+    "wrong_title": "Water Pump"
+  },
+  {
+    "correct_title": "Great Value Whole Milk 1 Gallon",
+    "date": "2026-11-16",
+    "id": "t-milk-milk-scented-candle",
+    "query": "milk",
+    "source": "example — 500-test: 'Milk Scented Candle' counted as relevant for milk",
+    "status": "pending-review",
+    "wrong_title": "Milk Scented Candle"
+  },
+  {
+    "correct_title": "Colgate Toothpaste Whitening Mint",
+    "date": "2026-11-16",
+    "id": "t-toothpaste-ceramic-coffee-mug-set",
+    "query": "toothpaste",
+    "source": "example — 500-test worst case (toothpaste → coffee mug on top)",
+    "status": "pending-review",
+    "wrong_title": "Ceramic Coffee Mug Set"
+  },
+  {
+    "id": "t-bicycle-bike-helmet",
+    "date": "2026-11-16",
+    "query": "bicycle",
+    "wrong_title": "Bike Helmet",
+    "correct_title": "Trek Bicycle for Adults",
+    "source": "user approved 2026-11-16 — accessory-exclusion rule",
+    "status": "applied"
+  },
+  {
+    "id": "t-bicycle-bike-rack",
+    "date": "2026-11-16",
+    "query": "bicycle",
+    "wrong_title": "Bike Rack",
+    "correct_title": "Trek Bicycle for Adults",
+    "source": "user approved 2026-11-16 — accessory-exclusion rule",
+    "status": "applied"
+  },
+  {
+    "id": "t-bicycle-bike-lock",
+    "date": "2026-11-16",
+    "query": "bicycle",
+    "wrong_title": "Bike Lock",
+    "correct_title": "Trek Bicycle for Adults",
+    "source": "user approved 2026-11-16 — accessory-exclusion rule",
+    "status": "applied"
+  },
+  {
+    "id": "t-bicycle-bike-pump",
+    "date": "2026-11-16",
+    "query": "bicycle",
+    "wrong_title": "Bike Pump",
+    "correct_title": "Trek Bicycle for Adults",
+    "source": "user approved 2026-11-16 — accessory-exclusion rule",
+    "status": "applied"
+  }
+]
