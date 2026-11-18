@@ -1,0 +1,4583 @@
+[
+  {
+    "section": "A-relevant",
+    "id": "A1",
+    "query": "shoes",
+    "detail": "correct: \"Purina Shoes 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A2",
+    "query": "shoes",
+    "detail": "wrong-category: \"Throw Pillow Covers 18x18\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A3",
+    "query": "shoes",
+    "detail": "partial-word-match: \"Shoes Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A4",
+    "query": "shoes",
+    "detail": "singular/plural variant: \"Kirkland Shoe Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A5",
+    "query": "shoes",
+    "detail": "synonym: \"Great Value Sneakers New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A6",
+    "query": "running shoes",
+    "detail": "correct: \"Samsung Running Shoes Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A7",
+    "query": "running shoes",
+    "detail": "wrong-category: \"Ceramic Coffee Mug Set\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A8",
+    "query": "running shoes",
+    "detail": "partial-word-match: \"Running Table Black\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A9",
+    "query": "running shoes",
+    "detail": "singular/plural variant: \"Amazon Basics Running Shoe Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A10",
+    "query": "running shoes",
+    "detail": "synonym: \"Hanes Running Sneakers Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A11",
+    "query": "black shoes",
+    "detail": "correct: \"Great Value Black Shoes for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A12",
+    "query": "black shoes",
+    "detail": "wrong-category: \"Wooden Dining Chair Set of 4\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A13",
+    "query": "black shoes",
+    "detail": "partial-word-match: \"Black Table Size Large\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A14",
+    "query": "black shoes",
+    "detail": "singular/plural variant: \"Hanes Black Shoe for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A15",
+    "query": "black shoes",
+    "detail": "expanded correct: \"Purina Black Shoes Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A16",
+    "query": "pumps",
+    "detail": "correct: \"Sony Pumps New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A17",
+    "query": "pumps",
+    "detail": "wrong-category: \"Laptop Stand Aluminum\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A18",
+    "query": "pumps",
+    "detail": "partial-word-match: \"Pumps Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A19",
+    "query": "pumps",
+    "detail": "singular/plural variant: \"Purina Pump Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A20",
+    "query": "pumps",
+    "detail": "expanded correct: \"Levi Pumps Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A21",
+    "query": "slippers",
+    "detail": "correct: \"Dove Slippers for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A22",
+    "query": "slippers",
+    "detail": "wrong-category: \"Stainless Steel Water Bottle 32oz\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A23",
+    "query": "slippers",
+    "detail": "partial-word-match: \"Slippers Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A24",
+    "query": "slippers",
+    "detail": "singular/plural variant: \"Sony Slipper for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A25",
+    "query": "slippers",
+    "detail": "expanded correct: \"Purina Slippers Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A26",
+    "query": "bathing suit",
+    "detail": "correct: \"Nike Bathing Suit Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A27",
+    "query": "bathing suit",
+    "detail": "wrong-category: \"Garden Hose 50ft\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A28",
+    "query": "bathing suit",
+    "detail": "partial-word-match: \"Bathing Blanket 2 Pack\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A29",
+    "query": "bathing suit",
+    "detail": "singular/plural variant: \"Samsung Bathing Suits Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A30",
+    "query": "bathing suit",
+    "detail": "synonym: \"Samsung Swimsuit for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A31",
+    "query": "winter coat",
+    "detail": "correct: \"Amazon Basics Winter Coat Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A32",
+    "query": "winter coat",
+    "detail": "wrong-category: \"Car Tire All Season\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A33",
+    "query": "winter coat",
+    "detail": "partial-word-match: \"Winter Hat Size Large\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A34",
+    "query": "winter coat",
+    "detail": "singular/plural variant: \"Levi Winter Coats Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A35",
+    "query": "winter coat",
+    "detail": "expanded correct: \"Levi Winter Coat Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A36",
+    "query": "t-shirt",
+    "detail": "correct: \"Samsung T-Shirt White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A37",
+    "query": "t-shirt",
+    "detail": "wrong-category: \"Women One Piece Bathing Suit\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A38",
+    "query": "t-shirt",
+    "detail": "partial-word-match: \"T-Shirt Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A39",
+    "query": "t-shirt",
+    "detail": "singular/plural variant: \"Sony T-Shirts White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A40",
+    "query": "t-shirt",
+    "detail": "synonym: \"Nike Tee Shirt New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A41",
+    "query": "jeans",
+    "detail": "correct: \"Great Value Jeans White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A42",
+    "query": "jeans",
+    "detail": "wrong-category: \"Laptop Stand Aluminum\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A43",
+    "query": "jeans",
+    "detail": "partial-word-match: \"Jeans Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A44",
+    "query": "jeans",
+    "detail": "singular/plural variant: \"Purina Jean for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A45",
+    "query": "jeans",
+    "detail": "expanded correct: \"Kirkland Jeans Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A46",
+    "query": "dress",
+    "detail": "correct: \"Dove Dress for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A47",
+    "query": "dress",
+    "detail": "wrong-category: \"Vitamin C Tablets 500mg\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A48",
+    "query": "dress",
+    "detail": "partial-word-match: \"Dress Flavored Lip Balm\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A49",
+    "query": "dress",
+    "detail": "singular/plural variant: \"Sony Dres for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A50",
+    "query": "dress",
+    "detail": "synonym: \"Great Value Gown Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A51",
+    "query": "socks",
+    "detail": "correct: \"Great Value Socks 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A52",
+    "query": "socks",
+    "detail": "wrong-category: \"Vitamin C Tablets 500mg\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A53",
+    "query": "socks",
+    "detail": "partial-word-match: \"Socks Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A54",
+    "query": "socks",
+    "detail": "singular/plural variant: \"Kirkland Sock White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A55",
+    "query": "socks",
+    "detail": "expanded correct: \"Purina Socks Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A56",
+    "query": "sneakers",
+    "detail": "correct: \"Great Value Sneakers Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A57",
+    "query": "sneakers",
+    "detail": "wrong-category: \"Ceramic Coffee Mug Set\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A58",
+    "query": "sneakers",
+    "detail": "partial-word-match: \"Sneakers Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A59",
+    "query": "sneakers",
+    "detail": "singular/plural variant: \"Great Value Sneaker New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A60",
+    "query": "sneakers",
+    "detail": "synonym: \"Purina Trainers Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A61",
+    "query": "sandals",
+    "detail": "correct: \"Samsung Sandals for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A62",
+    "query": "sandals",
+    "detail": "wrong-category: \"Garden Hose 50ft\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A63",
+    "query": "sandals",
+    "detail": "partial-word-match: \"Sandals Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A64",
+    "query": "sandals",
+    "detail": "singular/plural variant: \"Dove Sandal Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A65",
+    "query": "sandals",
+    "detail": "expanded correct: \"Hanes Sandals Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A66",
+    "query": "boots",
+    "detail": "correct: \"Great Value Boots for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A67",
+    "query": "boots",
+    "detail": "wrong-category: \"Garden Hose 50ft\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A68",
+    "query": "boots",
+    "detail": "partial-word-match: \"Boots Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A69",
+    "query": "boots",
+    "detail": "singular/plural variant: \"Hanes Boot White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A70",
+    "query": "boots",
+    "detail": "expanded correct: \"Levi Boots Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A71",
+    "query": "hoodie",
+    "detail": "correct: \"Sony Hoodie for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A72",
+    "query": "hoodie",
+    "detail": "wrong-category: \"Ceramic Coffee Mug Set\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A73",
+    "query": "hoodie",
+    "detail": "partial-word-match: \"Hoodie Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A74",
+    "query": "hoodie",
+    "detail": "singular/plural variant: \"Kirkland Hoodies for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A75",
+    "query": "hoodie",
+    "detail": "expanded correct: \"Great Value Hoodie Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A76",
+    "query": "sweater",
+    "detail": "correct: \"Amazon Basics Sweater Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A77",
+    "query": "sweater",
+    "detail": "wrong-category: \"Yoga Mat Non Slip\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A78",
+    "query": "sweater",
+    "detail": "partial-word-match: \"Sweater Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A79",
+    "query": "sweater",
+    "detail": "singular/plural variant: \"Purina Sweaters White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A80",
+    "query": "sweater",
+    "detail": "expanded correct: \"Dove Sweater Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A81",
+    "query": "swimsuit",
+    "detail": "correct: \"Levi Swimsuit Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A82",
+    "query": "swimsuit",
+    "detail": "wrong-category: \"Ceramic Coffee Mug Set\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A83",
+    "query": "swimsuit",
+    "detail": "partial-word-match: \"Swimsuit Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A84",
+    "query": "swimsuit",
+    "detail": "singular/plural variant: \"Samsung Swimsuits Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A85",
+    "query": "swimsuit",
+    "detail": "synonym: \"Sony Bathing Suit White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A86",
+    "query": "milk",
+    "detail": "correct: \"Samsung Milk New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A87",
+    "query": "milk",
+    "detail": "wrong-category: \"LED Desk Lamp Adjustable\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A88",
+    "query": "milk",
+    "detail": "partial-word-match: \"Milk Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A89",
+    "query": "milk",
+    "detail": "singular/plural variant: \"Sony Milks New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A90",
+    "query": "milk",
+    "detail": "expanded correct: \"Dove Milk Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A91",
+    "query": "bread",
+    "detail": "correct: \"Kirkland Bread New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A92",
+    "query": "bread",
+    "detail": "wrong-category: \"Bluetooth Speaker Waterproof\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A93",
+    "query": "bread",
+    "detail": "partial-word-match: \"Bread Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A94",
+    "query": "bread",
+    "detail": "singular/plural variant: \"Hanes Breads Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A95",
+    "query": "bread",
+    "detail": "expanded correct: \"Dove Bread Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A96",
+    "query": "eggs",
+    "detail": "correct: \"Amazon Basics Eggs Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A97",
+    "query": "eggs",
+    "detail": "wrong-category: \"AA Batteries Pack of 24\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A98",
+    "query": "eggs",
+    "detail": "partial-word-match: \"Eggs Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A99",
+    "query": "eggs",
+    "detail": "singular/plural variant: \"Samsung Egg for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A100",
+    "query": "eggs",
+    "detail": "expanded correct: \"Kirkland Eggs Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A101",
+    "query": "coffee",
+    "detail": "correct: \"Dove Coffee Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A102",
+    "query": "coffee",
+    "detail": "wrong-category: \"Yoga Mat Non Slip\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A103",
+    "query": "coffee",
+    "detail": "partial-word-match: \"Coffee Flavored Lip Balm\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A104",
+    "query": "coffee",
+    "detail": "singular/plural variant: \"Kirkland Coffees White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A105",
+    "query": "coffee",
+    "detail": "expanded correct: \"Levi Coffee Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A106",
+    "query": "bananas",
+    "detail": "correct: \"Samsung Bananas Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A107",
+    "query": "bananas",
+    "detail": "wrong-category: \"Bluetooth Speaker Waterproof\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A108",
+    "query": "bananas",
+    "detail": "partial-word-match: \"Bananas Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A109",
+    "query": "bananas",
+    "detail": "singular/plural variant: \"Purina Banana Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A110",
+    "query": "bananas",
+    "detail": "expanded correct: \"Nike Bananas Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A111",
+    "query": "chicken breast",
+    "detail": "correct: \"Levi Chicken Breast for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A112",
+    "query": "chicken breast",
+    "detail": "wrong-category: \"Car Tire All Season\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A113",
+    "query": "chicken breast",
+    "detail": "partial-word-match: \"Chicken Case 2 Pack\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A114",
+    "query": "chicken breast",
+    "detail": "singular/plural variant: \"Purina Chicken Breasts White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A115",
+    "query": "chicken breast",
+    "detail": "expanded correct: \"Dove Chicken Breast Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A116",
+    "query": "rice",
+    "detail": "correct: \"Amazon Basics Rice Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A117",
+    "query": "rice",
+    "detail": "wrong-category: \"Pet Cat Litter 20lb\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A118",
+    "query": "rice",
+    "detail": "partial-word-match: \"Rice Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A119",
+    "query": "rice",
+    "detail": "singular/plural variant: \"Nike Rices for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A120",
+    "query": "rice",
+    "detail": "expanded correct: \"Dove Rice Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A121",
+    "query": "cheese",
+    "detail": "correct: \"Sony Cheese Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A122",
+    "query": "cheese",
+    "detail": "wrong-category: \"LED Desk Lamp Adjustable\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A123",
+    "query": "cheese",
+    "detail": "partial-word-match: \"Cheese Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A124",
+    "query": "cheese",
+    "detail": "singular/plural variant: \"Great Value Cheeses 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A125",
+    "query": "cheese",
+    "detail": "expanded correct: \"Purina Cheese Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A126",
+    "query": "butter",
+    "detail": "correct: \"Hanes Butter Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A127",
+    "query": "butter",
+    "detail": "wrong-category: \"Throw Pillow Covers 18x18\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A128",
+    "query": "butter",
+    "detail": "partial-word-match: \"Butter Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A129",
+    "query": "butter",
+    "detail": "singular/plural variant: \"Dove Butters 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A130",
+    "query": "butter",
+    "detail": "expanded correct: \"Kirkland Butter Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A131",
+    "query": "cereal",
+    "detail": "correct: \"Levi Cereal White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A132",
+    "query": "cereal",
+    "detail": "wrong-category: \"Wooden Dining Chair Set of 4\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A133",
+    "query": "cereal",
+    "detail": "partial-word-match: \"Cereal Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A134",
+    "query": "cereal",
+    "detail": "singular/plural variant: \"Amazon Basics Cereals Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A135",
+    "query": "cereal",
+    "detail": "expanded correct: \"Great Value Cereal Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A136",
+    "query": "phone charger",
+    "detail": "correct: \"Amazon Basics Phone Charger Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A137",
+    "query": "phone charger",
+    "detail": "wrong-category: \"AA Batteries Pack of 24\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A138",
+    "query": "phone charger",
+    "detail": "partial-word-match: \"Phone Blanket for Men\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A139",
+    "query": "phone charger",
+    "detail": "singular/plural variant: \"Nike Phone Chargers for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A140",
+    "query": "phone charger",
+    "detail": "synonym: \"Levi Phone Charging Cable New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A141",
+    "query": "laptop",
+    "detail": "correct: \"Dove Laptop Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A142",
+    "query": "laptop",
+    "detail": "wrong-category: \"Garden Hose 50ft\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A143",
+    "query": "laptop",
+    "detail": "partial-word-match: \"Laptop Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A144",
+    "query": "laptop",
+    "detail": "singular/plural variant: \"Samsung Laptops for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A145",
+    "query": "laptop",
+    "detail": "synonym: \"Great Value Notebook Computer Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A146",
+    "query": "headphones",
+    "detail": "correct: \"Great Value Headphones for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A147",
+    "query": "headphones",
+    "detail": "wrong-category: \"Dog Food Grain Free 15lb\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A148",
+    "query": "headphones",
+    "detail": "partial-word-match: \"Headphones Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A149",
+    "query": "headphones",
+    "detail": "singular/plural variant: \"Samsung Headphone 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A150",
+    "query": "headphones",
+    "detail": "synonym: \"Samsung Earphones for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A151",
+    "query": "television",
+    "detail": "correct: \"Hanes Television Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A152",
+    "query": "television",
+    "detail": "wrong-category: \"Dog Food Grain Free 15lb\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A153",
+    "query": "television",
+    "detail": "partial-word-match: \"Television Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A154",
+    "query": "television",
+    "detail": "singular/plural variant: \"Nike Televisions Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A155",
+    "query": "television",
+    "detail": "synonym: \"Levi TV for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A156",
+    "query": "tablet",
+    "detail": "correct: \"Great Value Tablet for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A157",
+    "query": "tablet",
+    "detail": "wrong-category: \"Throw Pillow Covers 18x18\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A158",
+    "query": "tablet",
+    "detail": "partial-word-match: \"Tablet Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A159",
+    "query": "tablet",
+    "detail": "singular/plural variant: \"Sony Tablets White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A160",
+    "query": "tablet",
+    "detail": "expanded correct: \"Kirkland Tablet Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A161",
+    "query": "smart watch",
+    "detail": "correct: \"Kirkland Smart Watch New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A162",
+    "query": "smart watch",
+    "detail": "wrong-category: \"Wall Clock Modern\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A163",
+    "query": "smart watch",
+    "detail": "partial-word-match: \"Smart Shorts for Men\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A164",
+    "query": "smart watch",
+    "detail": "singular/plural variant: \"Hanes Smart Watchs Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A165",
+    "query": "smart watch",
+    "detail": "synonym: \"Levi Smartwatch White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A166",
+    "query": "bluetooth speaker",
+    "detail": "correct: \"Hanes Bluetooth Speaker for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A167",
+    "query": "bluetooth speaker",
+    "detail": "wrong-category: \"Yoga Mat Non Slip\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A168",
+    "query": "bluetooth speaker",
+    "detail": "partial-word-match: \"Bluetooth Blanket for Kids\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A169",
+    "query": "bluetooth speaker",
+    "detail": "singular/plural variant: \"Samsung Bluetooth Speakers New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A170",
+    "query": "bluetooth speaker",
+    "detail": "expanded correct: \"Amazon Basics Bluetooth Speaker Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A171",
+    "query": "camera",
+    "detail": "correct: \"Kirkland Camera Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A172",
+    "query": "camera",
+    "detail": "wrong-category: \"AA Batteries Pack of 24\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A173",
+    "query": "camera",
+    "detail": "partial-word-match: \"Camera Flavored Lip Balm\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A174",
+    "query": "camera",
+    "detail": "singular/plural variant: \"Great Value Cameras New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A175",
+    "query": "camera",
+    "detail": "synonym: \"Amazon Basics Digital Camera Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A176",
+    "query": "couch",
+    "detail": "correct: \"Purina Couch Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A177",
+    "query": "couch",
+    "detail": "wrong-category: \"Stainless Steel Water Bottle 32oz\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A178",
+    "query": "couch",
+    "detail": "partial-word-match: \"Couch Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A179",
+    "query": "couch",
+    "detail": "singular/plural variant: \"Sony Couchs Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A180",
+    "query": "couch",
+    "detail": "synonym: \"Levi Sofa Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A181",
+    "query": "sofa",
+    "detail": "correct: \"Amazon Basics Sofa White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A182",
+    "query": "sofa",
+    "detail": "wrong-category: \"LED Desk Lamp Adjustable\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A183",
+    "query": "sofa",
+    "detail": "partial-word-match: \"Sofa Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A184",
+    "query": "sofa",
+    "detail": "singular/plural variant: \"Amazon Basics Sofas Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A185",
+    "query": "sofa",
+    "detail": "synonym: \"Sony Couch Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A186",
+    "query": "lamp",
+    "detail": "correct: \"Kirkland Lamp White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A187",
+    "query": "lamp",
+    "detail": "wrong-category: \"Throw Pillow Covers 18x18\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A188",
+    "query": "lamp",
+    "detail": "partial-word-match: \"Lamp Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A189",
+    "query": "lamp",
+    "detail": "singular/plural variant: \"Amazon Basics Lamps Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A190",
+    "query": "lamp",
+    "detail": "expanded correct: \"Nike Lamp Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A191",
+    "query": "pillow",
+    "detail": "correct: \"Dove Pillow for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A192",
+    "query": "pillow",
+    "detail": "wrong-category: \"Car Tire All Season\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A193",
+    "query": "pillow",
+    "detail": "partial-word-match: \"Pillow Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A194",
+    "query": "pillow",
+    "detail": "singular/plural variant: \"Great Value Pillows Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A195",
+    "query": "pillow",
+    "detail": "expanded correct: \"Dove Pillow Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A196",
+    "query": "blanket",
+    "detail": "correct: \"Amazon Basics Blanket White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A197",
+    "query": "blanket",
+    "detail": "wrong-category: \"Baby Stroller Lightweight\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A198",
+    "query": "blanket",
+    "detail": "partial-word-match: \"Blanket Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A199",
+    "query": "blanket",
+    "detail": "singular/plural variant: \"Levi Blankets Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A200",
+    "query": "blanket",
+    "detail": "synonym: \"Sony Throw Blanket for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A201",
+    "query": "vacuum cleaner",
+    "detail": "correct: \"Sony Vacuum Cleaner Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A202",
+    "query": "vacuum cleaner",
+    "detail": "wrong-category: \"Laptop Stand Aluminum\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A203",
+    "query": "vacuum cleaner",
+    "detail": "partial-word-match: \"Vacuum Hat Black\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A204",
+    "query": "vacuum cleaner",
+    "detail": "singular/plural variant: \"Levi Vacuum Cleaners Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A205",
+    "query": "vacuum cleaner",
+    "detail": "synonym: \"Hanes Vacuum for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A206",
+    "query": "desk",
+    "detail": "correct: \"Sony Desk Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A207",
+    "query": "desk",
+    "detail": "wrong-category: \"Women One Piece Bathing Suit\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A208",
+    "query": "desk",
+    "detail": "partial-word-match: \"Desk Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A209",
+    "query": "desk",
+    "detail": "singular/plural variant: \"Samsung Desks for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A210",
+    "query": "desk",
+    "detail": "expanded correct: \"Levi Desk Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A211",
+    "query": "chair",
+    "detail": "correct: \"Sony Chair New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A212",
+    "query": "chair",
+    "detail": "wrong-category: \"AA Batteries Pack of 24\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A213",
+    "query": "chair",
+    "detail": "partial-word-match: \"Chair Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A214",
+    "query": "chair",
+    "detail": "singular/plural variant: \"Levi Chairs for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A215",
+    "query": "chair",
+    "detail": "expanded correct: \"Hanes Chair Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A216",
+    "query": "bed sheets",
+    "detail": "correct: \"Great Value Bed Sheets for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A217",
+    "query": "bed sheets",
+    "detail": "wrong-category: \"Wall Clock Modern\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A218",
+    "query": "bed sheets",
+    "detail": "partial-word-match: \"Bed Case for Men\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A219",
+    "query": "bed sheets",
+    "detail": "singular/plural variant: \"Dove Bed Sheet 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A220",
+    "query": "bed sheets",
+    "detail": "expanded correct: \"Hanes Bed Sheets Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A221",
+    "query": "toothpaste",
+    "detail": "correct: \"Amazon Basics Toothpaste White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A222",
+    "query": "toothpaste",
+    "detail": "wrong-category: \"Yoga Mat Non Slip\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A223",
+    "query": "toothpaste",
+    "detail": "partial-word-match: \"Toothpaste Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A224",
+    "query": "toothpaste",
+    "detail": "singular/plural variant: \"Samsung Toothpastes for Kids\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A225",
+    "query": "toothpaste",
+    "detail": "expanded correct: \"Levi Toothpaste Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A226",
+    "query": "shampoo",
+    "detail": "correct: \"Great Value Shampoo White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A227",
+    "query": "shampoo",
+    "detail": "wrong-category: \"Throw Pillow Covers 18x18\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A228",
+    "query": "shampoo",
+    "detail": "partial-word-match: \"Shampoo Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A229",
+    "query": "shampoo",
+    "detail": "singular/plural variant: \"Nike Shampoos New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A230",
+    "query": "shampoo",
+    "detail": "expanded correct: \"Sony Shampoo Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A231",
+    "query": "vitamins",
+    "detail": "correct: \"Amazon Basics Vitamins Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A232",
+    "query": "vitamins",
+    "detail": "wrong-category: \"Stainless Steel Water Bottle 32oz\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A233",
+    "query": "vitamins",
+    "detail": "partial-word-match: \"Vitamins Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A234",
+    "query": "vitamins",
+    "detail": "singular/plural variant: \"Nike Vitamin for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A235",
+    "query": "vitamins",
+    "detail": "expanded correct: \"Amazon Basics Vitamins Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A236",
+    "query": "sunscreen",
+    "detail": "correct: \"Kirkland Sunscreen for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A237",
+    "query": "sunscreen",
+    "detail": "wrong-category: \"Ceramic Coffee Mug Set\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A238",
+    "query": "sunscreen",
+    "detail": "partial-word-match: \"Sunscreen Bath Soak\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A239",
+    "query": "sunscreen",
+    "detail": "singular/plural variant: \"Sony Sunscreens 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A240",
+    "query": "sunscreen",
+    "detail": "expanded correct: \"Sony Sunscreen Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A241",
+    "query": "lipstick",
+    "detail": "correct: \"Dove Lipstick 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A242",
+    "query": "lipstick",
+    "detail": "wrong-category: \"Umbrella Windproof Travel\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A243",
+    "query": "lipstick",
+    "detail": "partial-word-match: \"Lipstick Scented Candle\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A244",
+    "query": "lipstick",
+    "detail": "singular/plural variant: \"Kirkland Lipsticks for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A245",
+    "query": "lipstick",
+    "detail": "expanded correct: \"Hanes Lipstick Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A246",
+    "query": "baby diapers",
+    "detail": "correct: \"Sony Baby Diapers Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A247",
+    "query": "baby diapers",
+    "detail": "wrong-category: \"Throw Pillow Covers 18x18\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A248",
+    "query": "baby diapers",
+    "detail": "partial-word-match: \"Baby Jacket Size Large\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A249",
+    "query": "baby diapers",
+    "detail": "singular/plural variant: \"Nike Baby Diaper New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A250",
+    "query": "baby diapers",
+    "detail": "synonym: \"Amazon Basics Disposable Nappies Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A251",
+    "query": "baby stroller",
+    "detail": "correct: \"Nike Baby Stroller for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A252",
+    "query": "baby stroller",
+    "detail": "wrong-category: \"Stainless Steel Water Bottle 32oz\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A253",
+    "query": "baby stroller",
+    "detail": "partial-word-match: \"Baby Shorts for Women\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A254",
+    "query": "baby stroller",
+    "detail": "singular/plural variant: \"Purina Baby Strollers Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A255",
+    "query": "baby stroller",
+    "detail": "expanded correct: \"Dove Baby Stroller Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A256",
+    "query": "baby bottle",
+    "detail": "correct: \"Nike Baby Bottle Size Large\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A257",
+    "query": "baby bottle",
+    "detail": "wrong-category: \"Vitamin C Tablets 500mg\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A258",
+    "query": "baby bottle",
+    "detail": "partial-word-match: \"Baby Table White\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A259",
+    "query": "baby bottle",
+    "detail": "singular/plural variant: \"Purina Baby Bottles for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A260",
+    "query": "baby bottle",
+    "detail": "expanded correct: \"Nike Baby Bottle Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A261",
+    "query": "tennis racket",
+    "detail": "correct: \"Great Value Tennis Racket Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A262",
+    "query": "tennis racket",
+    "detail": "wrong-category: \"Umbrella Windproof Travel\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A263",
+    "query": "tennis racket",
+    "detail": "partial-word-match: \"Tennis Blanket Size Large\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A264",
+    "query": "tennis racket",
+    "detail": "singular/plural variant: \"Hanes Tennis Rackets Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A265",
+    "query": "tennis racket",
+    "detail": "expanded correct: \"Sony Tennis Racket Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A266",
+    "query": "yoga mat",
+    "detail": "correct: \"Sony Yoga Mat for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A267",
+    "query": "yoga mat",
+    "detail": "wrong-category: \"Stainless Steel Water Bottle 32oz\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A268",
+    "query": "yoga mat",
+    "detail": "partial-word-match: \"Yoga Shorts for Women\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A269",
+    "query": "yoga mat",
+    "detail": "singular/plural variant: \"Nike Yoga Mats Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A270",
+    "query": "yoga mat",
+    "detail": "expanded correct: \"Kirkland Yoga Mat Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A271",
+    "query": "bicycle",
+    "detail": "correct: \"Nike Bicycle for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A272",
+    "query": "bicycle",
+    "detail": "wrong-category: \"AA Batteries Pack of 24\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A273",
+    "query": "bicycle",
+    "detail": "partial-word-match: \"Bicycle Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A274",
+    "query": "bicycle",
+    "detail": "singular/plural variant: \"Nike Bicycles for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A275",
+    "query": "bicycle",
+    "detail": "synonym: \"Amazon Basics Bike 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A276",
+    "query": "dumbbells",
+    "detail": "correct: \"Amazon Basics Dumbbells for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A277",
+    "query": "dumbbells",
+    "detail": "wrong-category: \"Toothpaste Whitening Mint\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A278",
+    "query": "dumbbells",
+    "detail": "partial-word-match: \"Dumbbells Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A279",
+    "query": "dumbbells",
+    "detail": "singular/plural variant: \"Samsung Dumbbell 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A280",
+    "query": "dumbbells",
+    "detail": "expanded correct: \"Great Value Dumbbells Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A281",
+    "query": "dog food",
+    "detail": "correct: \"Dove Dog Food New\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A282",
+    "query": "dog food",
+    "detail": "wrong-category: \"Garden Hose 50ft\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A283",
+    "query": "dog food",
+    "detail": "partial-word-match: \"Dog Case 2 Pack\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A284",
+    "query": "dog food",
+    "detail": "singular/plural variant: \"Dove Dog Foods Lightweight\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A285",
+    "query": "dog food",
+    "detail": "expanded correct: \"Amazon Basics Dog Food Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A286",
+    "query": "batteries",
+    "detail": "correct: \"Great Value Batteries Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A287",
+    "query": "batteries",
+    "detail": "wrong-category: \"Stainless Steel Water Bottle 32oz\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A288",
+    "query": "batteries",
+    "detail": "partial-word-match: \"Batteries Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A289",
+    "query": "batteries",
+    "detail": "singular/plural variant: \"Dove Battery for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A290",
+    "query": "batteries",
+    "detail": "expanded correct: \"Dove Batteries Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A291",
+    "query": "backpack",
+    "detail": "correct: \"Levi Backpack Black\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A292",
+    "query": "backpack",
+    "detail": "wrong-category: \"Throw Pillow Covers 18x18\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A293",
+    "query": "backpack",
+    "detail": "partial-word-match: \"Backpack Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A294",
+    "query": "backpack",
+    "detail": "singular/plural variant: \"Samsung Backpacks Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A295",
+    "query": "backpack",
+    "detail": "expanded correct: \"Dove Backpack Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A296",
+    "query": "water bottle",
+    "detail": "correct: \"Dove Water Bottle for Men\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A297",
+    "query": "water bottle",
+    "detail": "wrong-category: \"Toothpaste Whitening Mint\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A298",
+    "query": "water bottle",
+    "detail": "partial-word-match: \"Water Case Black\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A299",
+    "query": "water bottle",
+    "detail": "singular/plural variant: \"Great Value Water Bottles for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A300",
+    "query": "water bottle",
+    "detail": "expanded correct: \"Nike Water Bottle Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A301",
+    "query": "umbrella",
+    "detail": "correct: \"Samsung Umbrella Premium\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A302",
+    "query": "umbrella",
+    "detail": "wrong-category: \"Laptop Stand Aluminum\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A303",
+    "query": "umbrella",
+    "detail": "partial-word-match: \"Umbrella Shaped Cookie Cutter\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A304",
+    "query": "umbrella",
+    "detail": "singular/plural variant: \"Amazon Basics Umbrellas White\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A305",
+    "query": "umbrella",
+    "detail": "expanded correct: \"Great Value Umbrella Deluxe Edition\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A306",
+    "query": "sunglasses",
+    "detail": "correct: \"Hanes Sunglasses for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A307",
+    "query": "sunglasses",
+    "detail": "wrong-category: \"Wall Clock Modern\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A308",
+    "query": "sunglasses",
+    "detail": "partial-word-match: \"Sunglasses Print Tote Bag\"",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A309",
+    "query": "sunglasses",
+    "detail": "singular/plural variant: \"Samsung Sunglasse 2 Pack\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "A-relevant",
+    "id": "A310",
+    "query": "sunglasses",
+    "detail": "synonym: \"Kirkland Shades for Women\"",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B1",
+    "query": "black shoes",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Black Shoes 2 Pack | Amazon Basics Black Shoes 2 ]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B2",
+    "query": "sandals",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Great Value Sandals Black | Samsung Sandals 2 Pack]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B3",
+    "query": "bluetooth speaker",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Hanes Bluetooth Speaker Whit | Great Value Bluetooth Speake | Amazon Basics Bluetooth Spea]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B4",
+    "query": "black shoes",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Sony Black Shoes 2 Pack | Sony Black Shoes for Women | Dove Black Shoes Lightweight]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B5",
+    "query": "smart watch",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Nike Smart Watch Size Large | Levi Smart Watch for Kids | Purina Smart Watch for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B6",
+    "query": "winter coat",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Great Value Winter Coat for  | Hanes Winter Coat Size Large]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B7",
+    "query": "headphones",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Hanes Headphones for Men | Kirkland Headphones Premium | Nike Headphones Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B8",
+    "query": "pumps",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Nike Pumps White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B9",
+    "query": "baby stroller",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Baby Stroller New]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B10",
+    "query": "sneakers",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Nike Sneakers 2 Pack]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B11",
+    "query": "baby bottle",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Great Value Baby Bottle for  | Amazon Basics Baby Bottle fo | Sony Baby Bottle New]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B12",
+    "query": "running shoes",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Amazon Basics Running Shoes  | Sony Running Shoes New | Great Value Running Shoes fo]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B13",
+    "query": "batteries",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Hanes Batteries Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B14",
+    "query": "jeans",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Nike Jeans for Kids | Amazon Basics Jeans White | Samsung Jeans for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B15",
+    "query": "laptop",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Sony Laptop for Women | Hanes Laptop for Men | Great Value Laptop for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B16",
+    "query": "smart watch",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Hanes Smart Watch Lightweigh | Hanes Smart Watch 2 Pack | Nike Smart Watch for Men]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B17",
+    "query": "television",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Nike Television for Kids | Samsung Television Lightweig | Nike Television for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B18",
+    "query": "chicken breast",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Chicken Breast White | Great Value Chicken Breast 2 | Hanes Chicken Breast Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B19",
+    "query": "bread",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Nike Bread 2 Pack | Great Value Bread Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B20",
+    "query": "running shoes",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Running Shoes 2 Pack]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B21",
+    "query": "slippers",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Great Value Slippers for Kid]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B22",
+    "query": "t-shirt",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Samsung T-Shirt Size Large | Purina T-Shirt Size Large | Dove T-Shirt Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B23",
+    "query": "winter coat",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Winter Coat fo | Purina Winter Coat for Women | Great Value Winter Coat 2 Pa]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B24",
+    "query": "tablet",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Tablet for Wom]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B25",
+    "query": "vitamins",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Vitamins Size  | Great Value Vitamins Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B26",
+    "query": "milk",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Milk Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B27",
+    "query": "yoga mat",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Hanes Yoga Mat for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B28",
+    "query": "water bottle",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Kirkland Water Bottle Premiu | Samsung Water Bottle Lightwe]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B29",
+    "query": "boots",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Hanes Boots Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B30",
+    "query": "cereal",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Nike Cereal Size Large | Hanes Cereal Lightweight]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B31",
+    "query": "cheese",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Kirkland Cheese New | Kirkland Cheese for Kids | Dove Cheese for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B32",
+    "query": "dress",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Levi Dress for Kids | Great Value Dress for Kids | Dove Dress for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B33",
+    "query": "coffee",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Kirkland Coffee Lightweight | Amazon Basics Coffee Size La | Levi Coffee Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B34",
+    "query": "sofa",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Sofa New | Great Value Sofa for Men]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B35",
+    "query": "backpack",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove Backpack for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B36",
+    "query": "bananas",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Great Value Bananas White | Nike Bananas White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B37",
+    "query": "cheese",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Cheese White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B38",
+    "query": "cheese",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Levi Cheese White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B39",
+    "query": "blanket",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Blanket Black | Kirkland Blanket Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B40",
+    "query": "sneakers",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Sneakers 2 Pac | Purina Sneakers for Women | Amazon Basics Sneakers for W]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B41",
+    "query": "tablet",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove Tablet Premium | Great Value Tablet Lightweig]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B42",
+    "query": "winter coat",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Samsung Winter Coat Lightwei | Sony Winter Coat 2 Pack | Amazon Basics Winter Coat Pr]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B43",
+    "query": "bed sheets",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Levi Bed Sheets for Women | Nike Bed Sheets Premium | Nike Bed Sheets 2 Pack]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B44",
+    "query": "vitamins",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Great Value Vitamins for Wom | Purina Vitamins Size Large | Samsung Vitamins Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B45",
+    "query": "sweater",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Sweater for Wo | Nike Sweater Size Large]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B46",
+    "query": "socks",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Nike Socks Premium | Great Value Socks Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B47",
+    "query": "sofa",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Sofa 2 Pack]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B48",
+    "query": "shoes",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Hanes Shoes Black | Samsung Shoes for Men | Great Value Shoes Lightweigh]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B49",
+    "query": "boots",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Boots Lightweight | Amazon Basics Boots for Wome | Levi Boots for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B50",
+    "query": "cheese",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Hanes Cheese for Women | Nike Cheese for Men]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B51",
+    "query": "television",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Sony Television Lightweight | Samsung Television White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B52",
+    "query": "water bottle",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove Water Bottle Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B53",
+    "query": "baby stroller",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Kirkland Baby Stroller Premi]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B54",
+    "query": "toothpaste",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Dove Toothpaste Lightweight | Dove Toothpaste for Kids | Great Value Toothpaste 2 Pac]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B55",
+    "query": "chair",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Nike Chair Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B56",
+    "query": "hoodie",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Kirkland Hoodie Lightweight | Nike Hoodie for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B57",
+    "query": "sunglasses",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Kirkland Sunglasses Black | Samsung Sunglasses White | Sony Sunglasses for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B58",
+    "query": "baby diapers",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Nike Baby Diapers Black | Sony Baby Diapers White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B59",
+    "query": "laptop",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Laptop Premium | Levi Laptop 2 Pack | Hanes Laptop Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B60",
+    "query": "sunglasses",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Kirkland Sunglasses Lightwei | Levi Sunglasses 2 Pack | Samsung Sunglasses 2 Pack]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B61",
+    "query": "eggs",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Nike Eggs Size Large | Great Value Eggs 2 Pack | Levi Eggs Size Large]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B62",
+    "query": "cheese",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Cheese Premium | Levi Cheese Size Large | Sony Cheese Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B63",
+    "query": "baby stroller",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Kirkland Baby Stroller Size  | Great Value Baby Stroller fo | Nike Baby Stroller Lightweig]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B64",
+    "query": "pillow",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove Pillow New | Great Value Pillow Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B65",
+    "query": "eggs",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Levi Eggs Black | Kirkland Eggs Lightweight | Purina Eggs White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B66",
+    "query": "black shoes",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Nike Black Shoes for Kids | Levi Black Shoes 2 Pack | Samsung Black Shoes Lightwei]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B67",
+    "query": "headphones",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Hanes Headphones for Women | Purina Headphones for Men | Samsung Headphones Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B68",
+    "query": "cheese",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove Cheese Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B69",
+    "query": "dumbbells",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Levi Dumbbells White | Amazon Basics Dumbbells Whit | Dove Dumbbells 2 Pack]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B70",
+    "query": "eggs",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Eggs White | Sony Eggs Premium | Samsung Eggs for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B71",
+    "query": "tablet",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Samsung Tablet Premium | Hanes Tablet New | Samsung Tablet for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B72",
+    "query": "sunglasses",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Sunglasses Siz | Samsung Sunglasses Size Larg | Sony Sunglasses for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B73",
+    "query": "toothpaste",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Hanes Toothpaste Lightweight | Purina Toothpaste for Men | Kirkland Toothpaste Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B74",
+    "query": "baby diapers",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Baby Diapers f | Samsung Baby Diapers for Men | Purina Baby Diapers for Kids]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B75",
+    "query": "headphones",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove Headphones New | Hanes Headphones Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B76",
+    "query": "winter coat",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Hanes Winter Coat Lightweigh]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B77",
+    "query": "toothpaste",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Great Value Toothpaste White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B78",
+    "query": "chair",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Kirkland Chair for Men | Samsung Chair Size Large | Samsung Chair New]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B79",
+    "query": "chair",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Samsung Chair 2 Pack | Kirkland Chair New | Great Value Chair Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B80",
+    "query": "blanket",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Samsung Blanket Black | Dove Blanket 2 Pack | Hanes Blanket White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B81",
+    "query": "t-shirt",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove T-Shirt Premium | Nike T-Shirt 2 Pack | Dove T-Shirt Black]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B82",
+    "query": "pumps",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Pumps for Women | Kirkland Pumps for Kids | Kirkland Pumps Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B83",
+    "query": "baby diapers",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Baby Diapers B | Great Value Baby Diapers Lig]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B84",
+    "query": "umbrella",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Umbrella 2 Pac]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B85",
+    "query": "sandals",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove Sandals White | Kirkland Sandals for Men | Nike Sandals Size Large]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B86",
+    "query": "running shoes",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Sony Running Shoes Lightweig | Hanes Running Shoes 2 Pack]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B87",
+    "query": "baby diapers",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Great Value Baby Diapers Whi | Great Value Baby Diapers Siz | Dove Baby Diapers for Men]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B88",
+    "query": "eggs",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Eggs Size Large | Nike Eggs for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B89",
+    "query": "jeans",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Amazon Basics Jeans Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B90",
+    "query": "tablet",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Kirkland Tablet for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B91",
+    "query": "boots",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Boots for Women | Kirkland Boots Lightweight | Hanes Boots New]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B92",
+    "query": "boots",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Boots for Men | Dove Boots Premium | Great Value Boots for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B93",
+    "query": "chicken breast",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Samsung Chicken Breast 2 Pac]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B94",
+    "query": "camera",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Dove Camera Premium | Levi Camera for Women]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B95",
+    "query": "rice",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Purina Rice for Men | Great Value Rice Lightweight | Amazon Basics Rice Size Larg]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B96",
+    "query": "pumps",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Purina Pumps Lightweight | Dove Pumps Premium | Kirkland Pumps for Men]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B97",
+    "query": "camera",
+    "detail": "8 items, 4 relevant, kept after filter=4; top3 irrelevant=0, relevant below top3=1, #1 irrelevant=false; top3=[Dove Camera Lightweight | Samsung Camera Size Large | Amazon Basics Camera Size La]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=1",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B98",
+    "query": "sandals",
+    "detail": "8 items, 1 relevant, kept after filter=1; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Levi Sandals White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B99",
+    "query": "lamp",
+    "detail": "8 items, 2 relevant, kept after filter=2; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Purina Lamp for Men | Levi Lamp Premium]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "B-sort",
+    "id": "B100",
+    "query": "sneakers",
+    "detail": "8 items, 3 relevant, kept after filter=3; top3 irrelevant=0, relevant below top3=0, #1 irrelevant=false; top3=[Levi Sneakers for Women | Dove Sneakers for Women | Levi Sneakers White]",
+    "expected": "no irrelevant in top3 while relevant exists below",
+    "actual": "top3Irrel=0 relBelow=0",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C1",
+    "query": "shoes",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C2",
+    "query": "black shoes",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C3",
+    "query": "stopwatch",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C4",
+    "query": "backpack",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C5",
+    "query": "back pain cream",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C6",
+    "query": "next generation phone",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C7",
+    "query": "pumps",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C8",
+    "query": "gift cards",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C9",
+    "query": "my cards",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C10",
+    "query": "wall mart",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C11",
+    "query": "target store",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C12",
+    "query": "best buy tv",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C13",
+    "query": "add to cart milk",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C14",
+    "query": "checkout",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C15",
+    "query": "fast shipping",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C16",
+    "query": "slow cooker",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C17",
+    "query": "normal milk",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C18",
+    "query": "speed",
+    "detail": "quick=null speed=ask noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=ask noise=false",
+    "pass": false
+  },
+  {
+    "section": "C-intent",
+    "id": "C19",
+    "query": "stop",
+    "detail": "quick=stop speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=stop speed=null noise=false",
+    "pass": false
+  },
+  {
+    "section": "C-intent",
+    "id": "C20",
+    "query": "next",
+    "detail": "quick=next speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=next speed=null noise=false",
+    "pass": false
+  },
+  {
+    "section": "C-intent",
+    "id": "C21",
+    "query": "back",
+    "detail": "quick=back speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=back speed=null noise=false",
+    "pass": false
+  },
+  {
+    "section": "C-intent",
+    "id": "C22",
+    "query": "camera",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C23",
+    "query": "barcode",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C24",
+    "query": "open box tv",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C25",
+    "query": "close up cream",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C26",
+    "query": "faster delivery",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C27",
+    "query": "wait longer",
+    "detail": "quick=null speed=slow noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=slow noise=false",
+    "pass": false
+  },
+  {
+    "section": "C-intent",
+    "id": "C28",
+    "query": "what is my speed",
+    "detail": "quick=null speed=ask noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=ask noise=false",
+    "pass": false
+  },
+  {
+    "section": "C-intent",
+    "id": "C29",
+    "query": "my cart",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C30",
+    "query": "my carts",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C31",
+    "query": "check out",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C32",
+    "query": "walmart",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C33",
+    "query": "costco",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C34",
+    "query": "home depot",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C35",
+    "query": "kroger",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C36",
+    "query": "walgreens",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C37",
+    "query": "meijer",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C38",
+    "query": "switch to target",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent",
+    "id": "C39",
+    "query": "go to walmart",
+    "detail": "quick=null speed=null noise=false",
+    "expected": "quick=null speed=null noise=false",
+    "actual": "quick=null speed=null noise=false",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C40",
+    "query": "gift cards",
+    "detail": "fix(\"gift cards\")",
+    "expected": "gift cards",
+    "actual": "gift cards",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C41",
+    "query": "black shoes",
+    "detail": "fix(\"black shoes\")",
+    "expected": "black shoes",
+    "actual": "black shoes",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C42",
+    "query": "my cards",
+    "detail": "fix(\"my cards\")",
+    "expected": "my carts",
+    "actual": "my carts",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C43",
+    "query": "add to card",
+    "detail": "fix(\"add to card\")",
+    "expected": "add to cart",
+    "actual": "add to cart",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C44",
+    "query": "wall mart",
+    "detail": "fix(\"wall mart\")",
+    "expected": "walmart",
+    "actual": "walmart",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C45",
+    "query": "best buy tv",
+    "detail": "fix(\"best buy tv\")",
+    "expected": "best buy tv",
+    "actual": "best buy tv",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C46",
+    "query": "check out",
+    "detail": "fix(\"check out\")",
+    "expected": "checkout",
+    "actual": "checkout",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C47",
+    "query": "my cart",
+    "detail": "fix(\"my cart\")",
+    "expected": "my cart",
+    "actual": "my cart",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C48",
+    "query": "shoes for my kids",
+    "detail": "fix(\"shoes for my kids\")",
+    "expected": "shoes for my kids",
+    "actual": "shoes for my kids",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C49",
+    "query": "card holder",
+    "detail": "fix(\"card holder\")",
+    "expected": "card holder",
+    "actual": "card holder",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C50",
+    "query": "gift card",
+    "detail": "fix(\"gift card\")",
+    "expected": "gift card",
+    "actual": "gift card",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C51",
+    "query": "tar get store",
+    "detail": "fix(\"tar get store\")",
+    "expected": "target store",
+    "actual": "target store",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C52",
+    "query": "home depo",
+    "detail": "fix(\"home depo\")",
+    "expected": "home depot",
+    "actual": "home depot",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C53",
+    "query": "cost co",
+    "detail": "fix(\"cost co\")",
+    "expected": "costco",
+    "actual": "costco",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C54",
+    "query": "kro ger",
+    "detail": "fix(\"kro ger\")",
+    "expected": "kroger",
+    "actual": "kroger",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C55",
+    "query": "wal greens",
+    "detail": "fix(\"wal greens\")",
+    "expected": "walgreens",
+    "actual": "walgreens",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C56",
+    "query": "my er",
+    "detail": "fix(\"my er\")",
+    "expected": "meijer",
+    "actual": "meijer",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C57",
+    "query": "go too walmart",
+    "detail": "fix(\"go too walmart\")",
+    "expected": "go to walmart",
+    "actual": "go to walmart",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C58",
+    "query": "switch two target",
+    "detail": "fix(\"switch two target\")",
+    "expected": "switch to target",
+    "actual": "switch to target",
+    "pass": true
+  },
+  {
+    "section": "C-intent-fix",
+    "id": "C59",
+    "query": "add it to my card",
+    "detail": "fix(\"add it to my card\")",
+    "expected": "add it to my cart",
+    "actual": "add it to my cart",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C60",
+    "query": "black shoes",
+    "detail": "hit(\"black shoes\", [back])",
+    "expected": null,
+    "actual": null,
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C61",
+    "query": "stopwatch",
+    "detail": "hit(\"stopwatch\", [stop])",
+    "expected": null,
+    "actual": "stop",
+    "pass": false
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C62",
+    "query": "backpack",
+    "detail": "hit(\"backpack\", [back])",
+    "expected": null,
+    "actual": "back",
+    "pass": false
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C63",
+    "query": "next generation phone",
+    "detail": "hit(\"next generation phone\", [next])",
+    "expected": null,
+    "actual": "next",
+    "pass": false
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C64",
+    "query": "pumps for a wedding",
+    "detail": "hit(\"pumps for a wedding\", [pumps])",
+    "expected": null,
+    "actual": "pumps",
+    "pass": false
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C65",
+    "query": "stop talking",
+    "detail": "hit(\"stop talking\", [stop])",
+    "expected": "stop",
+    "actual": "stop",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C66",
+    "query": "go back",
+    "detail": "hit(\"go back\", [back, go back])",
+    "expected": "go back",
+    "actual": "go back",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C67",
+    "query": "next one",
+    "detail": "hit(\"next one\", [next, next one])",
+    "expected": "next one",
+    "actual": "next one",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C68",
+    "query": "check out",
+    "detail": "hit(\"check out\", [checkout, check out])",
+    "expected": "check out",
+    "actual": "check out",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C69",
+    "query": "my carts",
+    "detail": "hit(\"my carts\", [my carts])",
+    "expected": "my carts",
+    "actual": "my carts",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C70",
+    "query": "open settings",
+    "detail": "hit(\"open settings\", [open settings])",
+    "expected": "open settings",
+    "actual": "open settings",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C71",
+    "query": "fast shipping",
+    "detail": "hit(\"fast shipping\", [fast])",
+    "expected": null,
+    "actual": "fast",
+    "pass": false
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C72",
+    "query": "slow cooker",
+    "detail": "hit(\"slow cooker\", [slow])",
+    "expected": null,
+    "actual": "slow",
+    "pass": false
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C73",
+    "query": "camera",
+    "detail": "hit(\"camera\", [camera])",
+    "expected": "camera",
+    "actual": "camera",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C74",
+    "query": "shoes",
+    "detail": "hit(\"shoes\", [shoes])",
+    "expected": "shoes",
+    "actual": "shoes",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C75",
+    "query": "milk",
+    "detail": "hit(\"milk\", [milk])",
+    "expected": "milk",
+    "actual": "milk",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C76",
+    "query": "what can you do",
+    "detail": "hit(\"what can you do\", [what can you do])",
+    "expected": "what can you do",
+    "actual": "what can you do",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C77",
+    "query": "buy milk",
+    "detail": "hit(\"buy milk\", [buy milk])",
+    "expected": "buy milk",
+    "actual": "buy milk",
+    "pass": true
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C78",
+    "query": "add milk to cart",
+    "detail": "hit(\"add milk to cart\", [add to cart])",
+    "expected": null,
+    "actual": "add to cart",
+    "pass": false
+  },
+  {
+    "section": "C-intent-hit",
+    "id": "C79",
+    "query": "number two",
+    "detail": "hit(\"number two\", [number two])",
+    "expected": "number two",
+    "actual": "number two",
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C80",
+    "query": "",
+    "detail": "noise(\"\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C81",
+    "query": "thank you",
+    "detail": "noise(\"thank you\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C82",
+    "query": "music",
+    "detail": "noise(\"music\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C83",
+    "query": "shoes",
+    "detail": "noise(\"shoes\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C84",
+    "query": "milk",
+    "detail": "noise(\"milk\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C85",
+    "query": "buy running shoes size 10",
+    "detail": "noise(\"buy running shoes size 10\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C86",
+    "query": "umm",
+    "detail": "noise(\"umm\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C87",
+    "query": "beep",
+    "detail": "noise(\"beep\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C88",
+    "query": "hello",
+    "detail": "noise(\"hello\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C89",
+    "query": "ok",
+    "detail": "noise(\"ok\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C90",
+    "query": "black shoes for men",
+    "detail": "noise(\"black shoes for men\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C91",
+    "query": "pumps",
+    "detail": "noise(\"pumps\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C92",
+    "query": "thanks for watching",
+    "detail": "noise(\"thanks for watching\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C93",
+    "query": "silence",
+    "detail": "noise(\"silence\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C94",
+    "query": "bathing suit",
+    "detail": "noise(\"bathing suit\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C95",
+    "query": "what is this",
+    "detail": "noise(\"what is this\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C96",
+    "query": "yeah",
+    "detail": "noise(\"yeah\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C97",
+    "query": "cough",
+    "detail": "noise(\"cough\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C98",
+    "query": "phone charger",
+    "detail": "noise(\"phone charger\")",
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "section": "C-intent-noise",
+    "id": "C99",
+    "query": "hmm",
+    "detail": "noise(\"hmm\")",
+    "expected": true,
+    "actual": true,
+    "pass": true
+  }
+]

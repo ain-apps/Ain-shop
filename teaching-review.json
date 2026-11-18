@@ -1,0 +1,173 @@
+[
+  {
+    "id": "t-shoes-women-one-piece-bathing-suit",
+    "date": "2026-11-16",
+    "query": "shoes",
+    "wrong_title": "Women One Piece Bathing Suit",
+    "bring_to_user": {
+      "said": "shoes",
+      "wrong": "\"Women One Piece Bathing Suit\" was shown for \"shoes\"",
+      "rule": "filterSearchResults() must remove \"Women One Piece Bathing Suit\" for query \"shoes\": title category is \"swimwear\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "category-exclusion",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "filterSearchResults() must remove \"Women One Piece Bathing Suit\" for query \"shoes\": title category is \"swimwear\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+    },
+    "status": "pending-review"
+  },
+  {
+    "id": "t-sneakers-dog-food-grain-free-15lb",
+    "date": "2026-11-16",
+    "query": "sneakers",
+    "wrong_title": "Dog Food Grain Free 15lb",
+    "bring_to_user": {
+      "said": "sneakers",
+      "wrong": "\"Dog Food Grain Free 15lb\" was shown for \"sneakers\"",
+      "rule": "filterSearchResults() must remove \"Dog Food Grain Free 15lb\" for query \"sneakers\": title category is \"pets\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "category-exclusion",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "filterSearchResults() must remove \"Dog Food Grain Free 15lb\" for query \"sneakers\": title category is \"pets\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+    },
+    "status": "pending-review"
+  },
+  {
+    "id": "t-pumps-water-pump",
+    "date": "2026-11-16",
+    "query": "pumps",
+    "wrong_title": "Water Pump",
+    "bring_to_user": {
+      "said": "pumps",
+      "wrong": "\"Water Pump\" was shown for \"pumps\"",
+      "rule": "filterSearchResults() must remove \"Water Pump\" for query \"pumps\": title category is \"tools\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "category-exclusion",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "filterSearchResults() must remove \"Water Pump\" for query \"pumps\": title category is \"tools\", query category is \"footwear\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+    },
+    "status": "pending-review"
+  },
+  {
+    "id": "t-milk-milk-scented-candle",
+    "date": "2026-11-16",
+    "query": "milk",
+    "wrong_title": "Milk Scented Candle",
+    "bring_to_user": {
+      "said": "milk",
+      "wrong": "\"Milk Scented Candle\" was shown for \"milk\"",
+      "rule": "filterSearchResults() must remove \"Milk Scented Candle\" for query \"milk\": title category is \"home\", query category is \"groceries\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "category-exclusion",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "filterSearchResults() must remove \"Milk Scented Candle\" for query \"milk\": title category is \"home\", query category is \"groceries\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+    },
+    "status": "pending-review"
+  },
+  {
+    "id": "t-toothpaste-ceramic-coffee-mug-set",
+    "date": "2026-11-16",
+    "query": "toothpaste",
+    "wrong_title": "Ceramic Coffee Mug Set",
+    "bring_to_user": {
+      "said": "toothpaste",
+      "wrong": "\"Ceramic Coffee Mug Set\" was shown for \"toothpaste\"",
+      "rule": "filterSearchResults() must remove \"Ceramic Coffee Mug Set\" for query \"toothpaste\": title category is \"kitchen\", query category is \"personal care\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "category-exclusion",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "filterSearchResults() must remove \"Ceramic Coffee Mug Set\" for query \"toothpaste\": title category is \"kitchen\", query category is \"personal care\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+    },
+    "status": "pending-review"
+  },
+  {
+    "id": "t-bicycle-bike-helmet",
+    "date": "2026-11-16",
+    "query": "bicycle",
+    "wrong_title": "Bike Helmet",
+    "bring_to_user": {
+      "said": "bicycle",
+      "wrong": "\"Bike Helmet\" was shown for \"bicycle\"",
+      "rule": "No new rule needed: relevant(\"Bike Helmet\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back.",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "already-handled",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "No new rule needed: relevant(\"Bike Helmet\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back."
+    },
+    "status": "applied"
+  },
+  {
+    "id": "t-bicycle-bike-rack",
+    "date": "2026-11-16",
+    "query": "bicycle",
+    "wrong_title": "Bike Rack",
+    "bring_to_user": {
+      "said": "bicycle",
+      "wrong": "\"Bike Rack\" was shown for \"bicycle\"",
+      "rule": "No new rule needed: relevant(\"Bike Rack\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back.",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "already-handled",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "No new rule needed: relevant(\"Bike Rack\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back."
+    },
+    "status": "applied"
+  },
+  {
+    "id": "t-bicycle-bike-lock",
+    "date": "2026-11-16",
+    "query": "bicycle",
+    "wrong_title": "Bike Lock",
+    "bring_to_user": {
+      "said": "bicycle",
+      "wrong": "\"Bike Lock\" was shown for \"bicycle\"",
+      "rule": "No new rule needed: relevant(\"Bike Lock\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back.",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "already-handled",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "No new rule needed: relevant(\"Bike Lock\", \"bicycle\") is already false under the v31 fix (checked). Keep this case as a regression test so a future change cannot bring the mix-up back."
+    },
+    "status": "applied"
+  },
+  {
+    "id": "t-bicycle-bike-pump",
+    "date": "2026-11-16",
+    "query": "bicycle",
+    "wrong_title": "Bike Pump",
+    "bring_to_user": {
+      "said": "bicycle",
+      "wrong": "\"Bike Pump\" was shown for \"bicycle\"",
+      "rule": "filterSearchResults() must remove \"Bike Pump\" for query \"bicycle\": title category is \"tools\", query category is \"sports\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true",
+      "question": "Yes or no — apply this rule for everyone?"
+    },
+    "suggestion": {
+      "type": "category-exclusion",
+      "file": "site/_worker.js",
+      "status": "pending-review",
+      "rule": "filterSearchResults() must remove \"Bike Pump\" for query \"bicycle\": title category is \"tools\", query category is \"sports\". Check CATEGORIES / categoryMatches() in _worker.js covers this pair; if not, add the missing trigger phrase. Already handled by the v31 category gate: true"
+    },
+    "status": "applied"
+  }
+]
