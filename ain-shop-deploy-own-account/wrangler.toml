@@ -1,0 +1,23 @@
+# AIN Shop — own-account deployment (no Tab).
+# Built from tab-site.json in the v30 source: same worker, same D1 binding.
+name = "ain-shop"
+main = "site/_worker.js"
+compatibility_date = "2026-08-01"
+compatibility_flags = ["nodejs_compat"]
+# Account ID from the dashboard URL, 2026-11-18.
+account_id = "1c2af07314007bab930917de72a287f4"
+
+[assets]
+directory = "site"
+# The worker serves pages via env.ASSETS (site/_worker.js page()),
+# so the assets binding must exist; without this line env.ASSETS is
+# undefined and every page request throws (error 1101).
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "BAIN_DB"
+database_name = "ainshopdb"
+# Database ID filled in 2026-11-18 from the dashboard URL the user pasted.
+# The database already exists in his account (created 2026-11-17/18,
+# confirmed empty: 0 tables, 12.29 kB).
+database_id = "af2bee35-d60a-4717-b5b5-d63959de0b2f"
