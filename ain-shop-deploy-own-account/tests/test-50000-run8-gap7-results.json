@@ -1,0 +1,6588 @@
+{
+  "summary": {
+    "method": "LOCAL only — 0 live searches. 100 product types x 5 query variants = 500 queries; each query a list of 100 items (25 relevant, 75 wrong by construction) = 50,000 relevant() item-checks, seed 987654321.",
+    "date": "2026-11-17T03:10:55.173Z",
+    "queriesRun": 500,
+    "itemChecks": 50000,
+    "itemPass": 49941,
+    "itemFailed": 59,
+    "itemPassRate": 0.99882,
+    "falsePositives": 59,
+    "falseNegatives": 0,
+    "filterWrongKept": 59,
+    "filterRelevantLost": 0,
+    "top3": {
+      "slots": 1500,
+      "wrongInTop3": 17,
+      "wrongRate": 0.011333333333333334,
+      "queriesClean": 493,
+      "queriesDirty": 7
+    },
+    "perCategory": {
+      "footwear": {
+        "queries": 45,
+        "checks": 4500,
+        "pass": 4500,
+        "top3Dirty": 0
+      },
+      "swimwear": {
+        "queries": 20,
+        "checks": 2000,
+        "pass": 2000,
+        "top3Dirty": 0
+      },
+      "clothing": {
+        "queries": 50,
+        "checks": 5000,
+        "pass": 4994,
+        "top3Dirty": 0
+      },
+      "groceries": {
+        "queries": 75,
+        "checks": 7500,
+        "pass": 7500,
+        "top3Dirty": 0
+      },
+      "electronics": {
+        "queries": 60,
+        "checks": 6000,
+        "pass": 5976,
+        "top3Dirty": 2
+      },
+      "home": {
+        "queries": 55,
+        "checks": 5500,
+        "pass": 5500,
+        "top3Dirty": 0
+      },
+      "personal care": {
+        "queries": 40,
+        "checks": 4000,
+        "pass": 3979,
+        "top3Dirty": 5
+      },
+      "baby": {
+        "queries": 15,
+        "checks": 1500,
+        "pass": 1500,
+        "top3Dirty": 0
+      },
+      "sports": {
+        "queries": 55,
+        "checks": 5500,
+        "pass": 5492,
+        "top3Dirty": 0
+      },
+      "pets": {
+        "queries": 15,
+        "checks": 1500,
+        "pass": 1500,
+        "top3Dirty": 0
+      },
+      "bags": {
+        "queries": 10,
+        "checks": 1000,
+        "pass": 1000,
+        "top3Dirty": 0
+      },
+      "kitchen": {
+        "queries": 25,
+        "checks": 2500,
+        "pass": 2500,
+        "top3Dirty": 0
+      },
+      "tools": {
+        "queries": 20,
+        "checks": 2000,
+        "pass": 2000,
+        "top3Dirty": 0
+      },
+      "toys": {
+        "queries": 15,
+        "checks": 1500,
+        "pass": 1500,
+        "top3Dirty": 0
+      }
+    },
+    "ms": 540215,
+    "msPerQuery": 1080.43,
+    "msPerItemCheck": 10.8043,
+    "failuresRecorded": 59
+  },
+  "perQuery": [
+    {
+      "query": "shoes",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Shoes New",
+        "Samsung Shoes 2 Pack",
+        "Nike Shoes Premium"
+      ]
+    },
+    {
+      "query": "shoes for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Shoe For Men 2 Pack",
+        "Dove Shoes For Men for Men",
+        "Samsung Shoes For Men Size Large"
+      ]
+    },
+    {
+      "query": "shoes for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Sneakers For Women Black",
+        "Apple Shoe For Women for Women",
+        "Dove Shoes For Women for Women"
+      ]
+    },
+    {
+      "query": "new shoes",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove New Sneakers 2 Pack",
+        "Levi New Shoes Black",
+        "Samsung New Shoes for Women"
+      ]
+    },
+    {
+      "query": "shoes 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Sneakers 2 Pack Black",
+        "Dell Shoe 2 Pack New",
+        "Dove Shoes 2 Pack Black"
+      ]
+    },
+    {
+      "query": "running shoes",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Running Shoe for Men",
+        "Samsung Running Shoes 2 Pack",
+        "Trek Running Shoes 2 Pack"
+      ]
+    },
+    {
+      "query": "running shoes for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Running Sneakers For Men White",
+        "Colgate Running Shoe For Men for Kids",
+        "Apple Running Shoes For Men Black"
+      ]
+    },
+    {
+      "query": "running shoes for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Running Sneakers For Women New",
+        "Purina Running Shoe For Women for Men",
+        "Nike Running Sneakers For Women for Women"
+      ]
+    },
+    {
+      "query": "new running shoes",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Running Shoe Black",
+        "Trek New Running Shoe Premium",
+        "Levi New Running Shoe Black"
+      ]
+    },
+    {
+      "query": "running shoes 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Running Sneakers 2 Pack for Kids",
+        "Amazon Basics Running Shoe 2 Pack for Kids",
+        "Levi Running Shoes 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "sneakers",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Sneaker Size Large",
+        "Hanes Sneakers White",
+        "Dove Trainers for Kids"
+      ]
+    },
+    {
+      "query": "sneakers for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Sneakers For Men Size Large",
+        "Samsung Sneaker For Men for Men",
+        "Levi Trainers For Men for Kids"
+      ]
+    },
+    {
+      "query": "sneakers for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Sneakers For Women for Kids",
+        "Trek Trainers For Women Premium",
+        "Colgate Trainers For Women Premium"
+      ]
+    },
+    {
+      "query": "new sneakers",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Sneaker White",
+        "Trek New Trainers New",
+        "Apple New Sneakers New"
+      ]
+    },
+    {
+      "query": "sneakers 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Trainers 2 Pack Size Large",
+        "Sony Sneaker 2 Pack New",
+        "Kirkland Sneaker 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "boots",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Boots Deluxe Edition",
+        "Samsung Boots 2 Pack",
+        "Trek Boot for Men"
+      ]
+    },
+    {
+      "query": "boots for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Boot For Men for Men",
+        "Trek Boots For Men Deluxe Edition",
+        "Levi Boots For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "boots for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Boots For Women Deluxe Edition",
+        "Dove Boots For Women for Kids",
+        "Levi Boot For Women Lightweight"
+      ]
+    },
+    {
+      "query": "new boots",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Boot New",
+        "Hanes New Boots for Women",
+        "Great Value New Boots Deluxe Edition"
+      ]
+    },
+    {
+      "query": "boots 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Boots 2 Pack Deluxe Edition",
+        "Sony Boot 2 Pack for Women",
+        "Purina Boots 2 Pack White"
+      ]
+    },
+    {
+      "query": "sandals",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Sandals Deluxe Edition",
+        "Purina Sandal Lightweight",
+        "Dell Sandals 2 Pack"
+      ]
+    },
+    {
+      "query": "sandals for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Sandals For Men Deluxe Edition",
+        "Colgate Sandals For Men Deluxe Edition",
+        "Kirkland Sandals For Men New"
+      ]
+    },
+    {
+      "query": "sandals for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Sandals For Women Deluxe Edition",
+        "Kirkland Sandals For Women Deluxe Edition",
+        "Colgate Sandal For Women for Men"
+      ]
+    },
+    {
+      "query": "new sandals",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell New Sandal Premium",
+        "Trek New Sandal Lightweight",
+        "Samsung New Sandals for Kids"
+      ]
+    },
+    {
+      "query": "sandals 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Sandals 2 Pack for Kids",
+        "Apple Sandals 2 Pack Lightweight",
+        "Nike Sandal 2 Pack Lightweight"
+      ]
+    },
+    {
+      "query": "slippers",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Slipper for Women",
+        "Levi Slippers White",
+        "Purina Slippers for Men"
+      ]
+    },
+    {
+      "query": "slippers for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Slippers For Men Black",
+        "Trek Slippers For Men Deluxe Edition",
+        "Amazon Basics Slippers For Men White"
+      ]
+    },
+    {
+      "query": "slippers for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Slipper For Women for Men",
+        "Amazon Basics Slipper For Women for Women",
+        "Apple Slipper For Women Size Large"
+      ]
+    },
+    {
+      "query": "new slippers",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics New Slippers White",
+        "Levi New Slippers Deluxe Edition",
+        "Great Value New Slippers for Kids"
+      ]
+    },
+    {
+      "query": "slippers 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Slipper 2 Pack New",
+        "Colgate Slippers 2 Pack Premium",
+        "Amazon Basics Slipper 2 Pack Black"
+      ]
+    },
+    {
+      "query": "pumps",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Pumps Deluxe Edition",
+        "Colgate Pumps for Men",
+        "Amazon Basics Pumps for Kids"
+      ]
+    },
+    {
+      "query": "pumps for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Pumps For Men Deluxe Edition",
+        "Kirkland Pump For Men New",
+        "Nike Pumps For Men New"
+      ]
+    },
+    {
+      "query": "pumps for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Pumps For Women Deluxe Edition",
+        "Amazon Basics Pumps For Women Deluxe Edition",
+        "Levi Pumps For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new pumps",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove New Pumps Deluxe Edition",
+        "Levi New Pump for Women",
+        "Hanes New Pumps Deluxe Edition"
+      ]
+    },
+    {
+      "query": "pumps 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Pumps 2 Pack Deluxe Edition",
+        "Dell Pumps 2 Pack Premium",
+        "Hanes Pumps 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "loafers",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Loafers Deluxe Edition",
+        "Sony Loafer Lightweight",
+        "Colgate Loafer Size Large"
+      ]
+    },
+    {
+      "query": "loafers for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Loafers For Men Deluxe Edition",
+        "Nike Loafer For Men New",
+        "Sony Loafers For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "loafers for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Loafers For Women Deluxe Edition",
+        "Samsung Loafers For Women Deluxe Edition",
+        "Kirkland Loafer For Women New"
+      ]
+    },
+    {
+      "query": "new loafers",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value New Loafers Deluxe Edition",
+        "Nike New Loafer for Women",
+        "Apple New Loafer Lightweight"
+      ]
+    },
+    {
+      "query": "loafers 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Loafers 2 Pack New",
+        "Colgate Loafers 2 Pack Deluxe Edition",
+        "Dell Loafer 2 Pack New"
+      ]
+    },
+    {
+      "query": "heels",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Heel Black",
+        "Great Value Heels Deluxe Edition",
+        "Hanes Heels Deluxe Edition"
+      ]
+    },
+    {
+      "query": "heels for men",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Heels For Men Premium",
+        "Trek Heel For Men for Women",
+        "Sony Heel For Men New"
+      ]
+    },
+    {
+      "query": "heels for women",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Heels For Women Deluxe Edition",
+        "Amazon Basics Heels For Women Deluxe Edition",
+        "Dell Heel For Women Premium"
+      ]
+    },
+    {
+      "query": "new heels",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate New Heel Premium",
+        "Dell New Heels for Women",
+        "Samsung New Heels for Men"
+      ]
+    },
+    {
+      "query": "heels 2 pack",
+      "category": "footwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Heels 2 Pack for Women",
+        "Colgate Heels 2 Pack Deluxe Edition",
+        "Apple Heels 2 Pack Size Large"
+      ]
+    },
+    {
+      "query": "bathing suit",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Bathing Suit White",
+        "Apple Bathing Suit White",
+        "Great Value Bathing Suit Size Large"
+      ]
+    },
+    {
+      "query": "bathing suit for men",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Bathing Suits For Men New",
+        "Dove Bathing Suit For Men for Kids",
+        "Kirkland Bathing Suit For Men Black"
+      ]
+    },
+    {
+      "query": "bathing suit for women",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Bathing Suits For Women for Men",
+        "Dell Bathing Suit For Women Size Large",
+        "Kirkland Bathing Suits For Women Lightweight"
+      ]
+    },
+    {
+      "query": "new bathing suit",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple New Bathing Suits for Kids",
+        "Dove New Bathing Suit Lightweight",
+        "Sony New Bathing Suits for Women"
+      ]
+    },
+    {
+      "query": "bathing suit 2 pack",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Bathing Suit 2 Pack for Kids",
+        "Trek Bathing Suit 2 Pack Lightweight",
+        "Sony Bathing Suit 2 Pack Lightweight"
+      ]
+    },
+    {
+      "query": "swimsuit",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Bathing Suit 2 Pack",
+        "Dell Bathing Suit Lightweight",
+        "Kirkland Swimsuits for Women"
+      ]
+    },
+    {
+      "query": "swimsuit for men",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Swimsuits For Men New",
+        "Amazon Basics Swimsuit For Men for Men",
+        "Nike Bathing Suit For Men for Kids"
+      ]
+    },
+    {
+      "query": "swimsuit for women",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Swimsuits For Women Lightweight",
+        "Purina Bathing Suit For Women White",
+        "Hanes Bathing Suit For Women Premium"
+      ]
+    },
+    {
+      "query": "new swimsuit",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value New Swimsuits Premium",
+        "Sony New Bathing Suit for Men",
+        "Nike New Swimsuits New"
+      ]
+    },
+    {
+      "query": "swimsuit 2 pack",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Swimsuits 2 Pack for Kids",
+        "Purina Swimsuits 2 Pack New",
+        "Dell Swimsuit 2 Pack for Women"
+      ]
+    },
+    {
+      "query": "swim trunks",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Swim Trunk New",
+        "Trek Swim Trunks Deluxe Edition",
+        "Trek Swim Trunks Black"
+      ]
+    },
+    {
+      "query": "swim trunks for men",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Swim Trunks For Men Deluxe Edition",
+        "Trek Swim Trunk For Men 2 Pack",
+        "Nike Swim Trunk For Men Premium"
+      ]
+    },
+    {
+      "query": "swim trunks for women",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Swim Trunks For Women for Kids",
+        "Great Value Swim Trunk For Women White",
+        "Great Value Swim Trunks For Women for Kids"
+      ]
+    },
+    {
+      "query": "new swim trunks",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina New Swim Trunk for Women",
+        "Nike New Swim Trunks Deluxe Edition",
+        "Apple New Swim Trunks for Women"
+      ]
+    },
+    {
+      "query": "swim trunks 2 pack",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Swim Trunks 2 Pack Deluxe Edition",
+        "Dell Swim Trunks 2 Pack Lightweight",
+        "Trek Swim Trunks 2 Pack New"
+      ]
+    },
+    {
+      "query": "bikini",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Bikini Deluxe Edition",
+        "Dove Bikinis New",
+        "Trek Bikinis New"
+      ]
+    },
+    {
+      "query": "bikini for men",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Bikini For Men 2 Pack",
+        "Trek Bikinis For Men 2 Pack",
+        "Apple Bikini For Men Black"
+      ]
+    },
+    {
+      "query": "bikini for women",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Bikinis For Women Lightweight",
+        "Levi Bikini For Women Deluxe Edition",
+        "Samsung Bikini For Women Size Large"
+      ]
+    },
+    {
+      "query": "new bikini",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate New Bikini for Men",
+        "Nike New Bikini Deluxe Edition",
+        "Samsung New Bikini Deluxe Edition"
+      ]
+    },
+    {
+      "query": "bikini 2 pack",
+      "category": "swimwear",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Bikinis 2 Pack 2 Pack",
+        "Great Value Bikinis 2 Pack Lightweight",
+        "Hanes Bikinis 2 Pack for Women"
+      ]
+    },
+    {
+      "query": "t-shirt",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes T-Shirts Size Large",
+        "Great Value T-Shirts Premium",
+        "Sony T-Shirt Size Large"
+      ]
+    },
+    {
+      "query": "t-shirt for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics T-Shirts For Men White",
+        "Purina Tee Shirt For Men New",
+        "Amazon Basics T-Shirt For Men for Women"
+      ]
+    },
+    {
+      "query": "t-shirt for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics T-Shirts For Women for Women",
+        "Trek T-Shirt For Women Black",
+        "Trek T-Shirt For Women for Men"
+      ]
+    },
+    {
+      "query": "new t-shirt",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland New T-Shirt Black",
+        "Trek New T-Shirts Lightweight",
+        "Apple New T-Shirts Premium"
+      ]
+    },
+    {
+      "query": "t-shirt 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate T-Shirts 2 Pack 2 Pack",
+        "Colgate T-Shirt 2 Pack for Kids",
+        "Sony Tee Shirt 2 Pack Black"
+      ]
+    },
+    {
+      "query": "jeans",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Jean White",
+        "Kirkland Jeans Deluxe Edition",
+        "Samsung Jean Lightweight"
+      ]
+    },
+    {
+      "query": "jeans for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Jean For Men for Men",
+        "Hanes Jean For Men for Women",
+        "Hanes Jeans For Men for Kids"
+      ]
+    },
+    {
+      "query": "jeans for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Jeans For Women Deluxe Edition",
+        "Samsung Jean For Women 2 Pack",
+        "Dove Jean For Women White"
+      ]
+    },
+    {
+      "query": "new jeans",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina New Jeans Deluxe Edition",
+        "Dove New Jean for Kids",
+        "Hanes New Jeans for Women"
+      ]
+    },
+    {
+      "query": "jeans 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Jean 2 Pack for Kids",
+        "Hanes Jean 2 Pack Size Large",
+        "Nike Jeans 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "dress",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Dress Size Large",
+        "Levi Dress 2 Pack",
+        "Purina Dres for Men"
+      ]
+    },
+    {
+      "query": "dress for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Gown For Men for Kids",
+        "Great Value Dress For Men for Women",
+        "Great Value Dres For Men for Men"
+      ]
+    },
+    {
+      "query": "dress for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Dres For Women for Kids",
+        "Hanes Dres For Women White",
+        "Dell Gown For Women Premium"
+      ]
+    },
+    {
+      "query": "new dress",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple New Gown for Women",
+        "Purina New Dress for Kids",
+        "Colgate New Dress for Women"
+      ]
+    },
+    {
+      "query": "dress 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Gown 2 Pack Premium",
+        "Sony Dres 2 Pack Size Large",
+        "Dove Gown 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "hoodie",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Hoodie Deluxe Edition",
+        "Trek Hoodie Size Large",
+        "Great Value Hoodie Deluxe Edition"
+      ]
+    },
+    {
+      "query": "hoodie for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Hoodies For Men 2 Pack",
+        "Nike Hoodie For Men New",
+        "Purina Hoodie For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "hoodie for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Hoodie For Women Deluxe Edition",
+        "Great Value Hoodies For Women Premium",
+        "Levi Hoodie For Women 2 Pack"
+      ]
+    },
+    {
+      "query": "new hoodie",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell New Hoodies New",
+        "Hanes New Hoodie for Kids",
+        "Colgate New Hoodie Deluxe Edition"
+      ]
+    },
+    {
+      "query": "hoodie 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Hoodie 2 Pack Deluxe Edition",
+        "Dove Hoodies 2 Pack Size Large",
+        "Levi Hoodie 2 Pack Black"
+      ]
+    },
+    {
+      "query": "sweater",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Sweater Deluxe Edition",
+        "Dove Sweater 2 Pack",
+        "Great Value Sweater Deluxe Edition"
+      ]
+    },
+    {
+      "query": "sweater for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Sweater For Men Deluxe Edition",
+        "Nike Sweaters For Men White",
+        "Trek Sweater For Men Premium"
+      ]
+    },
+    {
+      "query": "sweater for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Sweater For Women for Kids",
+        "Great Value Sweater For Women White",
+        "Samsung Sweater For Women for Men"
+      ]
+    },
+    {
+      "query": "new sweater",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Sweaters 2 Pack",
+        "Trek New Sweater for Men",
+        "Colgate New Sweater New"
+      ]
+    },
+    {
+      "query": "sweater 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Sweater 2 Pack New",
+        "Hanes Sweater 2 Pack Deluxe Edition",
+        "Amazon Basics Sweater 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "winter coat",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 26,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Winter Coat Size Large",
+        "Amazon Basics Winter Coats Black",
+        "Levi Winter Coat Black"
+      ]
+    },
+    {
+      "query": "winter coat for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 26,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Winter Coats For Men White",
+        "Amazon Basics Winter Coat For Men Premium",
+        "Great Value Winter Coat For Men 2 Pack"
+      ]
+    },
+    {
+      "query": "winter coat for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 26,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Winter Coat For Women New",
+        "Levi Winter Coat For Women Premium",
+        "Trek Winter Coat For Women for Men"
+      ]
+    },
+    {
+      "query": "new winter coat",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 27,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove New Winter Coat Premium",
+        "Sony New Winter Coat for Men",
+        "Sony New Winter Coat Premium"
+      ]
+    },
+    {
+      "query": "winter coat 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 26,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Winter Coats 2 Pack Black",
+        "Trek Winter Coat 2 Pack for Women",
+        "Amazon Basics Winter Coat 2 Pack White"
+      ]
+    },
+    {
+      "query": "socks",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Socks for Kids",
+        "Sony Socks Deluxe Edition",
+        "Kirkland Socks for Women"
+      ]
+    },
+    {
+      "query": "socks for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Socks For Men Deluxe Edition",
+        "Levi Socks For Men Deluxe Edition",
+        "Great Value Socks For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "socks for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Sock For Women White",
+        "Great Value Sock For Women White",
+        "Purina Socks For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new socks",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value New Sock for Kids",
+        "Dove New Socks Deluxe Edition",
+        "Colgate New Socks for Men"
+      ]
+    },
+    {
+      "query": "socks 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Sock 2 Pack 2 Pack",
+        "Amazon Basics Socks 2 Pack Deluxe Edition",
+        "Great Value Sock 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "jacket",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Jacket Deluxe Edition",
+        "Trek Jackets Premium",
+        "Nike Jacket Size Large"
+      ]
+    },
+    {
+      "query": "jacket for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Jackets For Men for Women",
+        "Great Value Jacket For Men Black",
+        "Kirkland Jacket For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "jacket for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Jacket For Women Deluxe Edition",
+        "Nike Jacket For Women for Men",
+        "Levi Jacket For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new jacket",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Jacket Lightweight",
+        "Great Value New Jacket Deluxe Edition",
+        "Amazon Basics New Jacket for Women"
+      ]
+    },
+    {
+      "query": "jacket 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Jacket 2 Pack White",
+        "Colgate Jackets 2 Pack Size Large",
+        "Samsung Jackets 2 Pack White"
+      ]
+    },
+    {
+      "query": "shorts",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Shorts Deluxe Edition",
+        "Hanes Short Black",
+        "Great Value Shorts Size Large"
+      ]
+    },
+    {
+      "query": "shorts for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Shorts For Men Premium",
+        "Great Value Shorts For Men for Men",
+        "Nike Shorts For Men Lightweight"
+      ]
+    },
+    {
+      "query": "shorts for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Shorts For Women Deluxe Edition",
+        "Dove Shorts For Women Deluxe Edition",
+        "Hanes Short For Women Lightweight"
+      ]
+    },
+    {
+      "query": "new shorts",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value New Shorts Deluxe Edition",
+        "Dove New Short for Men",
+        "Great Value New Short New"
+      ]
+    },
+    {
+      "query": "shorts 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Short 2 Pack Black",
+        "Levi Short 2 Pack for Men",
+        "Purina Short 2 Pack White"
+      ]
+    },
+    {
+      "query": "shirt",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Shirt Deluxe Edition",
+        "Trek Shirt Deluxe Edition",
+        "Purina Shirts Size Large"
+      ]
+    },
+    {
+      "query": "shirt for men",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Shirt For Men Deluxe Edition",
+        "Dove Shirt For Men Black",
+        "Sony Shirt For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "shirt for women",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Shirts For Women Lightweight",
+        "Colgate Shirt For Women Deluxe Edition",
+        "Hanes Shirt For Women Premium"
+      ]
+    },
+    {
+      "query": "new shirt",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Shirt Deluxe Edition",
+        "Levi New Shirts Lightweight",
+        "Great Value New Shirt White"
+      ]
+    },
+    {
+      "query": "shirt 2 pack",
+      "category": "clothing",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Shirts 2 Pack Premium",
+        "Purina Shirts 2 Pack for Men",
+        "Sony Shirts 2 Pack New"
+      ]
+    },
+    {
+      "query": "milk",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Milk for Women",
+        "Great Value Milks 2 Pack",
+        "Apple Milks White"
+      ]
+    },
+    {
+      "query": "milk for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Milk For Men for Men",
+        "Amazon Basics Milks For Men for Women",
+        "Kirkland Milk For Men White"
+      ]
+    },
+    {
+      "query": "milk for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Milks For Women 2 Pack",
+        "Colgate Milk For Women Deluxe Edition",
+        "Great Value Milks For Women for Women"
+      ]
+    },
+    {
+      "query": "new milk",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell New Milk White",
+        "Great Value New Milks for Men",
+        "Purina New Milk 2 Pack"
+      ]
+    },
+    {
+      "query": "milk 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Milk 2 Pack Size Large",
+        "Sony Milk 2 Pack Black",
+        "Nike Milks 2 Pack for Kids"
+      ]
+    },
+    {
+      "query": "bread",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Breads 2 Pack",
+        "Kirkland Breads Black",
+        "Hanes Breads Lightweight"
+      ]
+    },
+    {
+      "query": "bread for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Breads For Men for Kids",
+        "Samsung Bread For Men Lightweight",
+        "Hanes Bread For Men for Men"
+      ]
+    },
+    {
+      "query": "bread for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Breads For Women Black",
+        "Dove Bread For Women Deluxe Edition",
+        "Trek Bread For Women for Men"
+      ]
+    },
+    {
+      "query": "new bread",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi New Bread Deluxe Edition",
+        "Trek New Breads New",
+        "Apple New Bread for Men"
+      ]
+    },
+    {
+      "query": "bread 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Breads 2 Pack Premium",
+        "Kirkland Bread 2 Pack for Kids",
+        "Colgate Bread 2 Pack White"
+      ]
+    },
+    {
+      "query": "eggs",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Eggs Premium",
+        "Apple Eggs Black",
+        "Dell Egg Black"
+      ]
+    },
+    {
+      "query": "eggs for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Eggs For Men Deluxe Edition",
+        "Dove Eggs For Men Deluxe Edition",
+        "Samsung Eggs For Men Size Large"
+      ]
+    },
+    {
+      "query": "eggs for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Eggs For Women Deluxe Edition",
+        "Samsung Egg For Women Premium",
+        "Great Value Egg For Women Lightweight"
+      ]
+    },
+    {
+      "query": "new eggs",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Eggs Deluxe Edition",
+        "Samsung New Eggs for Women",
+        "Dell New Eggs for Men"
+      ]
+    },
+    {
+      "query": "eggs 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Eggs 2 Pack for Men",
+        "Sony Egg 2 Pack Premium",
+        "Samsung Eggs 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "coffee",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Coffee Deluxe Edition",
+        "Dell Coffee Deluxe Edition",
+        "Purina Coffee 2 Pack"
+      ]
+    },
+    {
+      "query": "coffee for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Coffees For Men Premium",
+        "Trek Coffee For Men Deluxe Edition",
+        "Hanes Coffee For Men for Kids"
+      ]
+    },
+    {
+      "query": "coffee for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Coffees For Women New",
+        "Colgate Coffee For Women Deluxe Edition",
+        "Levi Coffees For Women New"
+      ]
+    },
+    {
+      "query": "new coffee",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Coffee Deluxe Edition",
+        "Levi New Coffees Black",
+        "Samsung New Coffee for Kids"
+      ]
+    },
+    {
+      "query": "coffee 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Coffees 2 Pack Premium",
+        "Dell Coffees 2 Pack Black",
+        "Trek Coffees 2 Pack New"
+      ]
+    },
+    {
+      "query": "bananas",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Banana for Women",
+        "Nike Banana White",
+        "Samsung Banana 2 Pack"
+      ]
+    },
+    {
+      "query": "bananas for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Bananas For Men Deluxe Edition",
+        "Sony Banana For Men New",
+        "Dell Bananas For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "bananas for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Banana For Women for Kids",
+        "Apple Banana For Women for Men",
+        "Sony Bananas For Women White"
+      ]
+    },
+    {
+      "query": "new bananas",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics New Bananas Deluxe Edition",
+        "Nike New Bananas Deluxe Edition",
+        "Trek New Banana New"
+      ]
+    },
+    {
+      "query": "bananas 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Bananas 2 Pack for Women",
+        "Nike Banana 2 Pack for Kids",
+        "Nike Bananas 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "chicken breast",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Chicken Breast Deluxe Edition",
+        "Purina Chicken Breast Black",
+        "Great Value Chicken Breasts for Men"
+      ]
+    },
+    {
+      "query": "chicken breast for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Chicken Breast For Men Deluxe Edition",
+        "Sony Chicken Breast For Men for Kids",
+        "Hanes Chicken Breasts For Men 2 Pack"
+      ]
+    },
+    {
+      "query": "chicken breast for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Chicken Breast For Women Deluxe Edition",
+        "Great Value Chicken Breast For Women for Women",
+        "Sony Chicken Breast For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new chicken breast",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Chicken Breasts Size Large",
+        "Kirkland New Chicken Breast New",
+        "Kirkland New Chicken Breasts for Women"
+      ]
+    },
+    {
+      "query": "chicken breast 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Chicken Breasts 2 Pack for Kids",
+        "Purina Chicken Breasts 2 Pack for Kids",
+        "Purina Chicken Breasts 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "rice",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Rice Deluxe Edition",
+        "Kirkland Rice Size Large",
+        "Samsung Rice New"
+      ]
+    },
+    {
+      "query": "rice for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Rice For Men White",
+        "Great Value Rice For Men 2 Pack",
+        "Levi Rice For Men Premium"
+      ]
+    },
+    {
+      "query": "rice for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Rice For Women Deluxe Edition",
+        "Dell Rice For Women Size Large",
+        "Levi Rice For Women Size Large"
+      ]
+    },
+    {
+      "query": "new rice",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Rice Lightweight",
+        "Dove New Rice New",
+        "Purina New Rice Deluxe Edition"
+      ]
+    },
+    {
+      "query": "rice 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Rices 2 Pack Lightweight",
+        "Nike Rices 2 Pack New",
+        "Hanes Rices 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "cheese",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Cheese Size Large",
+        "Colgate Cheese Premium",
+        "Levi Cheeses Black"
+      ]
+    },
+    {
+      "query": "cheese for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Cheeses For Men for Kids",
+        "Samsung Cheese For Men White",
+        "Kirkland Cheese For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "cheese for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Cheese For Women Deluxe Edition",
+        "Samsung Cheese For Women Deluxe Edition",
+        "Colgate Cheese For Women Black"
+      ]
+    },
+    {
+      "query": "new cheese",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics New Cheeses Premium",
+        "Apple New Cheese 2 Pack",
+        "Great Value New Cheese 2 Pack"
+      ]
+    },
+    {
+      "query": "cheese 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Cheeses 2 Pack Black",
+        "Sony Cheese 2 Pack Deluxe Edition",
+        "Hanes Cheese 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "butter",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Butter Deluxe Edition",
+        "Samsung Butter Deluxe Edition",
+        "Great Value Butter 2 Pack"
+      ]
+    },
+    {
+      "query": "butter for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Butter For Men Deluxe Edition",
+        "Nike Butters For Men for Men",
+        "Apple Butter For Men for Kids"
+      ]
+    },
+    {
+      "query": "butter for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Butter For Women White",
+        "Dove Butter For Women for Men",
+        "Apple Butter For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new butter",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Butter Lightweight",
+        "Nike New Butter Deluxe Edition",
+        "Amazon Basics New Butter Deluxe Edition"
+      ]
+    },
+    {
+      "query": "butter 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Butter 2 Pack Deluxe Edition",
+        "Nike Butter 2 Pack Black",
+        "Sony Butters 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "cereal",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Cereals New",
+        "Nike Cereal Deluxe Edition",
+        "Samsung Cereal Size Large"
+      ]
+    },
+    {
+      "query": "cereal for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Cereal For Men 2 Pack",
+        "Apple Cereals For Men White",
+        "Trek Cereal For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "cereal for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Cereal For Women Deluxe Edition",
+        "Trek Cereal For Women Deluxe Edition",
+        "Hanes Cereal For Women Premium"
+      ]
+    },
+    {
+      "query": "new cereal",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Cereal Size Large",
+        "Amazon Basics New Cereals Premium",
+        "Hanes New Cereal Deluxe Edition"
+      ]
+    },
+    {
+      "query": "cereal 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Cereals 2 Pack for Women",
+        "Trek Cereal 2 Pack for Women",
+        "Amazon Basics Cereals 2 Pack for Kids"
+      ]
+    },
+    {
+      "query": "apples",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Apples Deluxe Edition",
+        "Dove Apple for Men",
+        "Hanes Apple White"
+      ]
+    },
+    {
+      "query": "apples for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Apples For Men for Men",
+        "Sony Apples For Men Deluxe Edition",
+        "Kirkland Apple For Men 2 Pack"
+      ]
+    },
+    {
+      "query": "apples for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Apples For Women Deluxe Edition",
+        "Colgate Apple For Women New",
+        "Purina Apple For Women 2 Pack"
+      ]
+    },
+    {
+      "query": "new apples",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple New Apples for Kids",
+        "Amazon Basics New Apples White",
+        "Sony New Apples for Men"
+      ]
+    },
+    {
+      "query": "apples 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Apples 2 Pack Deluxe Edition",
+        "Kirkland Apples 2 Pack for Kids",
+        "Colgate Apples 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "yogurt",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Yogurts Size Large",
+        "Levi Yogurt Black",
+        "Amazon Basics Yogurt 2 Pack"
+      ]
+    },
+    {
+      "query": "yogurt for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Yogurt For Men for Kids",
+        "Sony Yogurt For Men Deluxe Edition",
+        "Colgate Yogurt For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "yogurt for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Yogurts For Women for Men",
+        "Dell Yogurt For Women Deluxe Edition",
+        "Hanes Yogurt For Women New"
+      ]
+    },
+    {
+      "query": "new yogurt",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina New Yogurts White",
+        "Dell New Yogurts Lightweight",
+        "Sony New Yogurt Deluxe Edition"
+      ]
+    },
+    {
+      "query": "yogurt 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Yogurt 2 Pack Size Large",
+        "Amazon Basics Yogurt 2 Pack Deluxe Edition",
+        "Great Value Yogurt 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "orange juice",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Orange Juices for Men",
+        "Apple Orange Juice 2 Pack",
+        "Purina Orange Juice Deluxe Edition"
+      ]
+    },
+    {
+      "query": "orange juice for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Orange Juice For Men New",
+        "Great Value Orange Juices For Men Lightweight",
+        "Amazon Basics Orange Juices For Men for Kids"
+      ]
+    },
+    {
+      "query": "orange juice for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Orange Juice For Women for Women",
+        "Great Value Orange Juice For Women Size Large",
+        "Amazon Basics Orange Juices For Women 2 Pack"
+      ]
+    },
+    {
+      "query": "new orange juice",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove New Orange Juices for Women",
+        "Great Value New Orange Juice Deluxe Edition",
+        "Colgate New Orange Juice for Kids"
+      ]
+    },
+    {
+      "query": "orange juice 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Orange Juice 2 Pack Deluxe Edition",
+        "Dove Orange Juice 2 Pack for Kids",
+        "Colgate Orange Juice 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "pasta",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Pastas for Men",
+        "Trek Pastas for Men",
+        "Apple Pasta for Men"
+      ]
+    },
+    {
+      "query": "pasta for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Pasta For Men Deluxe Edition",
+        "Apple Pasta For Men Deluxe Edition",
+        "Kirkland Pasta For Men Premium"
+      ]
+    },
+    {
+      "query": "pasta for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Pasta For Women Deluxe Edition",
+        "Great Value Pastas For Women for Men",
+        "Hanes Pasta For Women 2 Pack"
+      ]
+    },
+    {
+      "query": "new pasta",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Pasta Deluxe Edition",
+        "Colgate New Pastas Lightweight",
+        "Dove New Pasta Deluxe Edition"
+      ]
+    },
+    {
+      "query": "pasta 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Pasta 2 Pack Deluxe Edition",
+        "Purina Pastas 2 Pack 2 Pack",
+        "Colgate Pasta 2 Pack Lightweight"
+      ]
+    },
+    {
+      "query": "olive oil",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Olive Oil New",
+        "Amazon Basics Olive Oils New",
+        "Dove Olive Oil 2 Pack"
+      ]
+    },
+    {
+      "query": "olive oil for men",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Olive Oil For Men Deluxe Edition",
+        "Kirkland Olive Oil For Men for Women",
+        "Dove Olive Oil For Men Black"
+      ]
+    },
+    {
+      "query": "olive oil for women",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Olive Oil For Women Deluxe Edition",
+        "Dove Olive Oil For Women for Kids",
+        "Nike Olive Oils For Women Black"
+      ]
+    },
+    {
+      "query": "new olive oil",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi New Olive Oil Deluxe Edition",
+        "Dell New Olive Oil Deluxe Edition",
+        "Sony New Olive Oil for Women"
+      ]
+    },
+    {
+      "query": "olive oil 2 pack",
+      "category": "groceries",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Olive Oils 2 Pack Lightweight",
+        "Sony Olive Oil 2 Pack Premium",
+        "Samsung Olive Oil 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "phone charger",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Phone Chargers Black",
+        "Levi Phone Charging Cable New",
+        "Colgate Phone Charging Cable Size Large"
+      ]
+    },
+    {
+      "query": "phone charger for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Phone Chargers For Men Premium",
+        "Trek Phone Chargers For Men for Kids",
+        "Colgate Phone Charger For Men for Women"
+      ]
+    },
+    {
+      "query": "phone charger for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Phone Chargers For Women White",
+        "Samsung Phone Charging Cable For Women Black",
+        "Dell Phone Charging Cable For Women New"
+      ]
+    },
+    {
+      "query": "new phone charger",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Phone Charging Cable Black",
+        "Levi New Phone Chargers Premium",
+        "Colgate New Phone Chargers for Men"
+      ]
+    },
+    {
+      "query": "phone charger 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Phone Charging Cable 2 Pack Premium",
+        "Kirkland Phone Charger 2 Pack for Men",
+        "Dove Phone Charger 2 Pack for Women"
+      ]
+    },
+    {
+      "query": "laptop",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Notebook Computer Black",
+        "Samsung Laptop Lightweight",
+        "Great Value Laptops Lightweight"
+      ]
+    },
+    {
+      "query": "laptop for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Laptops For Men for Men",
+        "Amazon Basics Notebook Computer For Men for Kids",
+        "Purina Notebook Computer For Men for Men"
+      ]
+    },
+    {
+      "query": "laptop for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Notebook Computer For Women New",
+        "Levi Laptop For Women Premium",
+        "Nike Laptop For Women New"
+      ]
+    },
+    {
+      "query": "new laptop",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Notebook Computer Premium",
+        "Levi New Laptop for Men",
+        "Hanes New Laptop New"
+      ]
+    },
+    {
+      "query": "laptop 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Laptops 2 Pack Lightweight",
+        "Kirkland Laptops 2 Pack White",
+        "Nike Notebook Computer 2 Pack Black"
+      ]
+    },
+    {
+      "query": "headphones",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Headphone 2 Pack",
+        "Colgate Headphones Premium",
+        "Colgate Earphones Black"
+      ]
+    },
+    {
+      "query": "headphones for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Headphone For Men for Kids",
+        "Dell Headphones For Men for Women",
+        "Great Value Earphones For Men New"
+      ]
+    },
+    {
+      "query": "headphones for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Headphone For Women New",
+        "Purina Headphones For Women Size Large",
+        "Amazon Basics Headphone For Women for Kids"
+      ]
+    },
+    {
+      "query": "new headphones",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate New Headphone White",
+        "Kirkland New Headphone Lightweight",
+        "Nike New Headphone Premium"
+      ]
+    },
+    {
+      "query": "headphones 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Headphones 2 Pack for Kids",
+        "Sony Earphones 2 Pack 2 Pack",
+        "Amazon Basics Earphones 2 Pack Lightweight"
+      ]
+    },
+    {
+      "query": "television",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Televisions White",
+        "Samsung Televisions Lightweight",
+        "Nike TV Black"
+      ]
+    },
+    {
+      "query": "television for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Television For Men for Kids",
+        "Amazon Basics TV For Men 2 Pack",
+        "Great Value Television For Men Lightweight"
+      ]
+    },
+    {
+      "query": "television for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Televisions For Women New",
+        "Dell TV For Women Size Large",
+        "Trek Television For Women Black"
+      ]
+    },
+    {
+      "query": "new television",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove New TV Lightweight",
+        "Nike New Television Black",
+        "Levi New Television for Men"
+      ]
+    },
+    {
+      "query": "television 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina TV 2 Pack Size Large",
+        "Hanes Television 2 Pack Black",
+        "Trek Televisions 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "tablet",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Tablet Deluxe Edition",
+        "Hanes Tablet for Women",
+        "Levi Tablet Deluxe Edition"
+      ]
+    },
+    {
+      "query": "tablet for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Tablet For Men for Men",
+        "Dove Tablet For Men for Kids",
+        "Colgate Tablets For Men Lightweight"
+      ]
+    },
+    {
+      "query": "tablet for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Tablets For Women New",
+        "Apple Tablets For Women Premium",
+        "Samsung Tablet For Women White"
+      ]
+    },
+    {
+      "query": "new tablet",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Tablets Lightweight",
+        "Trek New Tablet for Men",
+        "Samsung New Tablet for Men"
+      ]
+    },
+    {
+      "query": "tablet 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Tablets 2 Pack Premium",
+        "Dell Tablet 2 Pack for Kids",
+        "Kirkland Tablet 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "smart watch",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Smart Watch White",
+        "Apple Smart Watch Lightweight",
+        "Purina Smart Watchs for Men"
+      ]
+    },
+    {
+      "query": "smart watch for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Smart Watch For Men Premium",
+        "Apple Smart Watchs For Men Black",
+        "Sony Smart Watch For Men White"
+      ]
+    },
+    {
+      "query": "smart watch for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Smart Watch For Women New",
+        "Great Value Smart Watch For Women Lightweight",
+        "Kirkland Smart Watchs For Women Size Large"
+      ]
+    },
+    {
+      "query": "new smart watch",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple New Smart Watch Size Large",
+        "Trek New Smart Watchs Lightweight",
+        "Great Value New Smart Watch Size Large"
+      ]
+    },
+    {
+      "query": "smart watch 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Smart Watch 2 Pack Lightweight",
+        "Colgate Smart Watchs 2 Pack Premium",
+        "Kirkland Smart Watch 2 Pack Size Large"
+      ]
+    },
+    {
+      "query": "bluetooth speaker",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Bluetooth Speakers for Kids",
+        "Amazon Basics Bluetooth Speaker Lightweight",
+        "Apple Bluetooth Speaker for Men"
+      ]
+    },
+    {
+      "query": "bluetooth speaker for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Bluetooth Speaker For Men White",
+        "Trek Bluetooth Speakers For Men Premium",
+        "Sony Bluetooth Speaker For Men Lightweight"
+      ]
+    },
+    {
+      "query": "bluetooth speaker for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Bluetooth Speaker For Women Black",
+        "Levi Bluetooth Speaker For Women 2 Pack",
+        "Kirkland Bluetooth Speakers For Women Black"
+      ]
+    },
+    {
+      "query": "new bluetooth speaker",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell New Bluetooth Speakers White",
+        "Amazon Basics New Bluetooth Speaker for Kids",
+        "Nike New Bluetooth Speaker White"
+      ]
+    },
+    {
+      "query": "bluetooth speaker 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Bluetooth Speaker 2 Pack for Kids",
+        "Dell Bluetooth Speaker 2 Pack 2 Pack",
+        "Levi Bluetooth Speakers 2 Pack for Women"
+      ]
+    },
+    {
+      "query": "camera",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Digital Camera New",
+        "Amazon Basics Cameras Size Large",
+        "Apple Digital Camera 2 Pack"
+      ]
+    },
+    {
+      "query": "camera for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Digital Camera For Men Premium",
+        "Sony Camera For Men Black",
+        "Apple Digital Camera For Men for Women"
+      ]
+    },
+    {
+      "query": "camera for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Digital Camera For Women for Women",
+        "Trek Cameras For Women New",
+        "Amazon Basics Camera For Women Premium"
+      ]
+    },
+    {
+      "query": "new camera",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Camera Lightweight",
+        "Dell New Cameras White",
+        "Samsung New Digital Camera Black"
+      ]
+    },
+    {
+      "query": "camera 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Cameras 2 Pack New",
+        "Purina Camera 2 Pack Size Large",
+        "Levi Camera 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "batteries",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Battery Size Large",
+        "Dell Batteries Premium",
+        "Nike Batteries for Kids"
+      ]
+    },
+    {
+      "query": "batteries for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Battery For Men Size Large",
+        "Dove Battery For Men Premium",
+        "Apple Battery For Men Lightweight"
+      ]
+    },
+    {
+      "query": "batteries for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Batteries For Women Black",
+        "Dell Batteries For Women New",
+        "Colgate Batteries For Women Size Large"
+      ]
+    },
+    {
+      "query": "new batteries",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Batteries for Kids",
+        "Sony New Batteries for Men",
+        "Sony New Battery for Men"
+      ]
+    },
+    {
+      "query": "batteries 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Battery 2 Pack White",
+        "Nike Battery 2 Pack Premium",
+        "Nike Batteries 2 Pack New"
+      ]
+    },
+    {
+      "query": "earbuds",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Earbud for Men",
+        "Samsung Earbud Premium",
+        "Colgate Earbuds Deluxe Edition"
+      ]
+    },
+    {
+      "query": "earbuds for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Earbud For Men for Kids",
+        "Colgate Earbuds For Men Premium",
+        "Apple Earbuds For Men for Men"
+      ]
+    },
+    {
+      "query": "earbuds for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Earbud For Women for Women",
+        "Nike Earbuds For Women Deluxe Edition",
+        "Amazon Basics Earbuds For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new earbuds",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina New Earbuds Deluxe Edition",
+        "Levi New Earbuds Lightweight",
+        "Kirkland New Earbuds Deluxe Edition"
+      ]
+    },
+    {
+      "query": "earbuds 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Earbuds 2 Pack Deluxe Edition",
+        "Great Value Earbuds 2 Pack for Kids",
+        "Apple Earbuds 2 Pack Black"
+      ]
+    },
+    {
+      "query": "couch",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Sofa Size Large",
+        "Dell Couchs New",
+        "Hanes Couch Lightweight"
+      ]
+    },
+    {
+      "query": "couch for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Couchs For Men New",
+        "Purina Sofa For Men for Kids",
+        "Trek Couch For Men Premium"
+      ]
+    },
+    {
+      "query": "couch for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Couchs For Women for Kids",
+        "Kirkland Couch For Women New",
+        "Colgate Couch For Women for Men"
+      ]
+    },
+    {
+      "query": "new couch",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Sofa New",
+        "Kirkland New Couch for Men",
+        "Hanes New Sofa for Kids"
+      ]
+    },
+    {
+      "query": "couch 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Couchs 2 Pack Size Large",
+        "Sony Sofa 2 Pack for Women",
+        "Dove Couch 2 Pack Lightweight"
+      ]
+    },
+    {
+      "query": "sofa",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Sofas for Women",
+        "Trek Sofas 2 Pack",
+        "Levi Sofas for Women"
+      ]
+    },
+    {
+      "query": "sofa for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Couch For Men for Women",
+        "Great Value Couch For Men 2 Pack",
+        "Kirkland Sofas For Men 2 Pack"
+      ]
+    },
+    {
+      "query": "sofa for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Couch For Women Premium",
+        "Dove Sofas For Women 2 Pack",
+        "Sony Couch For Women Premium"
+      ]
+    },
+    {
+      "query": "new sofa",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland New Couch for Men",
+        "Nike New Sofas New",
+        "Samsung New Sofas for Women"
+      ]
+    },
+    {
+      "query": "sofa 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Sofas 2 Pack Black",
+        "Hanes Couch 2 Pack Black",
+        "Samsung Couch 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "lamp",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Lamps Lightweight",
+        "Amazon Basics Lamp Deluxe Edition",
+        "Apple Lamp Lightweight"
+      ]
+    },
+    {
+      "query": "lamp for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Lamp For Men Deluxe Edition",
+        "Dell Lamp For Men for Women",
+        "Sony Lamp For Men 2 Pack"
+      ]
+    },
+    {
+      "query": "lamp for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Lamp For Women Deluxe Edition",
+        "Purina Lamps For Women for Men",
+        "Purina Lamps For Women White"
+      ]
+    },
+    {
+      "query": "new lamp",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Lamps New",
+        "Kirkland New Lamps for Men",
+        "Dove New Lamp Black"
+      ]
+    },
+    {
+      "query": "lamp 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Lamps 2 Pack for Kids",
+        "Levi Lamp 2 Pack Size Large",
+        "Apple Lamp 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "pillow",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Pillows Size Large",
+        "Kirkland Pillow for Kids",
+        "Great Value Pillow Premium"
+      ]
+    },
+    {
+      "query": "pillow for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Pillow For Men Deluxe Edition",
+        "Great Value Pillow For Men Size Large",
+        "Great Value Pillow For Men White"
+      ]
+    },
+    {
+      "query": "pillow for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Pillows For Women Premium",
+        "Dell Pillows For Women Black",
+        "Trek Pillows For Women New"
+      ]
+    },
+    {
+      "query": "new pillow",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Pillow Black",
+        "Kirkland New Pillows for Men",
+        "Levi New Pillows New"
+      ]
+    },
+    {
+      "query": "pillow 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Pillow 2 Pack White",
+        "Dell Pillow 2 Pack New",
+        "Nike Pillow 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "blanket",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Throw Blanket White",
+        "Nike Throw Blanket New",
+        "Trek Blanket for Men"
+      ]
+    },
+    {
+      "query": "blanket for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Blanket For Men Premium",
+        "Apple Blanket For Men Lightweight",
+        "Colgate Throw Blanket For Men for Men"
+      ]
+    },
+    {
+      "query": "blanket for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Blanket For Women Size Large",
+        "Amazon Basics Blankets For Women Black",
+        "Levi Blanket For Women Black"
+      ]
+    },
+    {
+      "query": "new blanket",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Throw Blanket 2 Pack",
+        "Kirkland New Throw Blanket for Women",
+        "Nike New Blanket Size Large"
+      ]
+    },
+    {
+      "query": "blanket 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Blankets 2 Pack for Kids",
+        "Samsung Blankets 2 Pack Premium",
+        "Purina Throw Blanket 2 Pack Lightweight"
+      ]
+    },
+    {
+      "query": "vacuum cleaner",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Vacuum Cleaner Premium",
+        "Apple Vacuum Cleaners Black",
+        "Sony Vacuum Cleaner White"
+      ]
+    },
+    {
+      "query": "vacuum cleaner for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Vacuum Cleaner For Men for Kids",
+        "Nike Vacuum Cleaner For Men for Women",
+        "Purina Vacuum Cleaners For Men for Men"
+      ]
+    },
+    {
+      "query": "vacuum cleaner for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Vacuum Cleaner For Women for Kids",
+        "Samsung Vacuum Cleaners For Women Lightweight",
+        "Nike Vacuum Cleaners For Women for Women"
+      ]
+    },
+    {
+      "query": "new vacuum cleaner",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek New Vacuum Cleaners Black",
+        "Nike New Vacuum Cleaner Lightweight",
+        "Amazon Basics New Vacuum Cleaners Black"
+      ]
+    },
+    {
+      "query": "vacuum cleaner 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Vacuum Cleaners 2 Pack Size Large",
+        "Kirkland Vacuum Cleaners 2 Pack White",
+        "Levi Vacuum Cleaner 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "desk",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Desk Deluxe Edition",
+        "Colgate Desk Lightweight",
+        "Colgate Desk Deluxe Edition"
+      ]
+    },
+    {
+      "query": "desk for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Desk For Men Deluxe Edition",
+        "Sony Desk For Men 2 Pack",
+        "Hanes Desk For Men for Kids"
+      ]
+    },
+    {
+      "query": "desk for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Desks For Women for Men",
+        "Trek Desk For Women White",
+        "Apple Desk For Women for Men"
+      ]
+    },
+    {
+      "query": "new desk",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Desk for Kids",
+        "Colgate New Desk Deluxe Edition",
+        "Hanes New Desk Deluxe Edition"
+      ]
+    },
+    {
+      "query": "desk 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Desks 2 Pack Premium",
+        "Colgate Desk 2 Pack for Men",
+        "Great Value Desk 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "chair",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Chairs White",
+        "Nike Chair Premium",
+        "Apple Chairs Size Large"
+      ]
+    },
+    {
+      "query": "chair for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Chair For Men Deluxe Edition",
+        "Samsung Chairs For Men 2 Pack",
+        "Kirkland Chair For Men Premium"
+      ]
+    },
+    {
+      "query": "chair for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Chair For Women Deluxe Edition",
+        "Apple Chair For Women Size Large",
+        "Dove Chair For Women for Kids"
+      ]
+    },
+    {
+      "query": "new chair",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Chair Deluxe Edition",
+        "Levi New Chairs Lightweight",
+        "Amazon Basics New Chairs for Women"
+      ]
+    },
+    {
+      "query": "chair 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Chairs 2 Pack White",
+        "Apple Chair 2 Pack New",
+        "Colgate Chair 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "bed sheets",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Bed Sheet for Women",
+        "Dove Bed Sheets Black",
+        "Hanes Bed Sheets 2 Pack"
+      ]
+    },
+    {
+      "query": "bed sheets for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Bed Sheet For Men for Women",
+        "Samsung Bed Sheets For Men White",
+        "Trek Bed Sheet For Men for Kids"
+      ]
+    },
+    {
+      "query": "bed sheets for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Bed Sheet For Women Black",
+        "Samsung Bed Sheets For Women for Kids",
+        "Great Value Bed Sheets For Women Size Large"
+      ]
+    },
+    {
+      "query": "new bed sheets",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Bed Sheets White",
+        "Trek New Bed Sheets Premium",
+        "Samsung New Bed Sheets White"
+      ]
+    },
+    {
+      "query": "bed sheets 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Bed Sheet 2 Pack New",
+        "Dell Bed Sheet 2 Pack for Kids",
+        "Great Value Bed Sheets 2 Pack for Women"
+      ]
+    },
+    {
+      "query": "clock",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Clock Deluxe Edition",
+        "Sony Clocks New",
+        "Colgate Clock Deluxe Edition"
+      ]
+    },
+    {
+      "query": "clock for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Clock For Men for Men",
+        "Nike Clocks For Men for Women",
+        "Kirkland Clock For Men Size Large"
+      ]
+    },
+    {
+      "query": "clock for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Clocks For Women for Kids",
+        "Nike Clock For Women Deluxe Edition",
+        "Levi Clock For Women White"
+      ]
+    },
+    {
+      "query": "new clock",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland New Clocks New",
+        "Nike New Clock New",
+        "Samsung New Clock New"
+      ]
+    },
+    {
+      "query": "clock 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Clock 2 Pack for Men",
+        "Kirkland Clock 2 Pack for Men",
+        "Levi Clock 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "candle",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Candles Size Large",
+        "Nike Candle for Men",
+        "Nike Candle White"
+      ]
+    },
+    {
+      "query": "candle for men",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Candle For Men Lightweight",
+        "Colgate Candles For Men White",
+        "Dell Candle For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "candle for women",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Candles For Women 2 Pack",
+        "Kirkland Candle For Women Premium",
+        "Dove Candle For Women for Women"
+      ]
+    },
+    {
+      "query": "new candle",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove New Candles Black",
+        "Levi New Candle White",
+        "Colgate New Candle for Women"
+      ]
+    },
+    {
+      "query": "candle 2 pack",
+      "category": "home",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Candles 2 Pack Black",
+        "Hanes Candle 2 Pack White",
+        "Trek Candles 2 Pack Size Large"
+      ]
+    },
+    {
+      "query": "toothpaste",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Toothpaste White",
+        "Amazon Basics Toothpastes Premium",
+        "Hanes Toothpaste New"
+      ]
+    },
+    {
+      "query": "toothpaste for men",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Toothpaste For Men Deluxe Edition",
+        "Kirkland Toothpastes For Men for Men",
+        "Nike Toothpaste For Men Lightweight"
+      ]
+    },
+    {
+      "query": "toothpaste for women",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Toothpaste For Women Deluxe Edition",
+        "Great Value Toothpastes For Women New",
+        "Colgate Toothpaste For Women New"
+      ]
+    },
+    {
+      "query": "new toothpaste",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek New Toothpastes for Women",
+        "Trek New Toothpaste Lightweight",
+        "Colgate New Toothpastes Size Large"
+      ]
+    },
+    {
+      "query": "toothpaste 2 pack",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Toothpaste 2 Pack Deluxe Edition",
+        "Levi Toothpaste 2 Pack Lightweight",
+        "Nike Toothpaste 2 Pack Lightweight"
+      ]
+    },
+    {
+      "query": "shampoo",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Shampoo Deluxe Edition",
+        "Sony Shampoo for Women",
+        "Levi Shampoo Deluxe Edition"
+      ]
+    },
+    {
+      "query": "shampoo for men",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Shampoo For Men Size Large",
+        "Great Value Shampoo For Men for Kids",
+        "Dove Shampoos For Men for Men"
+      ]
+    },
+    {
+      "query": "shampoo for women",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Shampoo For Women for Men",
+        "Great Value Shampoos For Women for Men",
+        "Dell Shampoo For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new shampoo",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics New Shampoo for Women",
+        "Samsung New Shampoo Black",
+        "Kirkland New Shampoos for Men"
+      ]
+    },
+    {
+      "query": "shampoo 2 pack",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Shampoo 2 Pack Deluxe Edition",
+        "Dell Shampoo 2 Pack White",
+        "Samsung Shampoo 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "vitamins",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Vitamin Size Large",
+        "Kirkland Vitamin New",
+        "Amazon Basics Vitamins Premium"
+      ]
+    },
+    {
+      "query": "vitamins for men",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Vitamin For Men Black",
+        "Dove Vitamins For Men for Men",
+        "Great Value Vitamins For Men Lightweight"
+      ]
+    },
+    {
+      "query": "vitamins for women",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Vitamin For Women for Men",
+        "Trek Vitamin For Women New",
+        "Apple Vitamin For Women White"
+      ]
+    },
+    {
+      "query": "new vitamins",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple New Vitamin White",
+        "Levi New Vitamin White",
+        "Hanes New Vitamin for Men"
+      ]
+    },
+    {
+      "query": "vitamins 2 pack",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Vitamin 2 Pack Lightweight",
+        "Apple Vitamin 2 Pack New",
+        "Trek Vitamins 2 Pack White"
+      ]
+    },
+    {
+      "query": "sunscreen",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Sunscreen Premium",
+        "Trek Sunscreens for Women",
+        "Sony Sunscreens New"
+      ]
+    },
+    {
+      "query": "sunscreen for men",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Sunscreen For Men Deluxe Edition",
+        "Colgate Sunscreen For Men Deluxe Edition",
+        "Dell Sunscreen For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "sunscreen for women",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Sunscreens For Women New",
+        "Samsung Sunscreen For Women Deluxe Edition",
+        "Trek Sunscreen For Women Black"
+      ]
+    },
+    {
+      "query": "new sunscreen",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Sunscreen Deluxe Edition",
+        "Kirkland New Sunscreen Deluxe Edition",
+        "Nike New Sunscreen Black"
+      ]
+    },
+    {
+      "query": "sunscreen 2 pack",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Sunscreens 2 Pack 2 Pack",
+        "Great Value Sunscreen 2 Pack for Women",
+        "Trek Sunscreen 2 Pack for Women"
+      ]
+    },
+    {
+      "query": "lipstick",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Lipstick Deluxe Edition",
+        "Great Value Lipsticks 2 Pack",
+        "Dove Lipstick for Kids"
+      ]
+    },
+    {
+      "query": "lipstick for men",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Lipstick For Men 2 Pack",
+        "Apple Lipstick For Men 2 Pack",
+        "Hanes Lipsticks For Men for Kids"
+      ]
+    },
+    {
+      "query": "lipstick for women",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Lipstick For Women Deluxe Edition",
+        "Dell Lipstick For Women Deluxe Edition",
+        "Colgate Lipstick For Women 2 Pack"
+      ]
+    },
+    {
+      "query": "new lipstick",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Lipstick Deluxe Edition",
+        "Nike New Lipstick Black",
+        "Kirkland New Lipsticks 2 Pack"
+      ]
+    },
+    {
+      "query": "lipstick 2 pack",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Lipstick 2 Pack Deluxe Edition",
+        "Samsung Lipstick 2 Pack Size Large",
+        "Samsung Lipstick 2 Pack Size Large"
+      ]
+    },
+    {
+      "query": "lip balm",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Lip Balms Black",
+        "Trek Lip Balm 2 Pack",
+        "Apple Lip Balm Deluxe Edition"
+      ]
+    },
+    {
+      "query": "lip balm for men",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Lip Balm For Men Deluxe Edition",
+        "Nike Lip Balm For Men Lightweight",
+        "Hanes Lip Balm For Men Premium"
+      ]
+    },
+    {
+      "query": "lip balm for women",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Lip Balm For Women Deluxe Edition",
+        "Dove Lip Balm For Women Deluxe Edition",
+        "Sony Lip Balm For Women for Women"
+      ]
+    },
+    {
+      "query": "new lip balm",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek New Lip Balm Deluxe Edition",
+        "Trek New Lip Balm for Women",
+        "Amazon Basics New Lip Balms for Kids"
+      ]
+    },
+    {
+      "query": "lip balm 2 pack",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Lip Balm 2 Pack Deluxe Edition",
+        "Dove Lip Balms 2 Pack for Men",
+        "Hanes Lip Balms 2 Pack White"
+      ]
+    },
+    {
+      "query": "bath soak",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 28,
+      "top3Wrong": 3,
+      "top3": [
+        "Bath Soak Bath Soak",
+        "Bath Soak Bath Soak",
+        "Bath Soak Bath Soak"
+      ]
+    },
+    {
+      "query": "bath soak for men",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 28,
+      "top3Wrong": 3,
+      "top3": [
+        "Bath Soak For Men Bath Soak",
+        "Bath Soak For Men Bath Soak",
+        "Bath Soak For Men Bath Soak"
+      ]
+    },
+    {
+      "query": "bath soak for women",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 28,
+      "top3Wrong": 3,
+      "top3": [
+        "Bath Soak For Women Bath Soak",
+        "Bath Soak For Women Bath Soak",
+        "Bath Soak For Women Bath Soak"
+      ]
+    },
+    {
+      "query": "new bath soak",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 28,
+      "top3Wrong": 3,
+      "top3": [
+        "New Bath Soak Bath Soak",
+        "New Bath Soak Bath Soak",
+        "New Bath Soak Bath Soak"
+      ]
+    },
+    {
+      "query": "bath soak 2 pack",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 28,
+      "top3Wrong": 3,
+      "top3": [
+        "Bath Soak 2 Pack Bath Soak",
+        "Bath Soak 2 Pack Bath Soak",
+        "Bath Soak 2 Pack Bath Soak"
+      ]
+    },
+    {
+      "query": "baby diapers",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Baby Diaper for Men",
+        "Hanes Baby Diapers for Men",
+        "Nike Baby Diapers New"
+      ]
+    },
+    {
+      "query": "baby diapers for men",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Baby Diaper For Men 2 Pack",
+        "Amazon Basics Baby Diaper For Men Premium",
+        "Sony Baby Diaper For Men for Kids"
+      ]
+    },
+    {
+      "query": "baby diapers for women",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Baby Diapers For Women 2 Pack",
+        "Purina Baby Diaper For Women for Men",
+        "Levi Baby Diapers For Women New"
+      ]
+    },
+    {
+      "query": "new baby diapers",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value New Baby Diapers for Women",
+        "Nike New Baby Diapers Black",
+        "Great Value New Baby Diaper Lightweight"
+      ]
+    },
+    {
+      "query": "baby diapers 2 pack",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Baby Diaper 2 Pack Black",
+        "Hanes Baby Diaper 2 Pack White",
+        "Levi Baby Diaper 2 Pack White"
+      ]
+    },
+    {
+      "query": "baby stroller",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Baby Strollers White",
+        "Purina Baby Stroller for Kids",
+        "Colgate Baby Stroller for Women"
+      ]
+    },
+    {
+      "query": "baby stroller for men",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Baby Strollers For Men for Men",
+        "Apple Baby Stroller For Men for Women",
+        "Dove Baby Strollers For Men New"
+      ]
+    },
+    {
+      "query": "baby stroller for women",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Baby Stroller For Women New",
+        "Kirkland Baby Strollers For Women 2 Pack",
+        "Sony Baby Strollers For Women Premium"
+      ]
+    },
+    {
+      "query": "new baby stroller",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland New Baby Stroller 2 Pack",
+        "Dove New Baby Stroller for Kids",
+        "Levi New Baby Strollers Size Large"
+      ]
+    },
+    {
+      "query": "baby stroller 2 pack",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Baby Stroller 2 Pack for Kids",
+        "Apple Baby Stroller 2 Pack Black",
+        "Great Value Baby Stroller 2 Pack New"
+      ]
+    },
+    {
+      "query": "baby bottle",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Baby Bottle Premium",
+        "Levi Baby Bottle Premium",
+        "Nike Baby Bottles Lightweight"
+      ]
+    },
+    {
+      "query": "baby bottle for men",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Baby Bottles For Men Black",
+        "Apple Baby Bottle For Men for Men",
+        "Dell Baby Bottle For Men Size Large"
+      ]
+    },
+    {
+      "query": "baby bottle for women",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Baby Bottle For Women Premium",
+        "Colgate Baby Bottle For Women for Kids",
+        "Nike Baby Bottle For Women New"
+      ]
+    },
+    {
+      "query": "new baby bottle",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove New Baby Bottles for Women",
+        "Apple New Baby Bottle Premium",
+        "Purina New Baby Bottles Black"
+      ]
+    },
+    {
+      "query": "baby bottle 2 pack",
+      "category": "baby",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Baby Bottle 2 Pack Size Large",
+        "Levi Baby Bottle 2 Pack 2 Pack",
+        "Dell Baby Bottle 2 Pack for Kids"
+      ]
+    },
+    {
+      "query": "tennis racket",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Tennis Racket for Men",
+        "Apple Tennis Racket for Women",
+        "Kirkland Tennis Rackets Lightweight"
+      ]
+    },
+    {
+      "query": "tennis racket for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Tennis Rackets For Men for Women",
+        "Hanes Tennis Racket For Men Premium",
+        "Samsung Tennis Racket For Men Premium"
+      ]
+    },
+    {
+      "query": "tennis racket for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Tennis Rackets For Women for Men",
+        "Hanes Tennis Racket For Women New",
+        "Sony Tennis Racket For Women Black"
+      ]
+    },
+    {
+      "query": "new tennis racket",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Tennis Rackets White",
+        "Nike New Tennis Rackets Lightweight",
+        "Apple New Tennis Rackets New"
+      ]
+    },
+    {
+      "query": "tennis racket 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Tennis Rackets 2 Pack for Women",
+        "Dell Tennis Racket 2 Pack for Kids",
+        "Nike Tennis Racket 2 Pack for Kids"
+      ]
+    },
+    {
+      "query": "yoga mat",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Yoga Mats for Men",
+        "Dell Yoga Mat for Women",
+        "Colgate Yoga Mat New"
+      ]
+    },
+    {
+      "query": "yoga mat for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Yoga Mats For Men Premium",
+        "Nike Yoga Mat For Men for Women",
+        "Sony Yoga Mat For Men for Women"
+      ]
+    },
+    {
+      "query": "yoga mat for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Yoga Mats For Women for Kids",
+        "Sony Yoga Mat For Women Premium",
+        "Trek Yoga Mat For Women for Women"
+      ]
+    },
+    {
+      "query": "new yoga mat",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate New Yoga Mat Black",
+        "Amazon Basics New Yoga Mat Size Large",
+        "Samsung New Yoga Mat New"
+      ]
+    },
+    {
+      "query": "yoga mat 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Yoga Mat 2 Pack for Women",
+        "Amazon Basics Yoga Mat 2 Pack Size Large",
+        "Hanes Yoga Mats 2 Pack for Women"
+      ]
+    },
+    {
+      "query": "bicycle",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Bike for Kids",
+        "Colgate Bicycles for Kids",
+        "Hanes Bike Size Large"
+      ]
+    },
+    {
+      "query": "bicycle for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Bicycles For Men Black",
+        "Hanes Bicycles For Men Lightweight",
+        "Apple Bicycle For Men Premium"
+      ]
+    },
+    {
+      "query": "bicycle for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Bicycles For Women for Men",
+        "Amazon Basics Bike For Women for Women",
+        "Samsung Bicycle For Women 2 Pack"
+      ]
+    },
+    {
+      "query": "new bicycle",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi New Bike Black",
+        "Dell New Bicycles Premium",
+        "Levi New Bicycle Black"
+      ]
+    },
+    {
+      "query": "bicycle 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Bicycle 2 Pack Lightweight",
+        "Sony Bicycles 2 Pack Lightweight",
+        "Nike Bicycle 2 Pack Black"
+      ]
+    },
+    {
+      "query": "mountain bike",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Mountain Bikes 2 Pack",
+        "Hanes Mountain Bike Deluxe Edition",
+        "Sony Mountain Bike White"
+      ]
+    },
+    {
+      "query": "mountain bike for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Mountain Bike For Men for Women",
+        "Dove Mountain Bikes For Men for Kids",
+        "Kirkland Mountain Bike For Men for Women"
+      ]
+    },
+    {
+      "query": "mountain bike for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Mountain Bikes For Women New",
+        "Samsung Mountain Bike For Women for Kids",
+        "Nike Mountain Bike For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new mountain bike",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi New Mountain Bike Deluxe Edition",
+        "Apple New Mountain Bike Black",
+        "Great Value New Mountain Bike New"
+      ]
+    },
+    {
+      "query": "mountain bike 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Mountain Bike 2 Pack Deluxe Edition",
+        "Samsung Mountain Bike 2 Pack for Kids",
+        "Nike Mountain Bike 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "road bike",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Road Bike Deluxe Edition",
+        "Dove Road Bikes for Men",
+        "Nike Road Bike Lightweight"
+      ]
+    },
+    {
+      "query": "road bike for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Road Bike For Men Deluxe Edition",
+        "Samsung Road Bikes For Men for Men",
+        "Sony Road Bike For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "road bike for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Road Bike For Women White",
+        "Trek Road Bike For Women Black",
+        "Colgate Road Bike For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new road bike",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland New Road Bikes White",
+        "Purina New Road Bike Black",
+        "Levi New Road Bike 2 Pack"
+      ]
+    },
+    {
+      "query": "road bike 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Road Bike 2 Pack Deluxe Edition",
+        "Levi Road Bike 2 Pack for Women",
+        "Apple Road Bike 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "e-bike",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony E-Bikes Premium",
+        "Nike Electric Bike Black",
+        "Amazon Basics Electric Bike 2 Pack"
+      ]
+    },
+    {
+      "query": "e-bike for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple E-Bikes For Men Size Large",
+        "Kirkland Electric Bike For Men Size Large",
+        "Levi E-Bikes For Men Black"
+      ]
+    },
+    {
+      "query": "e-bike for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell E-Bikes For Women White",
+        "Apple E-Bikes For Women White",
+        "Amazon Basics E-Bike For Women for Kids"
+      ]
+    },
+    {
+      "query": "new e-bike",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple New E-Bike Premium",
+        "Samsung New E-Bikes for Kids",
+        "Great Value New E-Bike 2 Pack"
+      ]
+    },
+    {
+      "query": "e-bike 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony E-Bike 2 Pack Lightweight",
+        "Colgate E-Bikes 2 Pack Size Large",
+        "Hanes E-Bike 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "dumbbells",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Dumbbell Size Large",
+        "Dell Dumbbells White",
+        "Sony Dumbbell for Men"
+      ]
+    },
+    {
+      "query": "dumbbells for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Dumbbells For Men Premium",
+        "Nike Dumbbells For Men for Kids",
+        "Sony Dumbbell For Men for Men"
+      ]
+    },
+    {
+      "query": "dumbbells for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Dumbbell For Women for Women",
+        "Apple Dumbbells For Women Premium",
+        "Purina Dumbbell For Women Size Large"
+      ]
+    },
+    {
+      "query": "new dumbbells",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple New Dumbbell Size Large",
+        "Nike New Dumbbells 2 Pack",
+        "Nike New Dumbbell New"
+      ]
+    },
+    {
+      "query": "dumbbells 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Dumbbell 2 Pack Premium",
+        "Dell Dumbbell 2 Pack 2 Pack",
+        "Dove Dumbbell 2 Pack White"
+      ]
+    },
+    {
+      "query": "fishing rod",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Fishing Rod 2 Pack",
+        "Colgate Fishing Rod for Kids",
+        "Purina Fishing Rod Deluxe Edition"
+      ]
+    },
+    {
+      "query": "fishing rod for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Fishing Rod For Men Deluxe Edition",
+        "Great Value Fishing Rod For Men for Women",
+        "Dove Fishing Rod For Men White"
+      ]
+    },
+    {
+      "query": "fishing rod for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Fishing Rod For Women Deluxe Edition",
+        "Kirkland Fishing Rod For Women Deluxe Edition",
+        "Hanes Fishing Rod For Women 2 Pack"
+      ]
+    },
+    {
+      "query": "new fishing rod",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland New Fishing Rod for Women",
+        "Amazon Basics New Fishing Rods Black",
+        "Amazon Basics New Fishing Rod Lightweight"
+      ]
+    },
+    {
+      "query": "fishing rod 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Fishing Rod 2 Pack Deluxe Edition",
+        "Samsung Fishing Rod 2 Pack Deluxe Edition",
+        "Apple Fishing Rod 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "bike helmet",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Bike Helmet for Women",
+        "Purina Bike Helmets White",
+        "Amazon Basics Bike Helmet for Kids"
+      ]
+    },
+    {
+      "query": "bike helmet for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 26,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Bike Helmet For Men for Women",
+        "Hanes Bike Helmets For Men for Kids",
+        "Apple Bike Helmet For Men Premium"
+      ]
+    },
+    {
+      "query": "bike helmet for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 27,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Bike Helmet For Women for Men",
+        "Dove Bike Helmet For Women Lightweight",
+        "Nike Bike Helmets For Women for Kids"
+      ]
+    },
+    {
+      "query": "new bike helmet",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Bike Helmet Deluxe Edition",
+        "Amazon Basics New Bike Helmet Premium",
+        "Amazon Basics New Bike Helmet New"
+      ]
+    },
+    {
+      "query": "bike helmet 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Bike Helmets 2 Pack New",
+        "Trek Bike Helmets 2 Pack Premium",
+        "Purina Bike Helmet 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "bike lock",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Bike Lock Deluxe Edition",
+        "Dove Bike Locks New",
+        "Trek Bike Locks New"
+      ]
+    },
+    {
+      "query": "bike lock for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 27,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Bike Lock For Men Deluxe Edition",
+        "Levi Bike Lock For Men Deluxe Edition",
+        "Great Value Bike Locks For Men New"
+      ]
+    },
+    {
+      "query": "bike lock for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 27,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Bike Lock For Women Deluxe Edition",
+        "Nike Bike Lock For Women for Men",
+        "Kirkland Bike Lock For Women Black"
+      ]
+    },
+    {
+      "query": "new bike lock",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Bike Lock Deluxe Edition",
+        "Samsung New Bike Locks 2 Pack",
+        "Apple New Bike Lock Deluxe Edition"
+      ]
+    },
+    {
+      "query": "bike lock 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 26,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Bike Locks 2 Pack for Kids",
+        "Nike Bike Lock 2 Pack for Men",
+        "Samsung Bike Lock 2 Pack for Women"
+      ]
+    },
+    {
+      "query": "bike pump",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Bike Pump Deluxe Edition",
+        "Trek Bike Pump for Kids",
+        "Purina Bike Pumps New"
+      ]
+    },
+    {
+      "query": "bike pump for men",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Bike Pump For Men Deluxe Edition",
+        "Apple Bike Pumps For Men New",
+        "Purina Bike Pump For Men for Kids"
+      ]
+    },
+    {
+      "query": "bike pump for women",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Bike Pump For Women White",
+        "Sony Bike Pump For Women 2 Pack",
+        "Dove Bike Pump For Women New"
+      ]
+    },
+    {
+      "query": "new bike pump",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina New Bike Pumps 2 Pack",
+        "Dell New Bike Pump for Kids",
+        "Apple New Bike Pumps for Women"
+      ]
+    },
+    {
+      "query": "bike pump 2 pack",
+      "category": "sports",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Bike Pumps 2 Pack Premium",
+        "Sony Bike Pumps 2 Pack for Kids",
+        "Samsung Bike Pump 2 Pack Black"
+      ]
+    },
+    {
+      "query": "dog food",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Dog Foods New",
+        "Apple Dog Food Black",
+        "Hanes Dog Food Black"
+      ]
+    },
+    {
+      "query": "dog food for men",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Dog Food For Men for Kids",
+        "Great Value Dog Food For Men Premium",
+        "Colgate Dog Foods For Men Black"
+      ]
+    },
+    {
+      "query": "dog food for women",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Dog Foods For Women for Men",
+        "Hanes Dog Foods For Women Premium",
+        "Great Value Dog Food For Women White"
+      ]
+    },
+    {
+      "query": "new dog food",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland New Dog Food Lightweight",
+        "Amazon Basics New Dog Food Black",
+        "Apple New Dog Foods for Kids"
+      ]
+    },
+    {
+      "query": "dog food 2 pack",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Dog Foods 2 Pack Premium",
+        "Nike Dog Food 2 Pack Black",
+        "Sony Dog Foods 2 Pack for Kids"
+      ]
+    },
+    {
+      "query": "cat litter",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Cat Litter for Men",
+        "Hanes Cat Litter Deluxe Edition",
+        "Purina Cat Litter for Men"
+      ]
+    },
+    {
+      "query": "cat litter for men",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Apple Cat Litters For Men Premium",
+        "Purina Cat Litter For Men for Kids",
+        "Apple Cat Litter For Men Premium"
+      ]
+    },
+    {
+      "query": "cat litter for women",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Cat Litter For Women Deluxe Edition",
+        "Dell Cat Litters For Women Lightweight",
+        "Dove Cat Litters For Women for Men"
+      ]
+    },
+    {
+      "query": "new cat litter",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi New Cat Litters 2 Pack",
+        "Colgate New Cat Litter for Men",
+        "Great Value New Cat Litter New"
+      ]
+    },
+    {
+      "query": "cat litter 2 pack",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Cat Litter 2 Pack Deluxe Edition",
+        "Dove Cat Litter 2 Pack Premium",
+        "Dove Cat Litter 2 Pack Black"
+      ]
+    },
+    {
+      "query": "pet food",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Pet Foods New",
+        "Samsung Pet Foods White",
+        "Hanes Pet Food Deluxe Edition"
+      ]
+    },
+    {
+      "query": "pet food for men",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Pet Food For Men for Men",
+        "Apple Pet Food For Men Deluxe Edition",
+        "Apple Pet Food For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "pet food for women",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Pet Food For Women Deluxe Edition",
+        "Amazon Basics Pet Foods For Women for Kids",
+        "Nike Pet Food For Women for Women"
+      ]
+    },
+    {
+      "query": "new pet food",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Pet Food Black",
+        "Hanes New Pet Food 2 Pack",
+        "Colgate New Pet Food Deluxe Edition"
+      ]
+    },
+    {
+      "query": "pet food 2 pack",
+      "category": "pets",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Pet Foods 2 Pack for Women",
+        "Levi Pet Foods 2 Pack Black",
+        "Samsung Pet Food 2 Pack for Kids"
+      ]
+    },
+    {
+      "query": "backpack",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Backpack for Kids",
+        "Amazon Basics Backpacks Size Large",
+        "Trek Backpack Premium"
+      ]
+    },
+    {
+      "query": "backpack for men",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Rucksack For Men 2 Pack",
+        "Trek Backpack For Men New",
+        "Purina Backpacks For Men Black"
+      ]
+    },
+    {
+      "query": "backpack for women",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Backpack For Women for Women",
+        "Kirkland Backpacks For Women for Kids",
+        "Apple Backpack For Women White"
+      ]
+    },
+    {
+      "query": "new backpack",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell New Backpack Premium",
+        "Great Value New Backpack for Women",
+        "Great Value New Rucksack 2 Pack"
+      ]
+    },
+    {
+      "query": "backpack 2 pack",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Backpacks 2 Pack Premium",
+        "Hanes Backpack 2 Pack 2 Pack",
+        "Colgate Backpack 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "tote bag",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Tote Bag Size Large",
+        "Kirkland Tote Bag Premium",
+        "Levi Tote Bag Deluxe Edition"
+      ]
+    },
+    {
+      "query": "tote bag for men",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Tote Bag For Men Deluxe Edition",
+        "Levi Tote Bag For Men New",
+        "Dove Tote Bag For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "tote bag for women",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Tote Bag For Women Deluxe Edition",
+        "Amazon Basics Tote Bags For Women for Kids",
+        "Purina Tote Bags For Women for Women"
+      ]
+    },
+    {
+      "query": "new tote bag",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Tote Bag New",
+        "Great Value New Tote Bag Size Large",
+        "Purina New Tote Bags Premium"
+      ]
+    },
+    {
+      "query": "tote bag 2 pack",
+      "category": "bags",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Tote Bags 2 Pack White",
+        "Dove Tote Bag 2 Pack New",
+        "Levi Tote Bag 2 Pack New"
+      ]
+    },
+    {
+      "query": "water bottle",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Water Bottles Lightweight",
+        "Amazon Basics Water Bottles New",
+        "Sony Water Bottle for Men"
+      ]
+    },
+    {
+      "query": "water bottle for men",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Water Bottles For Men for Women",
+        "Trek Water Bottle For Men Black",
+        "Levi Water Bottle For Men Premium"
+      ]
+    },
+    {
+      "query": "water bottle for women",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Water Bottle For Women Lightweight",
+        "Levi Water Bottle For Women New",
+        "Apple Water Bottle For Women for Kids"
+      ]
+    },
+    {
+      "query": "new water bottle",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove New Water Bottles White",
+        "Trek New Water Bottle Premium",
+        "Nike New Water Bottles New"
+      ]
+    },
+    {
+      "query": "water bottle 2 pack",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Water Bottles 2 Pack Premium",
+        "Hanes Water Bottle 2 Pack for Women",
+        "Colgate Water Bottle 2 Pack Black"
+      ]
+    },
+    {
+      "query": "coffee mug",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Coffee Mug for Kids",
+        "Apple Coffee Mug Premium",
+        "Dell Coffee Mug for Men"
+      ]
+    },
+    {
+      "query": "coffee mug for men",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Coffee Mug For Men Deluxe Edition",
+        "Hanes Coffee Mug For Men 2 Pack",
+        "Nike Coffee Mug For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "coffee mug for women",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Coffee Mug For Women Deluxe Edition",
+        "Purina Coffee Mug For Women for Kids",
+        "Nike Coffee Mugs For Women Black"
+      ]
+    },
+    {
+      "query": "new coffee mug",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Coffee Mugs Size Large",
+        "Samsung New Coffee Mug Deluxe Edition",
+        "Purina New Coffee Mugs Size Large"
+      ]
+    },
+    {
+      "query": "coffee mug 2 pack",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Coffee Mug 2 Pack Deluxe Edition",
+        "Dell Coffee Mugs 2 Pack for Men",
+        "Purina Coffee Mug 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "cookie cutter",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Cookie Cutter Lightweight",
+        "Levi Cookie Cutter for Men",
+        "Sony Cookie Cutter Premium"
+      ]
+    },
+    {
+      "query": "cookie cutter for men",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Cookie Cutters For Men for Men",
+        "Dove Cookie Cutter For Men New",
+        "Samsung Cookie Cutter For Men White"
+      ]
+    },
+    {
+      "query": "cookie cutter for women",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Cookie Cutter For Women Deluxe Edition",
+        "Levi Cookie Cutter For Women Deluxe Edition",
+        "Hanes Cookie Cutter For Women 2 Pack"
+      ]
+    },
+    {
+      "query": "new cookie cutter",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Cookie Cutters Premium",
+        "Great Value New Cookie Cutter Size Large",
+        "Apple New Cookie Cutter Deluxe Edition"
+      ]
+    },
+    {
+      "query": "cookie cutter 2 pack",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Cookie Cutter 2 Pack for Men",
+        "Kirkland Cookie Cutters 2 Pack Lightweight",
+        "Levi Cookie Cutter 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "frying pan",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Frying Pans Size Large",
+        "Dove Frying Pans White",
+        "Trek Frying Pan Premium"
+      ]
+    },
+    {
+      "query": "frying pan for men",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Frying Pan For Men Deluxe Edition",
+        "Apple Frying Pan For Men Premium",
+        "Colgate Frying Pan For Men for Men"
+      ]
+    },
+    {
+      "query": "frying pan for women",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Frying Pan For Women for Men",
+        "Dove Frying Pan For Women for Kids",
+        "Kirkland Frying Pan For Women New"
+      ]
+    },
+    {
+      "query": "new frying pan",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value New Frying Pans Lightweight",
+        "Kirkland New Frying Pans New",
+        "Dove New Frying Pans for Men"
+      ]
+    },
+    {
+      "query": "frying pan 2 pack",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Frying Pans 2 Pack for Men",
+        "Colgate Frying Pan 2 Pack Size Large",
+        "Great Value Frying Pans 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "blender",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Blenders Lightweight",
+        "Nike Blenders for Kids",
+        "Trek Blender 2 Pack"
+      ]
+    },
+    {
+      "query": "blender for men",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Blenders For Men Size Large",
+        "Trek Blender For Men Size Large",
+        "Great Value Blender For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "blender for women",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Blenders For Women Premium",
+        "Sony Blenders For Women for Kids",
+        "Purina Blender For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new blender",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung New Blender Deluxe Edition",
+        "Apple New Blender for Kids",
+        "Sony New Blender Black"
+      ]
+    },
+    {
+      "query": "blender 2 pack",
+      "category": "kitchen",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Blenders 2 Pack Size Large",
+        "Levi Blender 2 Pack for Women",
+        "Dove Blenders 2 Pack for Kids"
+      ]
+    },
+    {
+      "query": "water pump",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Water Pumps for Women",
+        "Levi Water Pumps Black",
+        "Samsung Water Pump for Kids"
+      ]
+    },
+    {
+      "query": "water pump for men",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Water Pump For Men Deluxe Edition",
+        "Nike Water Pump For Men Black",
+        "Amazon Basics Water Pumps For Men Size Large"
+      ]
+    },
+    {
+      "query": "water pump for women",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Water Pump For Women Black",
+        "Samsung Water Pumps For Women Lightweight",
+        "Hanes Water Pump For Women New"
+      ]
+    },
+    {
+      "query": "new water pump",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland New Water Pump Deluxe Edition",
+        "Hanes New Water Pumps for Men",
+        "Dove New Water Pumps Black"
+      ]
+    },
+    {
+      "query": "water pump 2 pack",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Water Pumps 2 Pack Lightweight",
+        "Levi Water Pumps 2 Pack 2 Pack",
+        "Great Value Water Pump 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "garden hose",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics Garden Hose Deluxe Edition",
+        "Dell Garden Hoses Lightweight",
+        "Dove Garden Hoses for Men"
+      ]
+    },
+    {
+      "query": "garden hose for men",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Garden Hoses For Men Premium",
+        "Dell Garden Hose For Men Deluxe Edition",
+        "Great Value Garden Hose For Men Lightweight"
+      ]
+    },
+    {
+      "query": "garden hose for women",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Garden Hoses For Women White",
+        "Great Value Garden Hoses For Women Size Large",
+        "Great Value Garden Hose For Women for Women"
+      ]
+    },
+    {
+      "query": "new garden hose",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell New Garden Hoses Lightweight",
+        "Great Value New Garden Hoses for Kids",
+        "Kirkland New Garden Hoses New"
+      ]
+    },
+    {
+      "query": "garden hose 2 pack",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Garden Hose 2 Pack Deluxe Edition",
+        "Levi Garden Hose 2 Pack Lightweight",
+        "Hanes Garden Hose 2 Pack for Kids"
+      ]
+    },
+    {
+      "query": "car tire",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Car Tires for Men",
+        "Nike Car Tire Deluxe Edition",
+        "Dove Car Tire for Men"
+      ]
+    },
+    {
+      "query": "car tire for men",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Car Tires For Men New",
+        "Colgate Car Tire For Men Deluxe Edition",
+        "Kirkland Car Tire For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "car tire for women",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Car Tires For Women for Women",
+        "Levi Car Tires For Women Black",
+        "Great Value Car Tire For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new car tire",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Car Tire Deluxe Edition",
+        "Colgate New Car Tire Deluxe Edition",
+        "Nike New Car Tire Black"
+      ]
+    },
+    {
+      "query": "car tire 2 pack",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes Car Tire 2 Pack Black",
+        "Samsung Car Tires 2 Pack Lightweight",
+        "Hanes Car Tire 2 Pack New"
+      ]
+    },
+    {
+      "query": "drill",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Drill Deluxe Edition",
+        "Hanes Drills for Men",
+        "Dove Drills Black"
+      ]
+    },
+    {
+      "query": "drill for men",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Drill For Men Deluxe Edition",
+        "Levi Drills For Men 2 Pack",
+        "Apple Drill For Men Deluxe Edition"
+      ]
+    },
+    {
+      "query": "drill for women",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Drills For Women Lightweight",
+        "Trek Drill For Women Deluxe Edition",
+        "Trek Drills For Women White"
+      ]
+    },
+    {
+      "query": "new drill",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina New Drill Deluxe Edition",
+        "Amazon Basics New Drill White",
+        "Samsung New Drills for Women"
+      ]
+    },
+    {
+      "query": "drill 2 pack",
+      "category": "tools",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Drill 2 Pack for Women",
+        "Great Value Drills 2 Pack New",
+        "Trek Drill 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "lego set",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Lego Sets for Kids",
+        "Kirkland Lego Sets New",
+        "Kirkland Lego Set Lightweight"
+      ]
+    },
+    {
+      "query": "lego set for men",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Lego Set For Men White",
+        "Purina Lego Set For Men Lightweight",
+        "Levi Lego Sets For Men New"
+      ]
+    },
+    {
+      "query": "lego set for women",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Lego Set For Women Deluxe Edition",
+        "Samsung Lego Sets For Women White",
+        "Sony Lego Set For Women Black"
+      ]
+    },
+    {
+      "query": "new lego set",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Hanes New Lego Set Deluxe Edition",
+        "Nike New Lego Set Deluxe Edition",
+        "Trek New Lego Sets for Women"
+      ]
+    },
+    {
+      "query": "lego set 2 pack",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Lego Set 2 Pack Deluxe Edition",
+        "Hanes Lego Set 2 Pack 2 Pack",
+        "Samsung Lego Sets 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "teddy bear",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Teddy Bears Premium",
+        "Dell Teddy Bears Black",
+        "Trek Teddy Bears New"
+      ]
+    },
+    {
+      "query": "teddy bear for men",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Levi Teddy Bear For Men Deluxe Edition",
+        "Apple Teddy Bears For Men Premium",
+        "Purina Teddy Bears For Men White"
+      ]
+    },
+    {
+      "query": "teddy bear for women",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Purina Teddy Bear For Women Deluxe Edition",
+        "Hanes Teddy Bears For Women for Men",
+        "Dove Teddy Bears For Women Black"
+      ]
+    },
+    {
+      "query": "new teddy bear",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek New Teddy Bear for Men",
+        "Dove New Teddy Bear for Kids",
+        "Colgate New Teddy Bears Lightweight"
+      ]
+    },
+    {
+      "query": "teddy bear 2 pack",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Teddy Bears 2 Pack New",
+        "Samsung Teddy Bear 2 Pack White",
+        "Hanes Teddy Bear 2 Pack Deluxe Edition"
+      ]
+    },
+    {
+      "query": "board game",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Board Game Deluxe Edition",
+        "Purina Board Game Deluxe Edition",
+        "Levi Board Game Premium"
+      ]
+    },
+    {
+      "query": "board game for men",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Board Game For Men Premium",
+        "Hanes Board Game For Men for Women",
+        "Nike Board Game For Men 2 Pack"
+      ]
+    },
+    {
+      "query": "board game for women",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Kirkland Board Games For Women Premium",
+        "Great Value Board Games For Women 2 Pack",
+        "Dove Board Game For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new board game",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike New Board Game Deluxe Edition",
+        "Dove New Board Game Black",
+        "Trek New Board Game Black"
+      ]
+    },
+    {
+      "query": "board game 2 pack",
+      "category": "toys",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Board Games 2 Pack for Men",
+        "Nike Board Game 2 Pack Deluxe Edition",
+        "Dove Board Game 2 Pack for Men"
+      ]
+    },
+    {
+      "query": "phone case",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Phone Cases Size Large",
+        "Purina Phone Cases Size Large",
+        "Levi Phone Case for Women"
+      ]
+    },
+    {
+      "query": "phone case for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 32,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Phone Case For Men Deluxe Edition",
+        "Great Value Phone Case For Men Deluxe Edition",
+        "Levi Phone Case For Men 2 Pack"
+      ]
+    },
+    {
+      "query": "phone case for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 28,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value Phone Case For Women Deluxe Edition",
+        "Great Value Phone Case For Women Deluxe Edition",
+        "Purina Phone Cases For Women Size Large"
+      ]
+    },
+    {
+      "query": "new phone case",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony New Phone Cases Black",
+        "Apple New Phone Case New",
+        "Great Value New Phone Case Size Large"
+      ]
+    },
+    {
+      "query": "phone case 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 28,
+      "top3Wrong": 1,
+      "top3": [
+        "Phone Case 2 Pack",
+        "Purina Phone Cases 2 Pack Lightweight",
+        "Colgate Phone Case 2 Pack 2 Pack"
+      ]
+    },
+    {
+      "query": "laptop case",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Dove Laptop Cases Lightweight",
+        "Levi Laptop Cases New",
+        "Purina Laptop Cases Size Large"
+      ]
+    },
+    {
+      "query": "laptop case for men",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 30,
+      "top3Wrong": 0,
+      "top3": [
+        "Sony Laptop Cases For Men Size Large",
+        "Dove Laptop Case For Men Size Large",
+        "Dove Laptop Case For Men Size Large"
+      ]
+    },
+    {
+      "query": "laptop case for women",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 27,
+      "top3Wrong": 1,
+      "top3": [
+        "Laptop Case for Women",
+        "Sony Laptop Cases For Women Black",
+        "Samsung Laptop Case For Women Deluxe Edition"
+      ]
+    },
+    {
+      "query": "new laptop case",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Amazon Basics New Laptop Case White",
+        "Amazon Basics New Laptop Case Deluxe Edition",
+        "Nike New Laptop Case Lightweight"
+      ]
+    },
+    {
+      "query": "laptop case 2 pack",
+      "category": "electronics",
+      "listSize": 100,
+      "kept": 29,
+      "top3Wrong": 0,
+      "top3": [
+        "Samsung Laptop Cases 2 Pack 2 Pack",
+        "Levi Laptop Case 2 Pack Deluxe Edition",
+        "Kirkland Laptop Case 2 Pack Premium"
+      ]
+    },
+    {
+      "query": "shoe polish",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Trek Shoe Polishs New",
+        "Dell Shoe Polishs White",
+        "Hanes Shoe Polish Deluxe Edition"
+      ]
+    },
+    {
+      "query": "shoe polish for men",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 31,
+      "top3Wrong": 0,
+      "top3": [
+        "Dell Shoe Polish For Men Deluxe Edition",
+        "Dell Shoe Polish For Men Premium",
+        "Dell Shoe Polishs For Men White"
+      ]
+    },
+    {
+      "query": "shoe polish for women",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Colgate Shoe Polishs For Women 2 Pack",
+        "Sony Shoe Polishs For Women New",
+        "Nike Shoe Polish For Women Lightweight"
+      ]
+    },
+    {
+      "query": "new shoe polish",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Great Value New Shoe Polishs Size Large",
+        "Dove New Shoe Polish for Women",
+        "Apple New Shoe Polish Deluxe Edition"
+      ]
+    },
+    {
+      "query": "shoe polish 2 pack",
+      "category": "personal care",
+      "listSize": 100,
+      "kept": 25,
+      "top3Wrong": 0,
+      "top3": [
+        "Nike Shoe Polish 2 Pack Deluxe Edition",
+        "Hanes Shoe Polishs 2 Pack for Kids",
+        "Great Value Shoe Polishs 2 Pack for Kids"
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "kind": "false-positive-kept",
+      "query": "winter coat",
+      "title": "Winter Jacket Black",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "winter coat for men",
+      "title": "Winter Jacket 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "winter coat for women",
+      "title": "Winter Jacket New",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "new winter coat",
+      "title": "Winter Jacket White",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "new winter coat",
+      "title": "Winter Jacket New",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "winter coat 2 pack",
+      "title": "Winter Jacket Premium",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak",
+      "title": "Bath Soak Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak",
+      "title": "Bath Soak Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak",
+      "title": "Bath Soak Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak for men",
+      "title": "Bath Soak For Men Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak for men",
+      "title": "Bath Soak For Men Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak for men",
+      "title": "Bath Soak For Men Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak for women",
+      "title": "Bath Soak For Women Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak for women",
+      "title": "Bath Soak For Women Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak for women",
+      "title": "Bath Soak For Women Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "new bath soak",
+      "title": "New Bath Soak Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "new bath soak",
+      "title": "New Bath Soak Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "new bath soak",
+      "title": "New Bath Soak Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak 2 pack",
+      "title": "Bath Soak 2 Pack Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak 2 pack",
+      "title": "Bath Soak 2 Pack Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bath soak 2 pack",
+      "title": "Bath Soak 2 Pack Bath Soak",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bike helmet for men",
+      "title": "Kirkland Trek Bicycle for Adults for Men",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bike helmet for women",
+      "title": "Levi Road Bike for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bike helmet for women",
+      "title": "Nike Trek Bicycle for Adults for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bike lock for men",
+      "title": "Apple Mountain Bike for Men",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bike lock for men",
+      "title": "Apple Mountain Bike for Men",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bike lock for women",
+      "title": "Samsung Trek Bicycle for Adults for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bike lock for women",
+      "title": "Samsung Trek Bicycle for Adults for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "bike lock 2 pack",
+      "title": "Hanes Trek Bicycle for Adults 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for men",
+      "title": "Phone Case Black",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for men",
+      "title": "Phone Case Lightweight",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for men",
+      "title": "Apple Samsung Phone for Men for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for men",
+      "title": "Dove Samsung Phone for Men 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for men",
+      "title": "Sony Samsung Phone for Men Premium",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for men",
+      "title": "Dove Samsung Phone for Men New",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for men",
+      "title": "Sony Samsung Phone for Men Size Large",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for women",
+      "title": "Phone Case White",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for women",
+      "title": "Trek Samsung Phone for Men for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case for women",
+      "title": "Hanes Samsung Phone for Men for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case 2 pack",
+      "title": "Nike Apple iPhone 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case 2 pack",
+      "title": "Nike Samsung Phone for Men 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "phone case 2 pack",
+      "title": "Phone Case 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case for men",
+      "title": "Great Value Dell Laptop for Men 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case for men",
+      "title": "Kirkland Dell Laptop for Men Premium",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case for men",
+      "title": "Dove Dell Laptop for Men for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case for men",
+      "title": "Hanes Dell Laptop for Men Lightweight",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case for men",
+      "title": "Amazon Basics Dell Laptop for Men Premium",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case for women",
+      "title": "Laptop Case Premium",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case for women",
+      "title": "Laptop Case for Women",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case 2 pack",
+      "title": "Great Value Notebook Computer 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case 2 pack",
+      "title": "Sony Dell Laptop for Men 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case 2 pack",
+      "title": "Laptop Case for Kids",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "laptop case 2 pack",
+      "title": "Samsung Dell Laptop for Men 2 Pack",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "shoe polish for men",
+      "title": "Kirkland Nike Running Shoes for Men for Men",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "shoe polish for men",
+      "title": "Dove Shoe Rack for Men",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "shoe polish for men",
+      "title": "Colgate Nike Running Shoes for Men Premium",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "shoe polish for men",
+      "title": "Dove Nike Running Shoes for Men New",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "shoe polish for men",
+      "title": "Hanes Nike Running Shoes for Men for Men",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    },
+    {
+      "kind": "false-positive-kept",
+      "query": "shoe polish for men",
+      "title": "Levi Nike Running Shoes for Men for Men",
+      "expected": false,
+      "got": true,
+      "where": "relevant()"
+    }
+  ]
+}
