@@ -1,0 +1,5 @@
+# Apple / Android native STT — 2026-11-20, index unless noted
+Apple SFSpeechRecognizer: free, 1 min/request server path, 1000 requests/device/hour (QA1951 via Picovoice), requiresOnDeviceRecognition forces on-device if supportsOnDeviceRecognition; server 50+ languages, on-device 10+ (2019 list). SpeechAnalyzer iOS26+: on-device only, no 1-min cap, 42 locales/22 languages, no Hindi/Polish/Ukrainian etc, 2.12% WER LibriSpeech test-clean in one July 2026 independent benchmark (M2 Pro Mac, not iPhone).
+Android SpeechRecognizer: https://developer.android.com/reference/android/speech/SpeechRecognizer — likely streams to Google servers, not for continuous recognition. On-device createOnDeviceSpeechRecognizer API31+, check isOnDeviceRecognitionAvailable first, throws if unavailable. ML Kit GenAI Basic/Advanced on-device, alpha, see ML Kit note.
+Vosk: https://alphacephei.com/vosk/models.html — small ~40MB, en-US small 9.85% WER, large 5.69%; 20+ languages, Apache 2.0, true streaming.
+whisper.cpp: tiny 75MB, base 142MB, small 466MB, 99 languages, MIT, batch/30s windows, streaming via sliding window.
