@@ -14,7 +14,7 @@
 // titles, mention-noun confusers ("Milk Scented Candle"), accessory titles
 // ("Bike Helmet" for "bicycle"), or partial word matches.
 // Seed is fixed, so re-running reproduces the same lists.
-import * as W from '../site/_worker.js';
+import * as W from '../../ain-shop-shared/web/_worker.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';

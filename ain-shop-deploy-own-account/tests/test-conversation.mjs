@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'conversation.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'conversation.js'), 'utf8');
 
 // ---- stubs ----
 let spoken = [];       // { text, voice, lang } via speechSynthesis

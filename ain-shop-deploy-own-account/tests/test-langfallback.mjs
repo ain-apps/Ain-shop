@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const SITE = path.join(dir, '..', 'site');
+const SITE = path.join(dir, '..', '..', 'ain-shop-shared', 'web');
 
 // ---- load the real tables + intent (read-only) into this process ----
 globalThis.window = globalThis;

@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const R = (await import('../site/roundup.js')).default || globalThis.BAIN_ROUNDUP;
+const R = (await import('../../ain-shop-shared/web/roundup.js')).default || globalThis.BAIN_ROUNDUP;
 
 let pass = 0, fail = 0;
 function check(name, ok) { if (ok) { pass++; } else { fail++; console.log('FAIL', name); } }
@@ -90,7 +90,7 @@ check('command: empty text is not a roundup', R.command('') === false);
 await tick();
 
 // 7. No background work: no timers in the module
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'roundup.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'roundup.js'), 'utf8');
 check('no background: no setInterval / setTimeout in the module', !/setInterval|setTimeout/.test(src));
 check('no background: nothing stored (no localStorage)', !/localStorage/.test(src));
 

@@ -41,7 +41,7 @@ globalThis.BAIN_CONVO = {
 };
 
 // ---- load feedback.js ----
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'feedback.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'feedback.js'), 'utf8');
 eval(src);
 const F = globalThis.BAIN_FEED;
 

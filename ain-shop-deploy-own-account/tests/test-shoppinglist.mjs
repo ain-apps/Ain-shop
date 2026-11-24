@@ -40,7 +40,7 @@ function installWatch() {
 function removeWatch() { delete globalThis.BAIN_WATCH; }
 
 // ---- load shoppinglist.js ----
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'shoppinglist.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'shoppinglist.js'), 'utf8');
 eval(src);
 const L = globalThis.BAIN_SHOPLIST;
 

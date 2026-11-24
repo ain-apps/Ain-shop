@@ -45,7 +45,7 @@ globalThis.BAIN_SHOPPINGLIST = [
 ];
 
 // ---- load dealssummary.js ----
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'dealssummary.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'dealssummary.js'), 'utf8');
 eval(src);
 const D = globalThis.BAIN_DEALS;
 

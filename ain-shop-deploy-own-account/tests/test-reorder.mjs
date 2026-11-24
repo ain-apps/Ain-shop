@@ -49,7 +49,7 @@ globalThis.BAIN_CONVO = {
 };
 
 // ---- load reorder.js ----
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'reorder.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'reorder.js'), 'utf8');
 eval(src);
 const R = globalThis.BAIN_REORDER;
 

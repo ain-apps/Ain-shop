@@ -47,7 +47,7 @@ globalThis.BAIN_APP = {
 };
 
 // ---- load watchlist.js ----
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'watchlist.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'watchlist.js'), 'utf8');
 eval(src);
 const W = globalThis.BAIN_WATCH;
 

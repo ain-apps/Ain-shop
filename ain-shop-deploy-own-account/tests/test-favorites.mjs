@@ -32,7 +32,7 @@ globalThis.BAIN_APP = {
 };
 
 // ---- load favorites.js ----
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'favorites.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'favorites.js'), 'utf8');
 eval(src);
 const F = globalThis.BAIN_FAVORITES;
 

@@ -1,15 +1,15 @@
 # AIN Shop — own-account deployment (no Tab).
 # Built from tab-site.json in the v30 source: same worker, same D1 binding.
 name = "ain-shop"
-main = "site/_worker.js"
+main = "../ain-shop-shared/web/_worker.js"
 compatibility_date = "2026-08-01"
 compatibility_flags = ["nodejs_compat"]
 # Account ID from the dashboard URL, 2026-11-18.
 account_id = "1c2af07314007bab930917de72a287f4"
 
 [assets]
-directory = "site"
-# The worker serves pages via env.ASSETS (site/_worker.js page()),
+directory = "../ain-shop-shared/web"
+# The worker serves pages via env.ASSETS (shared web core, page()),
 # so the assets binding must exist; without this line env.ASSETS is
 # undefined and every page request throws (error 1101).
 binding = "ASSETS"

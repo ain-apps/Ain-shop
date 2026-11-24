@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const src = fs.readFileSync(path.join(dir, '..', 'site', 'pricespeech.js'), 'utf8');
+const src = fs.readFileSync(path.join(dir, '..', '..', 'ain-shop-shared', 'web', 'pricespeech.js'), 'utf8');
 eval(src);
 const P = globalThis.BAIN_PRICESPEECH;
 
