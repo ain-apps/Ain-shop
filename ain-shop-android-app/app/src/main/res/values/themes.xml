@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Big text and big touch targets: nothing in this app is small.
+         Minimum touch target is 56dp (Android asks for 48dp); the main
+         talk button is much bigger. -->
+    <style name="Theme.AinShop" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/ain_paper</item>
+        <item name="android:textColor">@color/ain_ink</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

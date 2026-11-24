@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  AIN Shop — native Android app.
+  No WebView: every screen is Jetpack Compose.
+  No account, no sign-in. Voice, lists, watchlist, history and ZIP code
+  stay on this phone. Buying opens the store's own page in the browser;
+  AIN Shop never sees the card.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Network: talk to the AIN Shop server only (it holds the keys). -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Voice: listen to the shopper. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Camera: barcode scanning and "what is this?" -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Location: one coarse reading, turned into a ZIP/town only. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Phone calls: pause the voice when a call comes in, resume after.
+         READ_PHONE_STATE only reads the call state — it never reads or
+         records the call itself. -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Notifications: price-drop and back-in-stock alerts (Android 13+). -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Haptics: a buzz when a barcode is read. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" android:required="true" />
+
+    <application
+        android:name=".AinShopApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AinShop">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize|density|layoutDirection"
+            android:launchMode="singleTop"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- CameraX: the preview and capture use the phone's back camera. -->
+        <service
+            android:name="androidx.camera.core.impl.utils.executor.CameraXExecutors"
+            android:exported="false"
+            tools:ignore="MissingService" />
+    </application>
+</manifest>

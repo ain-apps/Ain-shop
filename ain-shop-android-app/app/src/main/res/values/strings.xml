@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  AIN Shop — English strings.
+  The website carries full translations for all 50 languages (site/i18n.js);
+  porting those into values-XX/ folders is the biggest remaining translation
+  job (see README.md). The language picker, speech recognition and spoken
+  answers already follow the chosen language from day one.
+  Every interactive element has a content description: TalkBack must be
+  able to say what everything is, because no step may require seeing.
+-->
+<resources>
+    <string name="app_name">AIN Shop</string>
+
+    <!-- Home -->
+    <string name="home_title">AIN Shop</string>
+    <string name="home_subtitle">Shop by voice, for the blind</string>
+    <string name="talk_button">Tap to talk</string>
+    <string name="talk_button_cd">Tap to talk. Speak what you want to buy.</string>
+    <string name="listening">Listening…</string>
+    <string name="speaking">Speaking…</string>
+    <string name="type_hint">Type what you want to buy</string>
+    <string name="type_hint_cd">Type what you want to buy, then send</string>
+    <string name="search_button">Search</string>
+    <string name="search_button_cd">Search for what you typed</string>
+    <string name="scan_barcode">Scan barcode</string>
+    <string name="scan_barcode_cd">Scan a barcode with the camera</string>
+    <string name="camera_what">Camera: what is this?</string>
+    <string name="camera_what_cd">Point the camera at something and ask what it is</string>
+    <string name="my_list">My list</string>
+    <string name="my_list_cd">My shopping list</string>
+    <string name="buy_again">Buy again</string>
+    <string name="buy_again_cd">Things you bought before, buy them again</string>
+    <string name="watchlist">Watched items</string>
+    <string name="watchlist_cd">Items you asked me to watch for a price drop</string>
+    <string name="stores_near">Stores near me</string>
+    <string name="stores_near_cd">Stores near your saved place</string>
+    <string name="deals_today">Deals today</string>
+    <string name="deals_today_cd">What deals do my favorite stores have today</string>
+    <string name="roundup">What dropped today</string>
+    <string name="roundup_cd">Daily roundup of price drops on your list</string>
+    <string name="settings">Settings</string>
+    <string name="settings_cd">Settings, language, location and your data</string>
+    <string name="language_button_cd">Change language. Current language: %1$s</string>
+    <string name="status_empty">Say what you want to buy, or tap Scan barcode.</string>
+
+    <!-- Search / results -->
+    <string name="searching">Searching the whole web…</string>
+    <string name="still_checking">Still checking the stores…</string>
+    <string name="results_for">Results for “%1$s”</string>
+    <string name="results_count">We found %1$d results. Here are the top three.</string>
+    <string name="results_count_more">We found %1$d results. Here are the next three.</string>
+    <string name="no_results">Nothing found for that. Try different words.</string>
+    <string name="more_results">More results</string>
+    <string name="more_results_cd">Hear the next three results</string>
+    <string name="open_at">Buy at %1$s</string>
+    <string name="open_at_cd">Open this item at %1$s. The store opens in your browser.</string>
+    <string name="describe">Describe</string>
+    <string name="describe_cd">Describe what this looks like</string>
+    <string name="add_to_list">Add to list</string>
+    <string name="add_to_list_cd">Add this item to my shopping list</string>
+    <string name="remember_item">Watch this price</string>
+    <string name="remember_item_cd">Remember this item and tell me when the price drops</string>
+    <string name="in_stock">In stock</string>
+    <string name="out_of_stock">Out of stock</string>
+    <string name="price_unknown">Price not shown</string>
+    <string name="price_checked">Price checked at %1$s</string>
+    <string name="price_from_search">Price from search</string>
+    <string name="was_price">Was %1$s</string>
+    <string name="delivery_verbatim">Delivery: %1$s</string>
+    <string name="delivery_check">Check delivery at checkout</string>
+    <string name="opening_store">Opening %1$s…</string>
+    <string name="off_topic">AIN Shop only helps with shopping. What do you want to buy?</string>
+    <string name="rate_limited">Too many searches just now. Please wait a little and try again.</string>
+    <string name="offline">No internet right now. Please check your connection and try again.</string>
+    <string name="search_timeout">That search is taking a while. Here is what I found so far.</string>
+
+    <!-- Voice -->
+    <string name="voice_not_available">Voice listening is not available on this phone right now.</string>
+    <string name="mic_permission_needed">I need the microphone to hear you. Please allow it.</string>
+    <string name="did_not_hear">I didn\'t hear that. Please say it again.</string>
+    <string name="confirm_buy">Shall I open this at %1$s so you can buy it there?</string>
+    <string name="confirm_delete">Delete %1$s? Say yes to delete, or no to keep it.</string>
+    <string name="confirm_yes">Yes</string>
+    <string name="confirm_no">No</string>
+    <string name="say_yes_no">Say yes or no.</string>
+    <string name="help_text">You can say: shop for shoes, scan barcode, what is this, my list, buy again, watch this price, what dropped today, deals today, stores near me, fastest delivery, track my order, go to Walmart, or stop.</string>
+
+    <!-- Barcode -->
+    <string name="barcode_title">Scan barcode</string>
+    <string name="barcode_hint">Hold the barcode to the camera. I will beep faster when I see stripes, and chime when I read it.</string>
+    <string name="barcode_read">Barcode read.</string>
+    <string name="barcode_not_found">Not in the free product databases. I will not guess what it is.</string>
+    <string name="barcode_bad_digits">Those digits are not a valid product barcode. A digit was probably misread.</string>
+    <string name="camera_permission_needed">I need the camera to scan. Please allow it.</string>
+    <string name="take_photo">Take a photo instead</string>
+
+    <!-- Camera identify -->
+    <string name="identify_title">What is this?</string>
+    <string name="identify_hint">Point the camera at it and tap Take photo. I will tell you what it is.</string>
+    <string name="identify_button">Take photo</string>
+    <string name="identify_button_cd">Take a photo and ask what it is</string>
+    <string name="identify_waiting">Looking at the photo…</string>
+    <string name="identify_failed">I could not tell what that is from the photo. Try again with more light.</string>
+    <string name="search_for_it">Search for this</string>
+
+    <!-- Lists -->
+    <string name="list_empty">Your shopping list is empty. Say “add milk to my list”.</string>
+    <string name="list_total">Total: %1$s</string>
+    <string name="list_remove_cd">Remove %1$s from the list</string>
+    <string name="list_checkout_cd">Open %1$s to check out there</string>
+    <string name="buy_again_empty">Nothing in Buy again yet. When you open a store page, it is remembered here.</string>
+    <string name="reorder">Buy it again</string>
+    <string name="reorder_cd">Search for this again to buy it</string>
+    <string name="reorder_confirm">Shall I find %1$s again?</string>
+    <string name="watch_empty">Nothing watched yet. After a search, say “remember this item”.</string>
+    <string name="watch_check">Check my watched items</string>
+    <string name="watch_check_cd">Check all watched items for price drops now</string>
+    <string name="watch_drop">Price drop! %1$s is now %2$s at %3$s. It was %4$s.</string>
+    <string name="watch_same">No price drops. %1$d watched items are the same price.</string>
+    <string name="watch_gone">I could not find %1$s just now.</string>
+    <string name="watch_remove_cd">Stop watching %1$s</string>
+    <string name="feedback_helpful">That was helpful</string>
+    <string name="feedback_not_helpful">That was not helpful</string>
+    <string name="feedback_saved">Thanks, I remembered that on this phone.</string>
+
+    <!-- Stores -->
+    <string name="stores_title">Stores</string>
+    <string name="stores_all">All stores</string>
+    <string name="stores_favorites">Favorite stores</string>
+    <string name="stores_open">Open stores</string>
+    <string name="stores_nearby">Stores near you</string>
+    <string name="store_go_cd">Go to %1$s</string>
+    <string name="store_favorite_add">Add %1$s to my favorites</string>
+    <string name="store_favorite_added">%1$s is now one of your favorites. I will check it first from now on.</string>
+    <string name="store_favorite_removed">%1$s is no longer a favorite.</string>
+    <string name="track_order">Track my delivery</string>
+    <string name="return_item">Return an item</string>
+    <string name="order_note">AIN Shop does not see your orders. I open the store\'s own page. You may need to sign in there.</string>
+
+    <!-- Location -->
+    <string name="loc_ask">May I use your location to find stores near you? I only keep your ZIP code or town, on this phone.</string>
+    <string name="loc_saved">Saved. Your place is %1$s.</string>
+    <string name="loc_forget">Forget my location</string>
+    <string name="loc_forgotten">Your location is forgotten.</string>
+    <string name="loc_type_zip">Or type your ZIP code</string>
+    <string name="loc_denied">That is fine. You can type a ZIP code instead.</string>
+
+    <!-- Settings -->
+    <string name="settings_language">Language</string>
+    <string name="settings_speed">Response speed</string>
+    <string name="speed_fast">Fast</string>
+    <string name="speed_normal">Normal</string>
+    <string name="speed_slow">Slow</string>
+    <string name="settings_location">My place</string>
+    <string name="settings_roundup">Daily price-drop check</string>
+    <string name="settings_roundup_note">Once a day, check watched items and tell me if a price dropped. Off unless you turn it on.</string>
+    <string name="settings_delete">Delete AIN Shop data on this phone</string>
+    <string name="settings_delete_note">AIN Shop has no account. This erases your language, lists, Buy again history, ZIP code and settings from this phone.</string>
+    <string name="settings_about">AIN Shop does not ask for your name, email or phone number. Your voice is not recorded or kept. Prices come from stores and the web and can be wrong — the store\'s page is final. Some store links are affiliate links; AIN Shop may earn a commission. Your price stays the same.</string>
+    <string name="settings_teaching">My reported mistakes</string>
+    <string name="settings_teaching_note">Mistakes you reported, kept on this phone only. Nothing is sent anywhere. A person reviews them before any fix is made.</string>
+
+    <!-- Misc -->
+    <string name="back">Back</string>
+    <string name="back_cd">Go back</string>
+    <string name="close">Close</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="loading">Loading…</string>
+    <string name="whisper_download_title">Download the backup listener?</string>
+    <string name="whisper_download_body">Your phone\'s own hearing does not cover %1$s. I can download a small listening model (about 75 MB) over Wi-Fi, once, so I can still hear you. It stays on your phone.</string>
+</resources>

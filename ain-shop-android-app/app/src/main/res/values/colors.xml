@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AIN Shop — high-contrast, calm palette. The app is used by ear, so
+         the screen stays simple: dark text on a light background, one accent. -->
+    <color name="ain_gold">#B8860B</color>
+    <color name="ain_gold_light">#FFF6D6</color>
+    <color name="ain_ink">#1A1A1A</color>
+    <color name="ain_paper">#FDFBF7</color>
+    <color name="ain_surface">#FFFFFF</color>
+    <color name="ain_muted">#5C5C5C</color>
+    <color name="ain_line">#D9D2C0</color>
+    <color name="ain_green">#1E7D32</color>
+    <color name="ain_red">#B3261E</color>
+    <color name="ic_launcher_background">#1A1A1A</color>
+</resources>
