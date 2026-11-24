@@ -1,0 +1,3 @@
+/* AIN Shop: runs first on every page. It lives in a file, not an inline <script>, so the page's security policy can refuse all inline scripts. */
+/* plain http:// → https:// (the host answers both; the microphone, camera and wake lock need https) */ if (location.protocol === 'http:' && !/^(localhost|127\.\d+\.\d+\.\d+|\[::1\])$/.test(location.hostname)) location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+/* security: this page must never be shown inside another site's frame (click-jacking) */ if (window.top !== window.self) { try { window.top.location.replace(window.self.location.href); } catch (e) { document.documentElement.style.display = 'none'; } }

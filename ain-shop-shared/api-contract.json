@@ -1,0 +1,452 @@
+{
+ "endpoints": [
+  {
+   "method": "GET",
+   "path": "/api/status",
+   "purpose": "Server health check.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "GET",
+   "path": "/api/ai/status",
+   "purpose": "Voice-call status.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "GET",
+   "path": "/api/geo",
+   "purpose": "Approximate place from the request (for 'near me' without a saved place).",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "GET",
+   "path": "/api/geo/reverse",
+   "purpose": "Place name for latitude/longitude.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/hit",
+   "purpose": "Usage-counting beacon (visits, platform, language \u2014 counts only).",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/ai/session",
+   "purpose": "Open a live voice (speech-to-speech) session.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/ai/heartbeat",
+   "purpose": "Keep a live voice session alive.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/ai/end",
+   "purpose": "End a live voice session.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/ai/fail",
+   "purpose": "Phone reports that a voice call gave up.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/ai/intent",
+   "purpose": "Natural-language command the on-phone parser does not know, in any of the 50 languages. Server interprets it; nothing is trained.",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/search",
+   "purpose": "Whole-web product search. Fixed matching (496/509), top 3 + count, 5-minute cache, 15-second first-answer cap.",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/store",
+   "purpose": "Search one store's own site ('open Walmart').",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/details",
+   "purpose": "Product details from the store's own page (price, stock, rating, reviews summary).",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/identify",
+   "purpose": "Camera 'what is this?' \u2014 a photo in, a description out. The photo is never stored.",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/barcode",
+   "purpose": "Barcode number to product: Open Food Facts, then UPCitemdb, then one whole-web search for the digits. Never invented.",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/nearby",
+   "purpose": "Stores near a saved ZIP/town, or in a named country ('buy in England').",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/storeinfo",
+   "purpose": "Facts about a store: phone, how many locations, online-only or not, delivers. Unknown stays unknown.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/memory",
+   "purpose": "Shared pure memory lookup: one shared entry per item, answered from memory first, exact match only.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/memory/share",
+   "purpose": "Share a taught item fact into shared memory. Refused without confirmed:true. Item facts only, never personal.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/usage/buy",
+   "purpose": "Buy-tap beacon (item words + store only) for the owner usage page.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/shop/checkout",
+   "purpose": "Prepare checkout on the store's own page (delivery time, price check).",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "GET",
+   "path": "/api/stores/partners",
+   "purpose": "Affiliate partner store list.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/join",
+   "purpose": "A store joins itself (name, website, product feed). Waits for the owner to approve.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/owner/login",
+   "purpose": "Owner PIN login. Sets a 30-day session cookie. PIN is never stored on the phone.",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/owner/logout",
+   "purpose": "Clear the owner session.",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "GET",
+   "path": "/api/owner/usage",
+   "purpose": "Owner usage numbers: visitors/searches per day, most-searched, most-tapped buy, language. Counts only.",
+   "status": "live",
+   "used_by": [
+    "website",
+    "android"
+   ]
+  },
+  {
+   "method": "GET",
+   "path": "/api/owner/stores",
+   "purpose": "Owner's list of joined stores (approve / reject).",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/owner/status",
+   "purpose": "Owner store approve/reject action.",
+   "status": "live",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "GET",
+   "path": "/api/memory/lookup",
+   "purpose": "DRIFT: Android's shared-memory lookup. The server does NOT have this path \u2014 it has /api/shop/memory instead. Android treats the 404 as 'no shared memory yet' and falls back to live search, so nothing breaks, but shared memory never switches on for Android until the paths are lined up (either the server adds these two routes, or the Android client is pointed at /api/shop/memory and /api/shop/memory/share).",
+   "status": "drift",
+   "used_by": [
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/memory/teach",
+   "purpose": "DRIFT: Android's shared-memory teach. Same as /api/memory/lookup \u2014 the server has /api/shop/memory/share instead. Same 404 fallback, same fix needed.",
+   "status": "drift",
+   "used_by": [
+    "android"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/sub/status",
+   "purpose": "Subscription status. The $4.99 subscription is built but switched OFF.",
+   "status": "off",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/sub/subscribe",
+   "purpose": "Subscribe. Switched off \u2014 returns paywall_off.",
+   "status": "off",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/sub/cancel",
+   "purpose": "Cancel subscription. Switched off.",
+   "status": "off",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/sub/restore",
+   "purpose": "Restore subscription. Switched off.",
+   "status": "off",
+   "used_by": [
+    "website"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/key",
+   "purpose": "Setup only: store the OpenAI key (with the setup phrase).",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/walmart_key",
+   "purpose": "Setup only: store the Walmart affiliate key.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/config",
+   "purpose": "Setup only: read/write site settings.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/usage",
+   "purpose": "Setup only: admin usage view.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/pin",
+   "purpose": "Setup only: set the first owner PIN.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/stores_test_cleanup",
+   "purpose": "Setup only: remove test stores.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/sub_set",
+   "purpose": "Setup only: owner comp / test subscription.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/purge",
+   "purpose": "Setup only: clear stored settings.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/unlock",
+   "purpose": "Setup only: clear PIN lockouts.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/diag",
+   "purpose": "Setup only: voice-call diagnostics.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/admin/calls",
+   "purpose": "Setup only: live-call list and today's spend.",
+   "status": "live",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/pay/stripe/webhook",
+   "pattern": true,
+   "purpose": "Payment webhook (Stripe). Paywall is off, so it is not used.",
+   "status": "off",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/pay/appstore/webhook",
+   "pattern": true,
+   "purpose": "Payment webhook (App Store). Paywall is off, so it is not used.",
+   "status": "off",
+   "used_by": [
+    "setup"
+   ]
+  },
+  {
+   "method": "POST",
+   "path": "/api/pay/googleplay/webhook",
+   "pattern": true,
+   "purpose": "Payment webhook (Google Play). Paywall is off, so it is not used.",
+   "status": "off",
+   "used_by": [
+    "setup"
+   ]
+  }
+ ],
+ "generated_from": "ain-shop-shared/web/_worker.js (verified by tools/extract-contract.mjs)",
+ "note": "Every API route the server answers. 'used_by' says which platform calls it. 'status' is live (works now), off (the route exists but the feature is switched off), or drift (a client calls a path the server does not have \u2014 see the note on that entry). Change a route here AND in web/_worker.js together; run tools/verify-shared.mjs to check they match.",
+ "version": "v36"
+}
