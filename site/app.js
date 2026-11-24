@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var I = window.BAIN_I18N;
-  var S = { lang: 'en', results: [], query: null, shown: 0, chosen: -1, spot: -1, details: {}, place: null, searchedAt: 0, pendingOpen: null };
+  var S = { lang: 'en', results: [], total: 0, partial: false, query: null, shown: 0, chosen: -1, spot: -1, details: {}, place: null, searchedAt: 0, pendingOpen: null };
   // first visit: the phone's own language list picks one of the 50 (I.pick); after that the person's choice is remembered
   try { var sv = localStorage.getItem('bain:lang'); S.lang = sv && I.LANGS[sv] ? sv : I.pick(navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en']); } catch (e) { S.lang = 'en'; }
   var $ = function (id) { return document.getElementById(id); };
@@ -129,7 +129,7 @@
     sec.hidden = !S.results.length && !S.query;
     var qx = S.query ? '\u2068' + S.query.query + '\u2069' : '';   // the search words keep their own direction inside a Hebrew/Arabic sentence
     var atStore = window.BAIN_STORES && BAIN_STORES.active();   // v18: the heading says which store this list belongs to
-    $('resultsH').textContent = S.query ? (atStore ? '\u2068' + atStore.name + '\u2069 · ' : '') + t('results', { q: qx }) + ' · ' + t('resultsCount', { n: S.results.length }) : '';
+    $('resultsH').textContent = S.query ? (atStore ? '\u2068' + atStore.name + '\u2069 · ' : '') + t('results', { q: qx }) + ' · ' + t('resultsCount', { n: S.total || S.results.length }) : '';   // v34: the heading says how many good results were found in total, not just how many are on this page
     var sk = document.querySelector('a.skip');   // the skip link exists only once there are results to skip to (never "Results for “”")
     if (sk) { sk.hidden = !S.query; sk.textContent = S.query ? t('results', { q: qx }) : ''; }
     $('where').textContent = S.query && S.query.near ? t('where', { place: S.query.near }) : '';
@@ -188,21 +188,56 @@
     if (!body.near && !body.zip && args.near_me && S.place) { body.near = [S.place.city, S.place.region, S.place.country].filter(Boolean).join(', '); body.loc = { city: S.place.city, region: S.place.region, country: S.place.country }; }
     return body;
   }
+  // v34: the same ranking for the first answer and for the rest when they fill in — favorite stores first (nothing removed), then the feedback nudge
+  function rankResults(list) {
+    try { if (window.BAIN_FAVORITES && BAIN_FAVORITES.isFavorite) { var _f = list.filter(function (p) { return BAIN_FAVORITES.isFavorite(p.store); }); var _o = list.filter(function (p) { return !BAIN_FAVORITES.isFavorite(p.store); }); if (_f.length && _o.length) list = _f.concat(_o); } } catch (e) {}
+    try { if (window.BAIN_FEED && BAIN_FEED.ranked) list = BAIN_FEED.ranked(list); } catch (e) {}
+    return list;
+  }
+  var fillSeq = 0;   // v34: a new search cancels the fill-in still asking for the last one
+  // v34 (speed): the first answer came back early (partial:true) while the rest
+  // are still being checked — ask for the same search again every few seconds.
+  // Each ask is a free cache hit until the full list lands, then the list grows
+  // in place: the top 3 already spoken stay where they are, the rest appear
+  // below them and by asking for more.
+  function fillIn(body) {
+    var seq = ++fillSeq, tries = 0;
+    (function poll() {
+      if (seq !== fillSeq || tries++ >= 11) { if (seq === fillSeq) S.partial = false; return; }   // about 45 seconds, then stop asking
+      setTimeout(function () {
+        if (seq !== fillSeq) return;
+        postJSON('/api/shop/search', body, 50000).then(function (j2) {
+          if (seq !== fillSeq) return;
+          if (!j2 || j2.error) { S.partial = false; return; }
+          if (j2.partial) { poll(); return; }
+          S.results = rankResults(j2.products || []);
+          S.total = (typeof j2.total === 'number' && j2.total >= 0) ? j2.total : S.results.length;
+          S.partial = false;
+          try { if (window.BAIN_CONVO && BAIN_CONVO.rememberSearch) BAIN_CONVO.rememberSearch(S.query.query || body.query, S.results); } catch (e) {}
+          render(); status(t('resultsCount', { n: S.total || S.results.length }));
+          if (window.BAIN_AI && BAIN_AI.resultsIn) try { BAIN_AI.resultsIn(); } catch (e) {}
+          if (window.BAIN_AI && BAIN_AI.moreIn) try { BAIN_AI.moreIn(S.total); } catch (e) {}   // the voice hears the rest arrived, next time they ask for more
+        });
+      }, 4000);
+    })();
+  }
   function search(args) {
     status(t('searching'));
     var body = searchBody(args);
     return postJSON('/api/shop/search', body, 50000).then(function (j) {
       if (j.error) { status(''); return j; }
-      S.results = j.products || []; S.query = j.query || body; S.shown = 0; S.chosen = -1; S.spot = -1; S.details = {}; S.searchedAt = j.searched_at || Date.now();
+      S.results = j.products || []; S.total = (typeof j.total === 'number' && j.total >= 0) ? j.total : S.results.length; S.partial = !!j.partial;   // v34: the server's true count of good matches (before the top-3 cut); old answers without it fall back to the list length
+      S.query = j.query || body; S.shown = 0; S.chosen = -1; S.spot = -1; S.details = {}; S.searchedAt = j.searched_at || Date.now();
+      fillSeq++;   // a new search cancels any fill-in still asking for the last one
       // v33: favorite stores first (stable — nothing is removed, the broad search stays broad), then the
       // feedback ranking (at most a small nudge), then the conversation remembers what was found
-      try { if (window.BAIN_FAVORITES && BAIN_FAVORITES.isFavorite) { var _f = S.results.filter(function (p) { return BAIN_FAVORITES.isFavorite(p.store); }); var _o = S.results.filter(function (p) { return !BAIN_FAVORITES.isFavorite(p.store); }); if (_f.length && _o.length) S.results = _f.concat(_o); } } catch (e) {}
-      try { if (window.BAIN_FEED && BAIN_FEED.ranked) S.results = BAIN_FEED.ranked(S.results); } catch (e) {}
+      S.results = rankResults(S.results);
       try { if (window.BAIN_CONVO && BAIN_CONVO.rememberSearch) BAIN_CONVO.rememberSearch(S.query.query || body.query, S.results); } catch (e) {}
-      render(); status(t('resultsCount', { n: S.results.length }));
+      render(); status(t('resultsCount', { n: S.total || S.results.length }));
       try { var rs = $('resultsSec'); if (rs && !rs.hidden && S.results.length && rs.scrollIntoView) rs.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch (e) {}   // v21: the results come into view (the focus is not moved, so a talking screen reader is not cut off)
       if (window.BAIN_STORES) BAIN_STORES.landed();
       if (window.BAIN_AI && BAIN_AI.resultsIn) try { BAIN_AI.resultsIn(); } catch (e) {}   // no stale "Still checking the stores…" / "Connecting…" once results are here
+      if (j.partial) fillIn(body);   // v34: the rest are still being checked — they fill in by themselves
       return j;
     });
   }
@@ -233,6 +268,11 @@
   function typedSearch(v, extra) {
     var args = window.AIN_TEXT ? AIN_TEXT.parseTyped(v) : { query: v };
     if (extra) for (var k in extra) if (extra[k] != null) args[k] = extra[k];
+    // v35 (place choice): "search in England" asked what to buy — the next
+    // search uses that place instead of the saved area. The pending place is
+    // always taken (cleared) here, so a search naming its own place does not
+    // leave a stale place behind for the search after it.
+    if (window.BAIN_LOC && BAIN_LOC.takePendingPlace) { var pp = BAIN_LOC.takePendingPlace(); if (pp && !args.near) args.near = pp; }
     announce(t('searching'));
     var sp = window.BAIN_STORES && BAIN_STORES.active();   // v18: at a store read from its own site, a typed search looks inside that store
     var run = sp && sp.site && !(args.stores && args.stores.length) ? storeOpen({ site: sp.site, query: args.query }) : search(args);
@@ -251,7 +291,7 @@
     return postJSON('/api/shop/store', { site: args.site, query: args.query || '' }, 50000).then(function (j) {
       if (j.error) { status(''); if (window.BAIN_STORES) BAIN_STORES.storeFailed(); return j; }
       S.storeMode = { store: j.store, url: j.url };
-      if (j.products && j.products.length) { S.results = j.products; S.query = { query: args.query || '', stores: [j.store] }; S.shown = 0; S.chosen = -1; S.spot = -1; S.details = {}; S.searchedAt = Date.now();
+      if (j.products && j.products.length) { S.results = j.products; S.total = (typeof j.total === 'number' && j.total >= 0) ? j.total : j.products.length; S.partial = false; fillSeq++; S.query = { query: args.query || '', stores: [j.store] }; S.shown = 0; S.chosen = -1; S.spot = -1; S.details = {}; S.searchedAt = Date.now();
         try { if (window.BAIN_FEED && BAIN_FEED.ranked) S.results = BAIN_FEED.ranked(S.results); } catch (e) {}
         try { if (window.BAIN_CONVO && BAIN_CONVO.rememberSearch) BAIN_CONVO.rememberSearch(S.query.query, S.results); } catch (e) {}
         render(); }

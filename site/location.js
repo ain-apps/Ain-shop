@@ -12,7 +12,7 @@
   function I() { return window.BAIN_I18N; }
   function t(k, v) { return APP() ? APP().t(k, v) : I().t(k, v); }
   function $(id) { return document.getElementById(id); }
-  var L = { pending: null, resolve: null, readAt: 0, near: null, busy: false };
+  var L = { pending: null, resolve: null, readAt: 0, near: null, busy: false, place: null };   // place: v35 — a place named without a product ("search in England"): kept for the very next search only, then cleared
 
   // ---- what is kept: { zip, city, region, country, how: phone|typed|approx, at } — never coordinates ----
   function get() { try { var o = JSON.parse(localStorage.getItem(KEY) || 'null'); return o && (o.zip || o.city) ? o : null; } catch (e) { return null; } }
@@ -36,7 +36,12 @@
     if (!zip) return null;
     return save({ postal: zip, country: /^\d{5}(-\d{4})?$/.test(zip) ? 'US' : null }, 'typed');
   }
-  function forget() { try { localStorage.removeItem(KEY); } catch (e) {} setConsent('no'); var A = APP(); if (A && A.S) A.S.place = null; L.near = null; render(); renderNear(); return true; }
+  function forget() { try { localStorage.removeItem(KEY); } catch (e) {} setConsent('no'); var A = APP(); if (A && A.S) A.S.place = null; L.near = null; L.place = null; render(); renderNear(); return true; }
+  // v35 (place choice): the pending place — named in one sentence, used by
+  // the next search, then gone. takePendingPlace always clears it, even when
+  // the next search names its own place, so a stale place never leaks into a
+  // later search.
+  function takePendingPlace() { var p = L.place; L.place = null; return p; }
   // ONE reading of the phone's position, now (a single reading, never a continuous watch); where(true) turns it into a ZIP; the position is not kept
   function readPhone() {
     var A = APP(); if (!A || !A.where) return Promise.resolve(null);
@@ -149,10 +154,12 @@
     return n ? t('fastFound', { n: n }) : t('fastNone');
   }
   // the fastest-delivery / pickup search, typed or tapped (the voice assistant calls search_products with fast)
-  function fastSearch(query, fast) {
+  function fastSearch(query, fast, near) {
     var A = APP();
-    return ensure().then(function () {
-      return A.typedSearch(query, { fast: fast, near_me: true }).then(function (j) {
+    // v35: a named place needs no saved location — never ask the location
+    // question for a search that already says where it is.
+    return (near ? Promise.resolve(null) : ensure()).then(function () {
+      return A.typedSearch(query, { fast: fast, near_me: !near, near: near || '' }).then(function (j) {
         if (j && !j.error) { var s = fastSummary(A.S.results); A.status(A.t('resultsCount', { n: A.S.results.length }) + ' ' + s); say(s); }
         return j;
       });
@@ -165,6 +172,12 @@
   function strip(text, k) { phr(k).forEach(function (w) { text = text.split(w).join(' '); }); return text; }
   var FILL = /^(please|for|of|a|an|the|some|me|my|i need|i want|get|find|order|buy|near me|around me|nearby|with|on)\b\s*|\s*\b(please|for me|near me|around me|nearby|today|now)$/i;
   function leftover(text) { var s = String(text).replace(/[?!.,:;]+/g, ' ').replace(/\s+/g, ' ').trim(), prev; do { prev = s; s = s.replace(FILL, '').trim(); } while (s !== prev); return s; }
+  // v35 (place choice): a trailing "in <place>" — any place, city or country,
+  // because here the person said "search in …", so the words after "in" are a
+  // place by construction (the typed search itself only trusts country names).
+  var VERB_START = /^\s*(?:please\s+)?(?:(?:i'?m|i\s+am)\s+)?(?:looking\s+to\s+buy|looking\s+for|search(?:\s+for)?|find(?:\s+me)?|show\s+me|buy|shop(?:\s+for)?|get|order|want(?:\s+to\s+buy)?|need(?:\s+to\s+buy)?|i\s+(?:want|need)(?:\s+to\s+buy)?)(?:\s+|$)/i;
+  function placeFrom(raw) { var m = String(raw || '').match(/\bin\s+([A-Za-z\u00C0-\u024F][A-Za-z\u00C0-\u024F .'\-]{0,60})\s*[?.!]*$/); return m ? { place: m[1].trim(), before: String(raw).slice(0, m.index).trim() } : null; }
+  function productPart(before) { return String(before || '').replace(VERB_START, '').replace(/\s+for\s*$/i, '').trim(); }
   function command(raw) {
     var text = String(raw || '').toLowerCase().trim(); if (!text) return null;
     if (hit(text, 'locCmdForget')) { var V = window.AIN_VCMD; if (V && window.AIN_LEGAL && AIN_LEGAL.confirm && get()) { V.ask(V.say('locForgetQ'), function () { forget(); render(); return t('locForgot'); }, 'typed'); return 'ask'; } forgetTap(); return 'forget'; }   // v28: asks first
@@ -173,12 +186,25 @@
       useTap(); return 'use';
     }
     if (hit(text, 'locCmdOpen')) { nearby('').then(function (j) { tell(nearSentence(j)); var h = $('nearH'); if (h && !j.error) try { h.focus(); } catch (e) {} }); return 'open'; }
+    // v35 (place choice): "search somewhere else" names no place yet — say
+    // how to name one; "buy shoes in England" / "search in England" name one.
+    if (hit(text, 'locCmdElsewhere')) { tell(t('locElsewhereWhat')); return 'ask'; }
+    var pin = VERB_START.test(text) ? placeFrom(raw) : null;
+    // a place named with no product ("search in England", "buy in London"):
+    // keep it for the next search and ask what to buy there. With a product
+    // ("buy shoes in England") this falls through — the typed search pulls
+    // the country out of the query itself, so "buy shoes in blue" still
+    // means blue shoes, not a place called blue.
+    if (pin && !productPart(pin.before)) { L.place = pin.place; tell(t('locPlaceWhat', { place: pin.place })); return 'place'; }
     var fast = hit(text, 'locCmdFast') ? 'delivery' : hit(text, 'locCmdPickup') ? 'pickup' : null;
     if (fast) {
       var q = leftover(strip(text, fast === 'delivery' ? 'locCmdFast' : 'locCmdPickup'));
       var S = APP().S; if (!q && S.query && S.query.query) q = S.query.query;
       if (!q) { tell(t('locFastWhat')); var ti = $('typeIn'); if (ti) try { ti.focus(); } catch (e) {} return 'ask'; }
-      fastSearch(q, fast); return 'fast';
+      // v35: a place in the request ("fastest delivery shoes in England")
+      // goes with the search — and the location question is not asked for it.
+      var pq = window.AIN_TEXT ? AIN_TEXT.parseTyped(q) : null;
+      fastSearch(q, fast, pq && pq.near ? pq.near : ''); return 'fast';
     }
     return null;
   }
@@ -193,6 +219,6 @@
     i18n(); render(); renderNear();
   }
   window.BAIN_LOC = { get: get, consent: consent, setConsent: setConsent, save: save, setZip: setZip, zipFrom: zipFrom, forget: forget, allow: allow, readPhone: readPhone, ensure: ensure, ask: ask, args: args, label: label, forAI: forAI,
-    nearby: nearby, nearSentence: nearSentence, fastSearch: fastSearch, fastSummary: fastSummary, command: command, render: function () { i18n(); render(); renderNear(); }, leftover: leftover, clean: clean };
+    nearby: nearby, nearSentence: nearSentence, fastSearch: fastSearch, fastSummary: fastSummary, command: command, takePendingPlace: takePendingPlace, render: function () { i18n(); render(); renderNear(); }, leftover: leftover, clean: clean };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

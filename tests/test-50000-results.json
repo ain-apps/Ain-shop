@@ -1,7 +1,7 @@
 {
   "summary": {
     "method": "LOCAL only — 0 live searches. 100 product types x 5 query variants = 500 queries; each query a list of 100 items (25 relevant, 75 wrong by construction) = 50,000 relevant() item-checks, seed 987654321.",
-    "date": "2026-11-17T05:33:28.432Z",
+    "date": "2026-11-19T23:29:18.536Z",
     "queriesRun": 500,
     "itemChecks": 50000,
     "itemPass": 49995,
@@ -104,9 +104,9 @@
         "top3Dirty": 0
       }
     },
-    "ms": 538133,
-    "msPerQuery": 1076.266,
-    "msPerItemCheck": 10.76266,
+    "ms": 556706,
+    "msPerQuery": 1113.412,
+    "msPerItemCheck": 11.13412,
     "failuresRecorded": 5
   },
   "perQuery": [

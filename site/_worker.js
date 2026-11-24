@@ -15,7 +15,7 @@ export const DEFAULTS = {
   // shopping calls
   ipSearchesDay: 60, globalSearchesDay: 1500, ipDetailsDay: 150, globalDetailsDay: 3000,
   searchModel: 'gpt-4.1', deepSearchModel: 'gpt-5-mini', quickSearchModel: 'gpt-4.1-mini', deepTimeoutMs: 22000, searchContext: 'low', visionModel: 'gpt-4.1-mini',
-  searchCacheS: 3600, detailsCacheS: 21600, pageTimeoutMs: 3500, maxResults: 8,
+  searchCacheS: 300, detailsCacheS: 21600, pageTimeoutMs: 3500, maxResults: 8, firstResultsCapMs: 12000,   // v34 (2026-11-19, owner's choice: "fresh with the caching"): a repeat search inside ~5 minutes answers at once from the saved copy; older than that, the web is searched live again. Was 3600 (1 hour). firstResultsCapMs: how long the first answer waits for the searches before speaking the top 3 — the page checks after it bring the first spoken words to about 15 seconds, while the rest keep checking in the background.
   // cost estimate (USD per 1M tokens; gpt-realtime-mini list prices + transcription), cents per web search call
   pAudioIn: 10, pAudioInCached: 0.3, pTextIn: 0.6, pTextInCached: 0.06, pAudioOut: 20, pTextOut: 2.4,
   searchCentsPerCall: 2.5, pSearchIn: 2, pSearchOut: 8, pVisionIn: 0.4, pVisionOut: 1.6,
@@ -561,7 +561,8 @@ export function canonUrl(u) {
     if (/(^|\.)walmart\.com$/.test(x.hostname)) { x.hostname = 'www.walmart.com'; const m = x.pathname.match(/\/ip\/(?:[^/]+\/)?(\d{5,})/); if (m) return 'https://www.walmart.com/ip/' + m[1]; }
     ['utm_source', 'utm_medium', 'utm_campaign', 'ref', 'aref', 'athbdg'].forEach(k => x.searchParams.delete(k)); return x.toString(); } catch (e) { return u; }
 }
-export function normUrl(u) { try { const x = new URL(u); return (x.hostname.replace(/^www\./, '') + x.pathname).replace(/\/+$/, '').toLowerCase(); } catch (e) { return ''; } }
+export function normUrl(u) { try { const x = new URL(u); let h = x.hostname.replace(/^www\./, '').toLowerCase(); if (/^(us|smile)\.amazon\.com$/.test(h)) h = 'amazon.com';   // v34: us/smile.amazon.com is the same store as www.amazon.com — canonUrl() rewrites it, so the cited-URL check must agree or Amazon items are dropped as "not cited"
+  return (h + x.pathname).replace(/\/+$/, '').toLowerCase(); } catch (e) { return ''; } }
 async function oneSearch(key, model, prompt, loc, L, o) {
   o = o || {};
   const tool = { type: 'web_search', search_context_size: L.searchContext };
@@ -602,14 +603,40 @@ export function searchPlan(q) {
   plan.push({ big: true, local: !!q.near, quick: !q.near });              // also the fallback when a careful search runs out of time
   return plan;
 }
-async function webSearch(env, key, q, L) {
+// v34 (speed: speak the first 3 fast): run jobs in parallel and take what is done
+// when the cap runs out, instead of waiting for the slowest one. Returns
+// { done: [settled values, in plan order], pending: [promises still running] }.
+// With no cap (0), it simply waits for all of them — the old behaviour.
+export async function collectTimed(jobs, capMs) {
+  if (!jobs.length) return { done: [], pending: [] };
+  if (!capMs || capMs <= 0) { const rs = await Promise.allSettled(jobs); return { done: rs.filter(r => r.status === 'fulfilled').map(r => r.value), pending: [] }; }
+  const settled = new Array(jobs.length).fill(false), values = new Array(jobs.length);
+  jobs.forEach((p, i) => { Promise.resolve(p).then(v => { values[i] = v; settled[i] = true; }, () => { settled[i] = true; }); });
+  await Promise.race([Promise.allSettled(jobs), new Promise(res => setTimeout(res, capMs))]);
+  const done = [], pending = [];
+  jobs.forEach((p, i) => { if (settled[i]) { if (values[i] !== undefined) done.push(values[i]); } else pending.push(p); });
+  return { done, pending };
+}
+async function webSearch(env, key, q, L, o) {
+  o = o || {};
   const plan = searchPlan(q);
-  const rs = await Promise.all(plan.map(p => p.deep
+  const jobs = plan.map(p => p.deep
     ? oneSearch(key, L.deepSearchModel, deepPrompt(q, p.domains[0]), null, L, { domains: p.domains, reasoning: 'low', timeout: L.deepTimeoutMs, maxCalls: 2 })
-    : oneSearch(key, p.quick ? L.quickSearchModel : L.searchModel, searchPrompt(q, null), q.loc, L, {})));
+    : oneSearch(key, p.quick ? L.quickSearchModel : L.searchModel, searchPrompt(q, null), q.loc, L, {}));
+  // v34: with a cap, the first searches to finish are enough to speak the top 3;
+  // the rest keep running and finish() collects them for the full list.
+  const { done: rs, pending } = await collectTimed(jobs, o.capMs || 0);
   const items = [], urls = []; let cents = 0, err = null;
   rs.forEach(r => { items.push(...(r.items || [])); urls.push(...(r.urls || [])); cents += r.cents || 0; if (r.error) err = err || r.error; });
-  return { items, urls, cents: Math.round(cents * 100) / 100, error: items.length ? null : err, text: rs.map(r => r.text || r.error || '').join('\n---\n').slice(0, 6000), plan };
+  const text = rs.map(r => r.text || r.error || '').join('\n---\n').slice(0, 6000);
+  async function finish() {   // the searches the cap cut short, awaited later: the FULL list, same shape
+    const rest = await Promise.allSettled(pending);
+    const r2 = rest.filter(r => r.status === 'fulfilled').map(r => r.value);
+    const items2 = items.slice(), urls2 = urls.slice(); let cents2 = cents, err2 = err;
+    r2.forEach(r => { items2.push(...(r.items || [])); urls2.push(...(r.urls || [])); cents2 += r.cents || 0; if (r.error) err2 = err2 || r.error; });
+    return { items: items2, urls: urls2, cents: Math.round(cents2 * 100) / 100, error: items2.length ? null : err2, text: (text + '\n---\n' + r2.map(r => r.text || r.error || '').join('\n---\n')).slice(0, 6000), plan };
+  }
+  return { items, urls, cents: Math.round(cents * 100) / 100, error: items.length ? null : err, text, plan, incomplete: pending.length, finish: pending.length ? finish : null };
 }
 
 // ---- adapter: Walmart Affiliate API (official; needs Walmart's approval: consumer id + private key + publisher id) ----
@@ -1148,10 +1175,38 @@ export async function mapLimit(arr, n, fn) {
 }
 // ---- the search route: adapters → one list → each page checked → filtered → cached ----
 export function wantsStore(q, name) { return !q.stores || !q.stores.length || q.stores.some(s => name.toLowerCase().includes(String(s).toLowerCase().replace(/\.com$/, '')) || String(s).toLowerCase().includes(name.toLowerCase())); }
+// v35 (place choice, 2026-11-19): a place named in a search ("buy in England")
+// is a country name often enough that the worker must know it — the app sends
+// country 'US' by default, so without this the search would still run the US
+// store list. Matched as whole words in the place text; longest name wins
+// ("northern ireland" beats "ireland", "new south wales" beats "wales").
+// A city ("London") is not mapped here — the voice assistant passes its
+// country code, and the open-web search is already local to the named place.
+export const COUNTRY_BY_NAME = {
+  'united kingdom': 'GB', 'great britain': 'GB', 'northern ireland': 'GB',
+  'england': 'GB', 'scotland': 'GB', 'wales': 'GB', 'britain': 'GB', 'uk': 'GB',
+  'united states': 'US', 'america': 'US', 'usa': 'US', 'us': 'US',
+  'canada': 'CA', 'mexico': 'MX', 'brazil': 'BR', 'israel': 'IL',
+  'ireland': 'IE', 'france': 'FR', 'germany': 'DE', 'spain': 'ES',
+  'italy': 'IT', 'portugal': 'PT', 'netherlands': 'NL', 'holland': 'NL',
+  'belgium': 'BE', 'switzerland': 'CH', 'austria': 'AT', 'poland': 'PL',
+  'australia': 'AU', 'new zealand': 'NZ', 'new south wales': 'AU',
+  'japan': 'JP', 'india': 'IN', 'south africa': 'ZA'
+};
+export function countryFromPlace(place) {
+  const s = ' ' + String(place || '').toLowerCase().replace(/\./g, '').replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim() + ' ';
+  let best = null;
+  for (const name of Object.keys(COUNTRY_BY_NAME)) {
+    if (s.includes(' ' + name + ' ') && (!best || name.length > best.length)) best = name;
+  }
+  return best ? COUNTRY_BY_NAME[best] : null;
+}
 export function cleanQuery(b) {
   const n = (v) => { const x = parseFloat(v); return isFinite(x) && x >= 0 ? x : null; };
   const stores = (Array.isArray(b.stores) ? b.stores : String(b.stores || '').split(/,| and /)).map(s => clip(s, 40)).filter(Boolean).slice(0, 8);
-  return { query: clip(b.query, 200), stores, min_price: n(b.min_price), max_price: n(b.max_price), near: clip(b.near, 100), country: clip(b.country || 'US', 2).toUpperCase(), currency: clip(b.currency || 'USD', 3).toUpperCase(), n: 8, zip: cleanZip(b.zip), fast: b.fast === 'pickup' ? 'pickup' : b.fast === 'delivery' || b.fast === true ? 'delivery' : '' };
+  const q = { query: clip(b.query, 200), stores, min_price: n(b.min_price), max_price: n(b.max_price), near: clip(b.near, 100), country: clip(b.country || 'US', 2).toUpperCase(), currency: clip(b.currency || 'USD', 3).toUpperCase(), n: 8, zip: cleanZip(b.zip), fast: b.fast === 'pickup' ? 'pickup' : b.fast === 'delivery' || b.fast === true ? 'delivery' : '' };
+  const cc = countryFromPlace(q.near); if (cc) q.country = cc;   // v35: a named country beats the default US — the search runs the open web for that place
+  return q;
 }
 export async function enrich(env, list, L, cited, why) {
   why = why || [];
@@ -1190,6 +1245,52 @@ export function extraWalmart(cited, have, max) {
   for (const u of cited || []) { const m = String(u).match(/walmart\.com\/ip\/(?:[^/?#]+\/)?(\d{5,})/); if (m && !ids.has(m[1])) { ids.add(m[1]); out.push({ title: '', store: 'Walmart', url: 'https://www.walmart.com/ip/' + m[1], source: 'web' }); if (out.length >= max) break; } }
   return out;
 }
+// v34: the search-result pipeline, pulled out of shopSearch unchanged so the
+// first answer and the finished answer run the exact same steps: canonicalize,
+// drop non-products and duplicates, check the store pages, drop dead links,
+// price limits, the relevance filter (v31: wrong items are removed, never
+// just demoted), ranking, and the total count. Returns { list, total, stats, why }.
+export async function processSearchResults(env, web, wm, q, L) {
+  let list = [].concat((wm && wm.items) || [], web.items || []).map(p => Object.assign({}, p, { url: p.source === 'walmart_affiliate' ? p.url : canonUrl(String(p.url || '')), store: storeName(p.url, p.store) }));
+  const stats = { found: list.length };
+  const seen = new Set();
+  list = list.filter(p => { if (!looksLikeProductUrl(p.url) || !p.title) { stats.not_product = (stats.not_product || 0) + 1; return false; } const k = normUrl(p.url); if (seen.has(k)) { stats.dup = (stats.dup || 0) + 1; return false; } seen.add(k); return true; });
+  if (q.stores.length) { const n0 = list.length; list = list.filter(p => wantsStore(q, p.store)); stats.other_store = n0 - list.length; }
+  list = list.slice(0, L.maxResults + 4);   // enough to fill the list after dead links drop out
+  const n1 = list.length;
+  const why = [];
+  const [enriched, listed] = await Promise.all([enrich(env, list, L, web.urls, why), Promise.resolve([])]);   // harvestWalmart(): Walmart answers listing pages with a robot check from servers (measured 2026-10-26), so it is off
+  const have = new Set(enriched.map(p => normUrl(p.url)));
+  stats.walmart_listing = listed.length;
+  list = enriched.concat(listed.filter(p => !have.has(normUrl(p.url)))).filter(p => p.title && !/not found|page not found|^404|unavailable/i.test(p.title)).map(normProduct);
+  stats.gone = n1 - list.length;
+  const seen2 = new Set(); list = list.filter(p => { const k = p.store + '|' + String(p.title).toLowerCase().slice(0, 60) + '|' + p.price; if (seen2.has(k)) return false; seen2.add(k); return true; });
+  // price limits are checked here too (the search model can be loose); an item with no readable price stays, marked unknown
+  const n2 = list.length;
+  list = list.filter(p => p.price == null || ((q.max_price == null || p.price <= q.max_price * 1.0001) && (q.min_price == null || p.price >= q.min_price)));
+  stats.over_price = n2 - list.length;
+  // v31 FIX: filter, don't just sort — drop anything that is not what was asked
+  // for BEFORE ranking and slicing, so wrong items can never fill the top 8
+  // or be read out as one of the first 3. If fewer than 3 good matches survive,
+  // the list is short on purpose: the app says how many it found instead of
+  // filling it with unrelated products.
+  const nBeforeFilter = list.length;
+  list = filterSearchResults(list, q.query);
+  stats.filtered_irrelevant = nBeforeFilter - list.length;
+  // relevance first, then stock/colour, then a verified price, then best rated
+  list = sortSearchResults(list, q.query);
+  // v14: when the person asked for the fastest way, items whose store page states a delivery / pickup time come first (relevance still wins)
+  if (q.fast) { const sp = p => p.delivery ? (q.fast === 'pickup' && deliveryKind(p.delivery) === 'pickup' ? 3 : 2) + (p.delivery_source === 'store_page' ? 1 : 0) : (q.fast === 'pickup' && p.local ? 1 : 0);
+    list = list.map((p, i) => [p, i]).sort((a, b2) => (relevanceScore(b2[0].title, q.query) - relevanceScore(a[0].title, q.query)) || (fitScore(b2[0], q.query) - fitScore(a[0], q.query)) || (sp(b2[0]) - sp(a[0])) || (a[1] - b2[1])).map(x => x[0]); }
+  // v34: total = the good matches after every filter, BEFORE the top-3 cut the
+  // app reads first — so the voice can say "We found N results. Here are the
+  // top three." and the count is always true. The list keeps every good match
+  // (up to the 12 the pipeline holds), so the count and the items on the phone
+  // always agree: the rest are there by scrolling, or by asking for more.
+  const total = list.length;
+  list = list.slice(0, L.maxResults + 4).map(p => colorMismatch(p, q.query) ? Object.assign({}, p, { color_differs: true }) : p);
+  return { list, total, stats, why };
+}
 async function shopSearch(req, env, ctx, url) {
   if (!sameOrigin(req, url)) return J({ error: 'forbidden' }, 403);
   let b = {}; try { b = await req.json(); } catch (e) {}
@@ -1224,7 +1325,10 @@ async function shopSearch(req, env, ctx, url) {
   // v31i: bumped again ('sc:v31i:') for the user-approved Gap 8 60%-bar fix.
   // v31j: bumped again ('sc:v31j:') for the user-approved Bath Soak follow-up
   // (narrowed Gap 6 exemption: a mention noun repeating the head is not exempted).
-  const ck = 'sc:v31j:' + (await sha256hex(JSON.stringify([q.query.toLowerCase(), q.stores, q.min_price, q.max_price, q.near.toLowerCase(), q.country, q.zip, q.fast]))).slice(0, 32);
+  // v31k: bumped again ('sc:v31k:') for the v34 whole-web fix (Amazon cited-URL
+  // match + total count + 5-minute search cache) so no answer saved under the
+  // old rules is ever served again.
+  const ck = 'sc:v31k:' + (await sha256hex(JSON.stringify([q.query.toLowerCase(), q.stores, q.min_price, q.max_price, q.near.toLowerCase(), q.country, q.zip, q.fast]))).slice(0, 32);
   const debug = !!(req.headers.get('x-setup-token') && (await sha256hex(req.headers.get('x-setup-token'))) === SETUP_HASH);
   const hit = (debug || fresh) ? null : await kvJSON(env, ck, null);
   if (hit) return J(Object.assign(hit, { cached: true, cents: 0 }));
@@ -1232,44 +1336,50 @@ async function shopSearch(req, env, ctx, url) {
   if (!(await bump(env, `srch:${d}:all`, L.globalSearchesDay))) return J({ error: 'rate_limited', scope: 'global' }, 429);
   if (!(await spend(env, L, L.searchReserveCents, d))) return J({ error: 'rate_limited', scope: 'budget' }, 429);
   const wantWalmart = wantsStore(q, 'Walmart');
-  const [web, wm] = await Promise.all([webSearch(env, key, q, L), wantWalmart ? walmartAffiliate(env, q, L) : Promise.resolve(null)]);
-  ctx.waitUntil(settle(env, d, L.searchReserveCents, web.cents || 0).catch(() => {}));
-  if (!(web.items || []).length && !(wm && wm.items && wm.items.length) && /"off_topic"\s*:\s*true/.test(web.text || '')) return J(Object.assign({ query: q, products: [] }, OFF_TOPIC_ANSWER), 422);
-  if (web.error && !(wm && wm.items && wm.items.length)) return J({ error: web.error }, web.error === 'no_credit' ? 402 : 502);
-  let list = [].concat((wm && wm.items) || [], web.items || []).map(p => Object.assign({}, p, { url: p.source === 'walmart_affiliate' ? p.url : canonUrl(String(p.url || '')), store: storeName(p.url, p.store) }));
-  const stats = { found: list.length };
-  const seen = new Set();
-  list = list.filter(p => { if (!looksLikeProductUrl(p.url) || !p.title) { stats.not_product = (stats.not_product || 0) + 1; return false; } const k = normUrl(p.url); if (seen.has(k)) { stats.dup = (stats.dup || 0) + 1; return false; } seen.add(k); return true; });
-  if (q.stores.length) { const n0 = list.length; list = list.filter(p => wantsStore(q, p.store)); stats.other_store = n0 - list.length; }
-  list = list.slice(0, L.maxResults + 4);   // enough to fill the list after dead links drop out
-  const n1 = list.length;
-  const why = [];
-  const [enriched, listed] = await Promise.all([enrich(env, list, L, web.urls, why), Promise.resolve([])]);   // harvestWalmart(): Walmart answers listing pages with a robot check from servers (measured 2026-10-26), so it is off
-  const have = new Set(enriched.map(p => normUrl(p.url)));
-  stats.walmart_listing = listed.length;
-  list = enriched.concat(listed.filter(p => !have.has(normUrl(p.url)))).filter(p => p.title && !/not found|page not found|^404|unavailable/i.test(p.title)).map(normProduct);
-  stats.gone = n1 - list.length;
-  const seen2 = new Set(); list = list.filter(p => { const k = p.store + '|' + String(p.title).toLowerCase().slice(0, 60) + '|' + p.price; if (seen2.has(k)) return false; seen2.add(k); return true; });
-  // price limits are checked here too (the search model can be loose); an item with no readable price stays, marked unknown
-  const n2 = list.length;
-  list = list.filter(p => p.price == null || ((q.max_price == null || p.price <= q.max_price * 1.0001) && (q.min_price == null || p.price >= q.min_price)));
-  stats.over_price = n2 - list.length;
-  // v31 FIX: filter, don't just sort — drop anything that is not what was asked
-  // for BEFORE ranking and slicing, so wrong items can never fill the top 8
-  // or be read out as one of the first 3. If fewer than 3 good matches survive,
-  // the list is short on purpose: the app says how many it found instead of
-  // filling it with unrelated products.
-  const nBeforeFilter = list.length;
-  list = filterSearchResults(list, q.query);
-  stats.filtered_irrelevant = nBeforeFilter - list.length;
-  // relevance first, then stock/colour, then a verified price, then best rated
-  list = sortSearchResults(list, q.query);
-  // v14: when the person asked for the fastest way, items whose store page states a delivery / pickup time come first (relevance still wins)
-  if (q.fast) { const sp = p => p.delivery ? (q.fast === 'pickup' && deliveryKind(p.delivery) === 'pickup' ? 3 : 2) + (p.delivery_source === 'store_page' ? 1 : 0) : (q.fast === 'pickup' && p.local ? 1 : 0);
-    list = list.map((p, i) => [p, i]).sort((a, b2) => (relevanceScore(b2[0].title, q.query) - relevanceScore(a[0].title, q.query)) || (fitScore(b2[0], q.query) - fitScore(a[0], q.query)) || (sp(b2[0]) - sp(a[0])) || (a[1] - b2[1])).map(x => x[0]); }
-  list = list.slice(0, L.maxResults).map(p => colorMismatch(p, q.query) ? Object.assign({}, p, { color_differs: true }) : p);
-  const res = { query: q, products: list, searched_at: Date.now(), source: (wm && wm.items && wm.items.length ? 'walmart_affiliate+' : '') + 'web_search', cents: (web.cents || 0), fresh: fresh };
-  if (debug) { res.stats = stats; res.raw = web.items; res.error = web.error; res.raw_text = web.text; res.plan = web.plan; res.cited = (web.urls || []).length; res.cited_urls = (web.urls || []).slice(0, 60); res.why = why; res.oa_status = web.status; res.incomplete = web.incomplete; }
+  // v34 (speed): the searches run with a cap, so the first results can be
+  // spoken in about 15 seconds instead of waiting for the slowest store.
+  // A fresh check (price drops) waits for everything, as before.
+  let [web, wm] = await Promise.all([webSearch(env, key, q, L, { capMs: fresh ? 0 : L.firstResultsCapMs }), wantWalmart ? walmartAffiliate(env, q, L) : Promise.resolve(null)]);
+  let settleDone = false;
+  function settleOnce(cents) { if (settleDone) return; settleDone = true; ctx.waitUntil(settle(env, d, L.searchReserveCents, cents || 0).catch(() => {})); }   // the daily budget is settled exactly once per search, with the real cost
+  if (!web.incomplete) {
+    settleOnce(web.cents);
+    if (!(web.items || []).length && !(wm && wm.items && wm.items.length) && /"off_topic"\s*:\s*true/.test(web.text || '')) return J(Object.assign({ query: q, products: [] }, OFF_TOPIC_ANSWER), 422);
+    if (web.error && !(wm && wm.items && wm.items.length)) return J({ error: web.error }, web.error === 'no_credit' ? 402 : 502);
+  }
+  let out = await processSearchResults(env, web, wm, q, L);
+  // v34 (speed): the first results are ready but some searches are still
+  // running — answer now with what is good (partial:true), and let the rest
+  // catch up in the background. The phone speaks the top 3 at once; the rest
+  // fill in after. The partial is saved under the same key, so the phone's
+  // next ask for this search is a free cache hit until the full list lands.
+  if (!fresh && web.incomplete > 0 && web.finish && out.list.length >= 1) {
+    const res = { query: q, products: out.list, total: out.total, partial: true, searched_at: Date.now(), source: (wm && wm.items && wm.items.length ? 'walmart_affiliate+' : '') + 'web_search', cents: (web.cents || 0), fresh: fresh };
+    if (debug) { res.stats = out.stats; res.raw = web.items; res.error = web.error; res.raw_text = web.text; res.plan = web.plan; res.cited = (web.urls || []).length; res.cited_urls = (web.urls || []).slice(0, 60); res.why = out.why; res.oa_status = web.status; res.incomplete = web.incomplete; }
+    await store(env).put(ck, JSON.stringify(Object.assign({}, res, { cents: 0 })), { expirationTtl: L.searchCacheS });
+    ctx.waitUntil((async () => {
+      try {
+        const full = await web.finish();
+        const out2 = await processSearchResults(env, full, wm, q, L);
+        const fullRes = { query: q, products: out2.list, total: out2.total, searched_at: Date.now(), source: (wm && wm.items && wm.items.length ? 'walmart_affiliate+' : '') + 'web_search', cents: (full.cents || 0), fresh: fresh };
+        if (debug) { fullRes.stats = out2.stats; fullRes.raw = full.items; fullRes.error = full.error; fullRes.raw_text = full.text; fullRes.plan = full.plan; fullRes.cited = (full.urls || []).length; fullRes.cited_urls = (full.urls || []).slice(0, 60); fullRes.why = out2.why; fullRes.oa_status = full.status; fullRes.incomplete = 0; }
+        await store(env).put(ck, JSON.stringify(Object.assign({}, fullRes, { cents: 0 })), { expirationTtl: L.searchCacheS });
+        await settle(env, d, L.searchReserveCents, full.cents || 0);
+      } catch (e) {}
+    })());
+    return J(res);
+  }
+  // fewer than 1 good item so far, or everything is done: wait for the rest when there is a rest, then the full list
+  if (web.incomplete > 0 && web.finish) {
+    web = await web.finish();
+    settleOnce(web.cents);
+    if (!(web.items || []).length && !(wm && wm.items && wm.items.length) && /"off_topic"\s*:\s*true/.test(web.text || '')) return J(Object.assign({ query: q, products: [] }, OFF_TOPIC_ANSWER), 422);
+    if (web.error && !(wm && wm.items && wm.items.length)) return J({ error: web.error }, web.error === 'no_credit' ? 402 : 502);
+    out = await processSearchResults(env, web, wm, q, L);
+  }
+  settleOnce(web.cents);
+  const res = { query: q, products: out.list, total: out.total, searched_at: Date.now(), source: (wm && wm.items && wm.items.length ? 'walmart_affiliate+' : '') + 'web_search', cents: (web.cents || 0), fresh: fresh };
+  if (debug) { res.stats = out.stats; res.raw = web.items; res.error = web.error; res.raw_text = web.text; res.plan = web.plan; res.cited = (web.urls || []).length; res.cited_urls = (web.urls || []).slice(0, 60); res.why = out.why; res.oa_status = web.status; res.incomplete = web.incomplete; }
   if (!fresh) ctx.waitUntil(store(env).put(ck, JSON.stringify(Object.assign({}, res, { cents: 0 })), { expirationTtl: L.searchCacheS }).catch(() => {}));
   return J(res);
 }

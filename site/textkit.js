@@ -106,16 +106,27 @@
 
   // ---------------- a typed search, without the AI ----------------
   function num(x) { var n = parseFloat(String(x).replace(/,/g, '')); return isFinite(n) && n > 0 ? n : null; }
+  // v35 (place choice): a country named with "in" / "from" — "buy shoes in England",
+  // "shoes in Canada for men" — is the search place, not part of the product.
+  // Only a real country name counts, so "shoes in blue" and "dress in stock"
+  // are untouched. A city ("in London") is not in this list: in a voice call
+  // the assistant passes it, and the worker maps country names (same list).
+  var PLACE_COUNTRIES = 'united kingdom|great britain|northern ireland|new south wales|new zealand|south africa|england|scotland|wales|britain|canada|israel|australia|ireland|france|germany|spain|italy|netherlands|holland|belgium|switzerland|austria|portugal|poland|mexico|brazil|japan|india|america|united states|usa|uk';
   function parseTyped(text) {
     var q = clean(text), out = { query: q };
     var m = q.match(/\s*(?:\b(?:under|below|less than|max(?:imum)?|up to|no more than|cheaper than|unter|bis|moins de|jusqu'à|menos de|até|hasta|sotto|onder|poniżej)\s*|<\s*)(?:\$|€|£|usd\s*)?\s*(\d[\d,]*(?:\.\d+)?)\s*(?:\$|€|£|dollars?|bucks|usd|euros?|dólares|dolares|dollar|reais|pesos|shekels?|₪)?/i);
     if (m) { out.max_price = num(m[1]); q = q.replace(m[0], ' '); }
     var n = q.match(/\s*(?:\b(?:over|above|more than|at least|min(?:imum)?|from|über|ab|plus de|más de|mais de)\s*|>\s*)(?:\$|€|£)?\s*(\d[\d,]*(?:\.\d+)?)\s*(?:\$|€|£|dollars?|bucks|usd|euros?)?/i);
     if (n) { out.min_price = num(n[1]); q = q.replace(n[0], ' '); }
+    var pm = q.match(new RegExp('\\s+(?:in|from)\\s+(?:the\\s+)?(' + PLACE_COUNTRIES + ')\\b', 'i'));
+    var place = '';
+    if (pm) { place = pm[1]; q = (q.slice(0, pm.index) + ' ' + q.slice(pm.index + pm[0].length)).replace(/\s+/g, ' ').trim(); }
     var st = q.match(/\s+(?:at|from|on|only at|only on)\s+(walmart|target|amazon|best buy|bestbuy|ikea|wayfair|home depot|homedepot|lowe'?s|costco|macy'?s|kohl'?s|ebay|etsy)\s*$/i);
     if (st) { out.stores = [st[1]]; q = q.replace(st[0], ' '); }
-    q = q.replace(/^\s*(?:i\s+(?:want|need)(?:\s+to\s+buy)?|find(?:\s+me)?|search(?:\s+for)?|show\s+me|looking\s+for|buy)\s+/i, '').replace(/\s+/g, ' ').trim();
-    out.query = q || clean(text);
+    q = q.replace(/^\s*(?:i\s+(?:want|need)(?:\s+to\s+buy)?|i'?m\s+looking\s+(?:to\s+buy|for)|i\s+am\s+looking\s+(?:to\s+buy|for)|looking\s+to\s+buy|find(?:\s+me)?|search(?:\s+for)?|show\s+me|looking\s+for|buy)(?:\s+|$)/i, '').replace(/\s+/g, ' ').trim();
+    if (!q) return out;   // no product named ("search in England") — the place alone is not a search; the app asks what to buy and keeps the place for it
+    if (place) out.near = place;
+    out.query = q;
     return out;
   }
   var api = { shortName: shortName, fallbackShort: fallbackShort, langOf: langOf, parseTyped: parseTyped, clean: clean };
