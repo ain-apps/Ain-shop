@@ -19,14 +19,11 @@ app, the Android app and the website are always the same thing.
   is the shared `config.json` `site_url`; if it ever changes, change it
   there first, then the one `siteURL` line in `AINShop/WebView.swift`.
 
-## ⚠️ First: check the bundle ID
+## Bundle ID — already set
 
-The project uses the placeholder bundle ID **`app.ain.shop`**. Before
-building, check the real one:
-
-1. Open App Store Connect, open **AIN Shop**, open **App Information**.
-2. Read the **Bundle ID** there.
-3. If it is different from `app.ain.shop`, change it in two places:
+The bundle ID is **`com.natimedwed.ainshop`**, the live app's real bundle ID
+(found via iTunes lookup 2026-11-22). If App Store Connect ever shows a
+different one, change it in two places:
    - `AINShop/AINShop.xcodeproj/project.pbxproj` — both
      `PRODUCT_BUNDLE_IDENTIFIER` lines
    - `codemagic.yaml` — the `BUNDLE_ID` line

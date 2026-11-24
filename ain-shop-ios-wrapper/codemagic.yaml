@@ -18,9 +18,9 @@
 #       APP_STORE_CONNECT_ISSUER_ID    — the Issuer ID
 #     (A fresh key can be made any time; the old .p8 Tab gave him was
 #     deleted at his request, so a new one is needed.)
-#  3. Bundle ID: the project uses PLACEHOLDER "app.ain.shop". Check the
-#     real bundle ID in App Store Connect (AIN Shop > App Information >
-#     Bundle ID) and, if it is different, change it in TWO places:
+#  3. Bundle ID: set to "com.natimedwed.ainshop" — the live v1.0.0 bundle ID
+#     (found via iTunes lookup 2026-11-22). If App Store Connect ever shows
+#     a different one, change it in TWO places:
 #     AINShop/AINShop.xcodeproj/project.pbxproj (PRODUCT_BUNDLE_IDENTIFIER)
 #     and the BUNDLE_ID variable below. v1.0.1 MUST use the same bundle ID
 #     as the live v1.0.0, or Apple treats it as a brand-new app.
@@ -34,8 +34,8 @@ workflows:
       vars:
         XCODE_PROJECT: "AINShop/AINShop.xcodeproj"
         XCODE_SCHEME: "AINShop"
-        # PLACEHOLDER — replace with the real bundle ID from App Store Connect (see above).
-        BUNDLE_ID: "app.ain.shop"
+        # Bundle ID matches the live app (see above).
+        BUNDLE_ID: "com.natimedwed.ainshop"
       xcode: latest
       cocoapods: default
     scripts:
