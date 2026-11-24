@@ -1,8 +1,11 @@
 # AIN Shop — deploy to your own account (no Tab)
 
-Prepared 2026-11-17. This folder is a copy of the fixed test version
-(`ain-shop-v30-fixed-test`), plus the deployment config Tab used
-(`site/tab-site.json`). Nothing here touches the live site or the live app.
+Prepared 2026-11-17. This folder is a thin deploy shell for the shared
+codebase: the website + server code lives in `../ain-shop-shared/web/`
+(the shared core), and `wrangler.toml` here points at it. It was built
+from the fixed test version (`ain-shop-v30-fixed-test`), plus the
+deployment config Tab used (`../ain-shop-shared/web/tab-site.json`).
+Nothing here touches the live site or the live app.
 
 Verified 2026-11-17: the 509 search tests re-run on THIS copy pass
 496/509 — same as the fixed test copy. The worker file is byte-identical
@@ -10,8 +13,9 @@ to the fixed test copy.
 
 ## What this folder is
 
-- `site/` — the whole website + the server code (`site/_worker.js`,
-  the fixed search).
+- `../ain-shop-shared/web/` — the shared core: the whole website + the
+  server code (`_worker.js`, the fixed search). `wrangler.toml` here
+  points at it; edit the code there, never a copy here.
 - `tests/` — the 509-test harness, so anyone can re-check the search.
 - `wrangler.toml` — the deployment config. One line still needs filling
   in: `database_id` (see step 2).
@@ -40,7 +44,8 @@ to the fixed test copy.
    on the computer doing the deploy. First deploy only — later updates
    are the same command.)
 4. Set the OpenAI key: the code stores it through `/api/admin/key` with a
-   setup token. DONE 2026-11-18 — SETUP_HASH in `site/_worker.js` is now
+   setup token. DONE 2026-11-18 — SETUP_HASH in
+   `../ain-shop-shared/web/_worker.js` is now
    the hash of his new setup phrase (the phrase itself is not recorded
    anywhere). Then open `https://<your-address>/api/admin/key` with
    your phrase and your OpenAI key.

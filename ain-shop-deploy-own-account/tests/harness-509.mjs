@@ -1,7 +1,7 @@
 // Teaching loop: the 509-case harness from search-test-500 / search-fix-test-report,
 // copied into this test copy so it can be re-run by teaching-loop.mjs.
 // No live searches. Paths are relative to this file.
-import * as W from '../site/_worker.js';
+import * as W from '../../ain-shop-shared/web/_worker.js';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const INTENT = require('../../ain-shop-v30-source/site/intent.js');
