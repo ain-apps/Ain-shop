@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name='impact-site-verification' value='9a7557fe-789f-434f-a59e-357041e567ef'>
+<meta name='impact-site-verification' value='faa27081-74c5-41f1-a8f2-83e34c7fa14c'>
+<meta name="fo-verify" content="2922ccde-b1b0-4853-9d28-395b7accf9b4" />
+<script src="/boot.js"></script>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AIN Shop · Shop by voice</title>
+<meta name="description" content="AIN Shop: an AI shopping assistant for blind and low-vision people. Say what you want, hear products and prices from many stores, choose, and pay the store directly.">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="AIN Shop">
+<meta property="og:title" content="AIN Shop · Shop by voice">
+<meta property="og:description" content="Say what you want to buy. AIN Shop finds it at many stores, reads you the prices, describes it, and opens the store's page so you pay the store directly.">
+<meta property="og:image" content="https://ainshop.sites.tab.bot/og.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="splash" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#17243f;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .15s ease">
+  <img src="icons/logo-512.png" alt="" style="width:min(62vw,62vh,360px);height:auto;border-radius:22%">
+  <div style="color:#e8c46a;font:700 clamp(32px,9vw,56px)/1.1 Georgia,serif;letter-spacing:.02em">AIN Shop</div>
+</div>
+<script src="/home.js"></script>
+<a class="skip" href="#resultsH" hidden></a>
+<header>
+  <h1><img class="logo" src="icons/icon-192.png" alt="" aria-hidden="true" width="44" height="44" style="border-radius:10px;vertical-align:middle;padding:0;background:none"><span data-i18n="appName">AIN Shop</span></h1>
+  <button id="payBtn" type="button" class="small payBtn" aria-haspopup="dialog" aria-controls="payDlg" data-i18n="payBtn" hidden>Plan</button>
+  <button id="langBtn" type="button" class="small langBtn" aria-haspopup="dialog" aria-controls="langDlg" aria-label="Language"><span class="globe" aria-hidden="true">🌐</span><span>English</span></button>
+</header>
+<dialog id="langDlg" class="langDlg" aria-labelledby="langTitle" aria-describedby="langHint">
+  <div class="langHead"><h2 id="langTitle">Choose your language</h2><button id="langClose" type="button" class="small">Close</button></div>
+  <p id="langHint" class="hint"></p>
+  <section id="setSec" class="setSec" aria-labelledby="setH">
+    <h2 id="setH" tabindex="-1">Settings</h2>
+    <button id="setClear" type="button" class="big alt clearData" aria-haspopup="dialog">Delete AIN Shop data on this phone</button>
+    <p id="setClearNote" class="hint">AIN Shop has no account. This erases everything AIN Shop saved on this phone.</p>
+    <div id="speedSec" class="speedSec" role="group" aria-labelledby="speedH">
+      <h3 id="speedH">Response speed</h3>
+      <div class="speedBtns">
+        <button type="button" class="big speedBtn" data-speed="fast" aria-pressed="false">Fast</button>
+        <button type="button" class="big speedBtn" data-speed="normal" aria-pressed="true">Normal</button>
+        <button type="button" class="big speedBtn" data-speed="slow" aria-pressed="false">Slow</button>
+      </div>
+      <p id="speedHint" class="hint">How long AIN Shop waits after you stop talking before it answers.</p>
+    </div>
+  </section>
+  <ul id="langList" class="langList"></ul>
+  <p class="hint corrP"><a class="corrLink" href="mailto:ainshop.corrections@mail.tab.bot?subject=AIN%20Shop%20correction">Found a mistake? Email corrections to ainshop.corrections@mail.tab.bot</a></p>
+  <p class="hint legalLinks"><a href="/privacy" data-i18n="privacyLink">Privacy</a> · <a href="/terms" data-i18n="termsLink">Terms</a> · <a href="/contact" data-i18n="contactLink">Contact</a></p>
+</dialog>
+<dialog id="locDlg" class="langDlg locDlg" aria-labelledby="locDlgH" aria-describedby="locDlgHint">
+  <h2 id="locDlgH">Can AIN Shop use your location to find stores that deliver fastest near you?</h2>
+  <p id="locDlgHint" class="hint">Only your ZIP code is kept, on this phone. Say “forget my location” any time.</p>
+  <button id="locYes" type="button" class="big">Yes, use my location</button>
+  <button id="locNo" type="button" class="big alt">No, I'll type a ZIP code</button>
+  <form id="locZipForm" autocomplete="off" hidden>
+    <label id="locZipL" for="locZip">ZIP code</label>
+    <div class="row"><input id="locZip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10" enterkeyhint="done"><button id="locZipSave" type="submit">Save ZIP code</button></div>
+    <p id="locErr" class="locErr" role="alert"></p>
+  </form>
+  <button id="locLater" type="button" class="small">Not now</button>
+</dialog>
+<dialog id="payDlg" class="langDlg payDlg" aria-labelledby="payTitle" aria-describedby="payStatus">
+  <div class="langHead"><h2 id="payTitle" data-i18n="payTitle">AIN Shop membership</h2><button id="payClose" type="button" class="small" data-i18n="payClose">Close</button></div>
+  <p id="payStatus" class="payStatus"></p>
+  <p id="payPriceLine" class="hint"></p>
+  <div class="payActions">
+    <button id="paySub" type="button" class="big" data-i18n="paySubscribe">Subscribe</button>
+    <button id="paySpeakBtn" type="button" class="big alt" data-i18n="paySpeak">Speak a command</button>
+    <button id="payRes" type="button" class="small" data-i18n="payRestore">Restore purchase</button>
+    <button id="payCan" type="button" class="small" data-i18n="payCancel" hidden>Cancel subscription</button>
+  </div>
+  <p class="hint" data-i18n="payVoiceHint">Say "subscribe", "how much", "cancel" or "close".</p>
+  <p id="payMsg" class="payMsg" role="status" aria-live="assertive"></p>
+</dialog>
+<main>
+  <p class="tagline" data-i18n="tagline">Shop by voice.</p>
+  <section id="notice" class="notice" aria-labelledby="noticeH">
+    <h2 id="noticeH" data-i18n="noticeH">Before you start</h2>
+    <p data-i18n="notice">AIN Shop is a helper.</p>
+    <p data-i18n="noticeVoice">When you tap “Tap to talk”, your voice goes live to our AI service (OpenAI) so it can understand you. AIN Shop does not record or keep it.</p>
+    <p><a href="/terms" data-i18n="termsLink">Terms</a> · <a href="/privacy" data-i18n="privacyLink">Privacy</a> · <a href="/contact" data-i18n="contactLink">Contact</a></p>
+    <button id="noticeOk" type="button" class="small" data-i18n="noticeOk">OK</button>
+  </section>
+  <button id="talk" type="button" aria-describedby="talkHint">
+    <span class="mic" aria-hidden="true"></span>
+    <span id="talkLabel" data-i18n="talk">Tap to talk</span>
+  </button>
+  <p id="talkHint" class="hint" data-i18n="talkHint">Starts a voice conversation.</p>
+  <button id="setBtn" type="button" class="camBtn setBtn setIco" aria-haspopup="dialog" aria-controls="langDlg" data-i18n="settingsBtn">Settings</button>
+  <button id="bcBtn" type="button" class="camBtn bcBtn" data-i18n="bcBtn">Scan barcode</button>
+  <button id="camBtn" type="button" class="camBtn camIco" data-i18n="camBtn">Camera: what is this?</button>
+  <button id="coBack" type="button" class="camBtn coBtn" hidden>Checkout help</button>
+  <div class="ordRow">
+    <button id="ordTrack" type="button" class="camBtn ordBtn ordTrackIco" aria-controls="ordSec" data-i18n="ordTrackBtn">Track my delivery</button>
+    <button id="ordReturn" type="button" class="camBtn ordBtn ordReturnIco" aria-controls="ordSec" data-i18n="ordReturnBtn">Return an item</button>
+  </div>
+  <section id="ordSec" class="ordSec" aria-labelledby="ordH" hidden>
+    <h2 id="ordH" tabindex="-1">Track my delivery</h2>
+    <div id="ordBox"></div>
+  </section>
+  <input id="camFile" type="file" accept="image/*" capture="environment" hidden>
+  <div id="camBox" class="camBox" hidden>
+    <video id="camVid" playsinline muted autoplay aria-hidden="true"></video>
+    <p id="camMsg" class="camMsg" role="status" aria-live="polite"></p>
+    <div class="row"><button id="camTake" type="button">Take picture</button><button id="camClose" type="button" class="small">Close camera</button></div>
+  </div>
+  <div id="bcResult" class="bcResult" aria-live="polite" hidden></div>
+  <p id="status" role="status" aria-live="polite"></p>
+  <p id="heard" class="line" aria-live="off"></p>
+  <p id="said" class="line" aria-live="off"></p>
+  <div id="announce" class="sr" aria-live="assertive"></div>
+
+  <form id="typeForm" autocomplete="off">
+    <label for="typeIn" data-i18n="typeLabel">Or type what you want</label>
+    <div class="row"><input id="typeIn" type="text" enterkeyhint="send" data-i18n-ph="typePh"><button type="submit" data-i18n="send">Send</button></div>
+  </form>
+
+  <section id="storesSec" class="storesSec" aria-labelledby="storesH" hidden>
+    <h2 id="storesH" tabindex="-1">My stores</h2>
+    <div id="storesBox"></div>
+  </section>
+
+  <section id="histSec" class="histSec" aria-labelledby="histH" hidden>
+    <h2 id="histH" tabindex="-1">Buy again</h2>
+    <div id="histBox"></div>
+  </section>
+
+  <section id="watchSec" class="histSec" aria-labelledby="watchH" hidden>
+    <h2 id="watchH" tabindex="-1">Price drop alerts</h2>
+    <div id="watchBox"></div>
+  </section>
+
+  <div id="locBox" class="locBox"></div>
+  <section id="nearSec" class="nearSec" aria-labelledby="nearH" hidden>
+    <h2 id="nearH" tabindex="-1">Stores near you</h2>
+    <div id="nearBox"></div>
+  </section>
+
+  <section id="resultsSec" aria-labelledby="resultsH" hidden>
+    <h2 id="resultsH" tabindex="-1"></h2>
+    <p id="where" class="hint"></p>
+    <p id="resAff" class="hint resAff" data-i18n="affiliate">AIN Shop may earn a commission from purchases made through store links.</p>
+    <span id="newTabNote" hidden data-i18n="newTab">Opens the store's page in a new tab.</span>
+    <ol id="results"></ol>
+  </section>
+
+  <section id="coSec" class="coSec" aria-labelledby="coH" hidden>
+    <h2 id="coH" tabindex="-1">Checkout</h2>
+    <div id="coBox"></div>
+  </section>
+
+  <section id="listSec" class="listSec" aria-labelledby="listH" hidden>
+    <h2 id="listH">My list</h2>
+    <div id="listBox"></div>
+  </section>
+
+  <section class="notes">
+    <p data-i18n="help">Say things like…</p>
+    <p data-i18n="payNote">AIN Shop never sees your payment details.</p>
+    <p class="hint" data-i18n="sourceNote">Prices can change.</p>
+    <p class="hint" data-i18n="affiliate">AIN Shop may earn a commission from purchases.</p>
+    <p class="hint shopTip"><a id="shopTip" class="joinlink" href="https://sovrn.co/1en0ohy" rel="sponsored noopener noreferrer" target="_blank" data-i18n="shopTip" data-i18n-label="shopTipLabel" aria-label="Shop tip: Walmart, an example store. Sponsored link: AIN Shop may earn a commission. Opens in a new tab.">Shop tip: Walmart, an example store (sponsored link)</a></p>
+    <p class="hint" data-i18n="limitNote">AIN Shop is free to use, with a daily limit for each phone.</p>
+    <p class="corrP"><a class="corrLink joinlink" href="mailto:ainshop.corrections@mail.tab.bot?subject=AIN%20Shop%20correction">Found a mistake? Email corrections to ainshop.corrections@mail.tab.bot</a></p>
+    <p><a href="/join" class="joinlink" data-i18n="joinLink">For stores – join AIN Shop</a> · <a href="/terms" class="joinlink" data-i18n="termsLink">Terms</a> · <a href="/privacy" class="joinlink" data-i18n="privacyLink">Privacy</a> · <a href="/contact" class="joinlink" data-i18n="contactLink">Contact</a> · <a href="/admin" class="joinlink">Owner</a></p>
+  </section>
+</main>
+<script src="i18n.js"></script>
+<script src="textkit.js"></script>
+<script src="app.js"></script>
+<script src="checkout.js"></script>
+<script src="intent.js"></script>
+<script src="stores.js"></script>
+<script src="history.js"></script>
+<script src="watchlist.js"></script>
+<script src="conversation.js"></script>
+<script src="favorites.js"></script>
+<script src="pricespeech.js"></script>
+<script src="shoppinglist.js"></script>
+<script src="reorder.js"></script>
+<script src="dealssummary.js"></script>
+<script src="langfallback.js"></script>
+<script src="feedback.js"></script>
+<script src="roundup.js"></script>
+<script src="teaching.js"></script>
+<script src="corrections.js"></script>
+<script src="location.js"></script>
+<script src="barcode.js"></script>
+<script src="orders.js"></script>
+<script src="noisegate.js"></script>
+<script src="show.js"></script>
+<script src="miniplayer.js"></script>
+<script src="callpause.js"></script>
+<script src="reviews.js"></script>
+<script src="coupons.js"></script>
+<script src="storecall.js"></script>
+<script src="pricehistory.js"></script>
+<script src="storeinfo.js"></script>
+<script src="returns.js"></script>
+<script src="sizes.js"></script>
+<script src="memory.js"></script>
+<script src="usage.js"></script>
+<script src="ai.js"></script>
+<script src="pay.js"></script>
+<script src="legal-common.js"></script>
+<script src="vcmd-i18n.js"></script>
+<script src="vcmd.js"></script>
+</body>
+</html>

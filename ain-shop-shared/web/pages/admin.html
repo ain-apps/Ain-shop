@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<script src="/boot.js"></script>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AIN Shop – owner</title>
+<link rel="stylesheet" href="/styles.css">
+<style>
+main { max-width: 760px; margin: 0 auto; padding: 16px; }
+input { font-size: 1.4rem; padding: 12px; width: 12em; background: #000; color: #fff; border: 3px solid var(--accent); border-radius: 12px; }
+.store { border: 2px solid #555; border-radius: 12px; padding: 12px; margin: 12px 0; }
+.store h3 { margin: 0 0 6px; } .store a { color: var(--accent); word-break: break-all; }
+.st { font-weight: 700; } .st.approved { color: #7dff9a; } .st.rejected { color: #ff8a8a; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; } .row button { font-size: 1.1rem; padding: 10px 14px; }
+table { border-collapse: collapse; width: 100%; } td, th { border-bottom: 1px solid #444; padding: 6px; text-align: start; }
+</style>
+</head>
+<body>
+<header class="top"><a href="/" class="brand">AIN Shop</a><span>owner</span></header>
+<main>
+<section id="login" hidden>
+  <h1>Owner page</h1>
+  <form id="lf"><label for="pin">PIN</label><br><input id="pin" type="password" inputmode="numeric" autocomplete="current-password"> <button class="btn" type="submit">Enter</button></form>
+  <p id="lmsg" role="status" aria-live="polite"></p>
+</section>
+<section id="panel" hidden>
+  <h1>Stores that asked to join</h1>
+  <p><span id="counts"></span> · <a href="/join" style="color:var(--accent)">join page</a> · <button id="out" class="small" type="button">Log out</button></p>
+  <div id="stores" aria-live="polite"></div>
+  <h2>Visitors</h2>
+  <p id="visitors" aria-live="polite"></p>
+  <h2>Subscriptions</h2>
+  <p id="subs" aria-live="polite"></p>
+  <table><thead><tr><th>Day</th><th>Devices</th><th>New</th><th>Returning</th></tr></thead><tbody id="vdays"></tbody></table>
+  <h2>Usage (last 7 days)</h2>
+  <table><thead><tr><th>Day</th><th>Sessions</th><th>Talk min</th><th>Voice ¢</th><th>Search ¢</th></tr></thead><tbody id="usage"></tbody></table>
+  <h2>What people search for and tap (last 30 days)</h2>
+  <p><button id="usageSpeak" class="small" type="button">Hear the numbers</button> <span id="usageSpeakMsg" role="status" aria-live="polite"></span></p>
+  <table><thead><tr><th>Day</th><th>Searches</th><th>Barcode scans</th></tr></thead><tbody id="usageDays"></tbody></table>
+  <h3>Most-searched items</h3>
+  <ol id="topQueries"></ol>
+  <h3>Most-tapped buy buttons</h3>
+  <ol id="topBuys"></ol>
+  <h3>Language (last 14 days)</h3>
+  <ul id="usageLangs"></ul>
+  <p id="usageNote">Counts only — no names, no personal data. "Most-searched" and "most-tapped buy" store only the item words plus a count, never who searched or tapped. Counts older than a year are deleted. These counts start from the day this page was added — there is no history before that.</p>
+</section>
+</main>
+<script src="/admin-page.js"></script></body>
+</html>

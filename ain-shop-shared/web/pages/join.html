@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<script src="/boot.js"></script>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For stores – join AIN Shop</title>
+<meta name="description" content="Make your store easy to shop for blind and low-vision customers with AIN Shop, the voice shopping assistant.">
+<meta property="og:title" content="For stores – join AIN Shop"><meta property="og:image" content="/og.png">
+<link rel="stylesheet" href="/styles.css">
+<style>
+main { max-width: 640px; margin: 0 auto; padding: 16px; }
+label { display: block; font-size: 1.15rem; font-weight: 700; margin: 18px 0 6px; }
+input[type=text], input[type=url], input[type=email], textarea { width: 100%; box-sizing: border-box; font-size: 1.2rem; padding: 14px; background: #000; color: #fff; border: 3px solid var(--accent); border-radius: 12px; }
+textarea { min-height: 90px; }
+.check { display: flex; gap: 12px; align-items: flex-start; font-weight: 400; }
+.check input { width: 32px; height: 32px; flex: none; accent-color: var(--accent); }
+.hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+#send { width: 100%; margin-top: 22px; font-size: 1.4rem; padding: 18px; }
+#msg { font-size: 1.2rem; margin-top: 16px; min-height: 1.4em; }
+.err { color: #ff8a8a; }
+.langPick { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 1.1rem; }
+.langPick select { font: inherit; font-size: 1.2rem; min-height: 52px; padding: 8px 10px; background: #000; color: #fff; border: 3px solid var(--accent); border-radius: 12px; max-width: 50vw; }
+</style>
+</head>
+<body>
+<header class="top"><a href="/" class="brand" id="home">AIN Shop</a><label class="langPick"><span id="lLang">Language</span> <select id="langSel"></select></label></header>
+<main>
+<h1 id="h1">For stores – join AIN Shop</h1>
+<p id="intro"></p>
+<form id="f" novalidate>
+  <label for="name" id="lName"></label><input id="name" type="text" autocomplete="organization" required>
+  <label for="website" id="lWeb"></label><input id="website" type="url" inputmode="url" placeholder="https://" required>
+  <label for="email" id="lEmail"></label><input id="email" type="email" autocomplete="email" required>
+  <label for="feed" id="lFeed"></label><input id="feed" type="url" inputmode="url" placeholder="https://">
+  <label for="note" id="lNote"></label><textarea id="note"></textarea>
+  <div class="hp" aria-hidden="true"><label for="company_fax">Fax</label><input id="company_fax" tabindex="-1" autocomplete="off"></div>
+  <label class="check"><input id="perm" type="checkbox" required><span id="lPerm"></span></label>
+  <button id="send" type="submit" class="btn"></button>
+  <p id="msg" role="status" aria-live="polite"></p>
+</form>
+</main>
+<script src="i18n.js"></script>
+<script src="/join-page.js"></script></body>
+</html>
