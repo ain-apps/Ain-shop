@@ -1,0 +1,65 @@
+# AIN Shop — iOS wrapper build (Codemagic) — REPO ROOT COPY
+#
+# Why this file is here: Codemagic only looks for codemagic.yaml in the
+# repository root. The iPhone wrapper project itself lives in
+# ain-shop-ios-wrapper/ (its own copy of this file is there too, for
+# reference — Codemagic ignores it). This root copy builds that wrapper.
+#
+# What this does: builds the AIN Shop iPhone wrapper on Codemagic's Macs
+# and sends the finished app to TestFlight. No Mac is needed on your side.
+#
+# BEFORE THE FIRST BUILD — things the user sets up in Codemagic
+# (https://codemagic.io), all in his OWN Codemagic account (free tier).
+# Nothing here belongs to Tab, and no secret is written in this file:
+#
+#  1. Apple Developer account: in Codemagic, connect his Apple Developer
+#     account (the one that owns AIN Shop on the App Store). Codemagic
+#     fetches the signing certificate and provisioning profile itself.
+#  2. App Store Connect API key: in App Store Connect, create an API key
+#     (Users and Access > Integrations > App Store Connect API), then put
+#     its three values in Codemagic as encrypted environment variables:
+#       APP_STORE_CONNECT_PRIVATE_KEY  — the .p8 file contents
+#       APP_STORE_CONNECT_KEY_ID       — the Key ID
+#       APP_STORE_CONNECT_ISSUER_ID    — the Issuer ID
+#     (A fresh key can be made any time; the old .p8 Tab gave him was
+#     deleted at his request, so a new one is needed.)
+#  3. Bundle ID: set to "com.natimedwed.ainshop" — the live v1.0.0 bundle ID
+#     (found via iTunes lookup 2026-11-22). v1.0.1 MUST use the same bundle
+#     ID as the live v1.0.0, or Apple treats it as a brand-new app.
+
+workflows:
+  ios-release:
+    name: AIN Shop iOS release (v1.0.1)
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      vars:
+        XCODE_PROJECT: "AINShop/AINShop.xcodeproj"
+        XCODE_SCHEME: "AINShop"
+        # Bundle ID matches the live app (see above).
+        BUNDLE_ID: "com.natimedwed.ainshop"
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Set up code signing settings on Xcode project
+        script: |
+          cd ain-shop-ios-wrapper
+          xcode-project use-profiles
+      - name: Build IPA
+        script: |
+          cd ain-shop-ios-wrapper
+          xcode-project build-ipa \
+            --project "$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME"
+    artifacts:
+      - ain-shop-ios-wrapper/build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $APP_STORE_CONNECT_KEY_ID
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+        # First time: goes to TestFlight only. Submit to the App Store
+        # from App Store Connect after testing on a real iPhone.
+        submit_to_testflight: true
+        submit_to_app_store: false
